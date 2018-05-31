@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './hello'
+import CourseManager from "./CourseManager";
 
 ReactDOM.render(
-    <Hello/>,
+    <CourseManager/>,
     document.getElementById('root')
 );
