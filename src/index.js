@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import CourseManager from "./CourseManager";
+import CourseManager from "./container/CourseManager";
 
 ReactDOM.render(
     <CourseManager/>,
