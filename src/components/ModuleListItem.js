@@ -7,7 +7,7 @@ export default class ModuleListItem extends Component{
     render() {
         return (
 
-                <li className="list-group-item">{this.props.title}
+                <li className="list-group-item">{"Module - " + this.props.id + " "+this.props.title}
                     <span className="float-right">
 
                         <i className="fa fa-trash"></i>
