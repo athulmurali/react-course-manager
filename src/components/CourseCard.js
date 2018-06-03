@@ -13,7 +13,7 @@ export default class CourseCard extends React.Component
 
             // {Math.floor(Math.random() * Math.floor(500))} looks odd for different image sizes
             return (
-          <div className="card" styles={{width: '12rem'}}>
+          <div className="card" styles={{width: '12rem',height: '24rem'}}>
           <img className="card-img-top"
                src={url}/>
 
@@ -21,9 +21,13 @@ export default class CourseCard extends React.Component
            <h5 className="card-title">
                <Link to= {coursePageUrl} className=" nav-item nav-link  active">{this.props.courseTitle}</Link>
            </h5>
+              {/*To be uncommented once the data is available*/}
               <p className="card-text">by       : {this.props.createdBy}</p>
+              {/*<p className="card-text">by       : Me</p>*/}
 
               <p className="card-text">Created : {this.props.createdAt}</p>
+
+              {/*<p className="card-text">Created : Yesterday</p>*/}
 
               {/*<a href="#" className="btn btn-primary">More...</a>*/}
           </div></div>)}}

@@ -1,36 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CourseManager from "./container/CourseManager";
-import Routing from './examples/Routing';
-import { BrowserRouter } from 'react-router-dom'
-import App from './examples/App'
+import {BrowserRouter, Switch} from 'react-router-dom'
 
 import { Route } from 'react-router-dom';
 import CoursesScreen from "./container/CoursesScreen";
-
-// ReactDOM.render(
-//     <div className="container-fluid">
-//         <CourseManager/>,
-//     </div>,
-//
-//     document.getElementById('root')
-// );
+import NavBar from "./components/Navbar";
+import My404Component from "./components/My404Component";
+import Home from "./components/Home";
+import Login from "./Pages/Login";
+import CourseEditor from "./container/CourseEditor";
 
 
-const Home = () => {return ( <p>This is home! And I love it</p>);}
 
-const PageParam =( {match}) =><p>{match.params.id}</p>;
+
+
+// const PageParam =( match) =><p>{match.params.id}</p>;
 
 const Routes =()=>
     <BrowserRouter>
         <div>
-            <App/>
-            <div className="container-fluid">
 
-            <Route path="/app" exact component={CourseManager}/>
-            <Route path="/home" exact component={Home}/>
-            <Route path='/pageParam/:id' component={PageParam}/>
-            <Route path='/courses' component={CoursesScreen}/>
+            <NavBar/>
+
+            <div className="container-fluid">
+                <Switch>
+                    <Route path="/" exact component={Home}/>
+
+                    <Route path="/app" exact component={CourseEditor}/>
+                    <Route path="/home" exact component={Home}/>
+                    {/*<Route path='/pageParam/:id' component={PageParam}/>*/}
+                    <Route path='/courses' component={CoursesScreen}/>
+                    <Route path='/Login' component={Login}/>
+
+                    <Route path='*' exact={true} component={My404Component} />
+                </Switch>
+
+
             </div>
         </div>
     </BrowserRouter>

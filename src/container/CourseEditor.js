@@ -6,15 +6,25 @@ import LessonTabs from "./LessonTabs";
 
 export default class CourseEditor extends React.Component{
     render(){
-        return (<div className="row">
-            <div className="col-lg-4 col-sm-12">
-                <h2>Modules</h2>
-                <ModuleList/>
-            </div>
-            <div className="col-lg-8 col-sm-12">
-                <h2>Lessons</h2><LessonTabs/>
-            </div>
-        </div>);
+        return (
+            <div className="container-fluid">
+                <div className="row py-1">
+
+                    <h3>Course Name </h3>
+
+                </div>
+
+                <div className="row py-2">
+
+                    <div className="col-lg-4 col-sm-12">
+                        <h2>Modules</h2>
+                        <ModuleList/>
+                    </div>
+                    <div className="container col-lg-8 col-sm-12">
+                        <h2>Lessons</h2><LessonTabs/>
+                    </div>
+                </div>
+            </div>);
     }
 }
 

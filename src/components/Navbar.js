@@ -1,15 +1,5 @@
-import React,{Component} from 'react';
-import { Link } from 'react-router-dom';
-
-
-
-// this component will be rendered by our <___Router>
-const App = () =>
-    <div>
-        <Header />
-        <Main />
-    </div>
-
+import {Link} from "react-router-dom";
+import React from 'react';
 
 
 const NavBar =()=>
@@ -21,8 +11,8 @@ const NavBar =()=>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
                 <li >
-                        <Link to='/' className=" nav-link nav-item active">Home</Link>
-                        <span className="sr-only">(current)</span>
+                    <Link to='/' className=" nav-link nav-item">Home</Link>
+                    <span className="sr-only">(current)</span>
                 </li>
                 <li >
                     <Link to='/app' className=" nav-link nav-item">App</Link>
@@ -32,21 +22,18 @@ const NavBar =()=>
                     <Link to='/courses' className=" nav-link nav-item">Courses</Link>
                 </li>
 
-                <li >
-                    <Link to='/pageParam/456' className=" nav-link nav-item">PageParam</Link>
-                </li>
+                {/*<li >*/}
+                    {/*<Link to='/pageParam/456' className=" nav-link nav-item">PageParam</Link>*/}
+                {/*</li>*/}
 
 
             </ul>
+            <ul className="navbar-nav ml-auto">
+                <li >
+                    <Link to='/Login' className=" nav-link nav-item">Login</Link>
+                    <span className="sr-only">(current)</span>
+                </li>
+            </ul>
         </div>
     </nav>
-const Header=()=>
-    <div>
-        <NavBar/>
-    </div>
-
-const Main=()=>
-    <div>
-    </div>
-
-export default App;
+export default NavBar;
