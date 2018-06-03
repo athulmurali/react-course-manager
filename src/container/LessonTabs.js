@@ -6,6 +6,10 @@ import TopicPills from "./TopicPills";
 
 export default class LessonTabs
     extends React.Component {
+    constructor(props){
+        super(props);
+
+    }
     render() { return(
         <div className="container">
             <ul className="nav nav-tabs px-2">
@@ -13,6 +17,9 @@ export default class LessonTabs
                                     href="#">Lesson 1</a></li>
             <li className="nav-item"><a className="nav-link active"
                                     href="#">Lesson 2</a></li>
+            <li className="nav-item">
+                <a className="nav-link" href="#"><b>+</b></a>
+            </li>
         </ul>
 
             <div className="container">

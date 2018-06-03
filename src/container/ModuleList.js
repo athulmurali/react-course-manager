@@ -4,13 +4,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import  ModuleListItem from '../components/ModuleListItem';
 
 export default class ModuleList extends React.Component{
-// <ul className="list-group list-group-flush">
-// <ModuleListItem title="Module 1 - jQuery"/>
-// <ModuleListItem title="Module 2 - React" />
-// <ModuleListItem title="Module 3 - Redux" />
-// <ModuleListItem title="Module 4 - Angular" />
-// <ModuleListItem title="Module 5 - NodeJs" />
-// </ul>
+
 
     constructor(props) {
         super(props);
@@ -26,6 +20,8 @@ export default class ModuleList extends React.Component{
         }
         this.titleChanged = this.titleChanged.bind(this);
         this.createModule = this.createModule.bind(this);
+        this.deleteModule = this.deleteModule.bind(this);
+
 
     }
 
@@ -39,16 +35,62 @@ export default class ModuleList extends React.Component{
         this.setState(
             { modules : this.state.modules.concat(this.state.module)});
         this.setState({module: {title: ""}});
+
+
+    }
+
+        deleteModule=(index)=>{
+            console.log("index to remove : " + index);
+            if (index > -1) {
+                this.setState(
+                    { modules : this.state.modules.splice(index, 1) });
+            }
+
+            // /api/module/61
+            // module_id actual
+        }
+
+
+
+    editModule(index,title,  updated){
+        console.log("Edit module ");
+        console.log("index          : " + index);
+        console.log("title          : " + title);
+        console.log("updated        : " + updated);
+
+
+        if (index > -1 && index  <  this.state.modules.length) {
+            this.setState(
+                { modules : this.state.modules.splice(index, 1) });
+        }
+
+
+        // to api :
+
+        //courseid
+        //title
+        // updatedAt:
+
+
+
     }
 
 
-
-
     renderListOfModules(){
-    let modules = this.state.modules.map(function(module){
-            return<ModuleListItem key={module.id} id={module.id}title={module.title}/>}
+        let index = -1;
 
-        );
+
+        let modules = this.state.modules.map(function(module) {
+                index++;
+                return <ModuleListItem
+                    key={module.id}
+                    id={index}
+                    index={index}
+                    title={module.title}
+                    inEditMode={false}
+                    deleteModule={this.deleteModule}/>
+            }
+        )
 
     return modules
 
