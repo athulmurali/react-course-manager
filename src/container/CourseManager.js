@@ -17,13 +17,6 @@ export default class CourseManager
 
                 <CourseEditor/>
 
-                 <div className="card-deck">
 
-                    <CourseCard/>
-                    <CourseCard/>
-                    <CourseCard/>
-                    <CourseCard/>
-                    <CourseCard/>
-                </div>
             </div>
         )}}
