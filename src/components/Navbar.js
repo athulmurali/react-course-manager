@@ -15,7 +15,7 @@ const NavBar =()=>
                     <span className="sr-only">(current)</span>
                 </li>
                 <li >
-                    <Link to='/app' className=" nav-link nav-item">App</Link>
+                    <Link to='/editCourse/:' className=" nav-link nav-item">App</Link>
                 </li>
 
                 <li >

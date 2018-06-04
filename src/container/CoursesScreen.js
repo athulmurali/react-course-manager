@@ -32,7 +32,7 @@ export default class CoursesScreen
                     <div className="input-group">
                         <input type="text" className="form-control" placeholder="Search for..."/>
                                 <span className="input-group-btn">
-                                     <button className="btn btn-default border-secondary" type="button">
+                                     <button className="btn btn-default btn-outline-secondary" type="button">
                                          Search
                                      </button>
                                 </span>

@@ -16,12 +16,21 @@ export default class CourseRow extends React.Component{
         return <tr>
             <th scope="row">
                 {this.props.index}
+
             </th>
             <td>
                 <Link to= {this.props.coursePageUrl}
-                      styles
+
                       className=" nav-item nav-link  active">
                     {this.props.title}
+
+
+                    <span className="float-right">
+
+                  <a href={"#"} style={{'color': 'black'}} >
+                <i className="px-2 fa fa-pencil"   onClick={this.props.editCoursePage}></i>
+                    </a>
+            </span>
                 </Link>
 
 
