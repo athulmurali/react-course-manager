@@ -26,9 +26,6 @@ export default  class EditCourseButton extends React.Component{
         console.log("courseId           :"+this.props.id);
         console.log("redirectTO         :"+ this.props.editCourseUrl + this.props.id);
 
-
-
-
     }
 
 

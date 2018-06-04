@@ -23,10 +23,10 @@ export default class CourseCard extends React.Component
 
            <h5 className="card-title">
                <Link to= {coursePageUrl}
-                     style={{color: 'black','text-decoration' : 'none'}} >
+                     style={{color: 'black','textDecoration' : 'none'}} >
                    {this.props.courseTitle}</Link>
                <span className="float-right">
-                        <EditCourseButton id={1} editCourseUrl={"/editCourse/:"} />
+                        <EditCourseButton id={this.props.id} editCourseUrl={"/editCourse/:"} />
                </span>
 
 

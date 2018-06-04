@@ -6,6 +6,7 @@ import '../../node_modules/font-awesome/css/font-awesome.min.css';
 import ModuleList from "./ModuleList/ModuleList";
 import LessonTabs from "./LessonList/LessonTabs";
 import CourseTitle from "./CourseList/CourseTitle/CourseTitle";
+import DeleteCourseButton from "./CourseList/DeleteCourseButton";
 
 export default class CourseEditor extends React.Component{
 
@@ -14,15 +15,15 @@ export default class CourseEditor extends React.Component{
         super(props);
         this.state =
             {
-                courses: [
-                    {
-                        id: 1,
-                        coursePageUrl: "/course/",
-                        courseTitle: "Web Development",
-                        createdBy : "Me",
-                        createdAt : "Yesterday",
-                        updatedAt : "Today"
-                    },
+                    courses: [
+                        {
+                            id: 1,
+                            coursePageUrl: "/course/",
+                            courseTitle: "Web Development",
+                            createdBy : "Me",
+                            createdAt : "Yesterday",
+                            updatedAt : "Today"
+                        },
                     {
                         id: 2,
                         coursePageUrl: "/course/",
@@ -102,25 +103,27 @@ export default class CourseEditor extends React.Component{
     }
 
 
-    updateCourseTitle=(newCourseTitle)=>{
+    deleteCourse=(id)=>{
+        var oldOptions = this.state.courses;
+        console.log("Delete course id : " + id);
 
-        let newCourse = this.state.course;
-        newCourse.title = newCourseTitle;
-
-
-
-        this.setState({ course : newCourse });
-
+        //api to delete
 
     }
 
 
-
-
-        render(){
+    render(){
         return (
-            <div className="container-fluid">
-               <CourseTitle/>
+            <div className="container" >
+                <div className= "row   py-1 justify-content-end" >
+
+                        <DeleteCourseButton  deleteCourse ={this.deleteCourse} id={this.state.course.id}/>
+                </div>
+
+                <CourseTitle/>
+
+
+
 
                 <div className="row py-2">
                     <div className="col-lg-4 col-sm-12">
