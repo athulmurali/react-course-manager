@@ -1,14 +1,12 @@
 import React,{Component} from 'react';
-import '../../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../../node_modules/font-awesome/css/font-awesome.min.css';
+import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../../../node_modules/font-awesome/css/font-awesome.min.css';
 import EditableModuleListItem from "./EditableModuleListItem";
 import StaticModuleListItem from "./StaticModuleListItem";
 
 
-
-
 export default class ModuleListItem extends Component{
-    constructor(props){
+        constructor(props){
         super(props);
         this.state =
             {
@@ -17,7 +15,9 @@ export default class ModuleListItem extends Component{
             }
 
         this.toggleEditMode = this.toggleEditMode.bind(this);
-        this.dele = this.toggleEditMode.bind(this);
+        console.log("ModuleListItem : Constructor props")
+        console.log(this.props);
+
 
     }
 
@@ -33,35 +33,29 @@ export default class ModuleListItem extends Component{
 
 }
 
-    editModule(){
 
-        console.log("inside edit");
-        console.log(this.props);
-        console.log("edit by id : " + this.props.id );
 
-    }
     render() {
-        console.log("printing edit state");
-        console.log(this.state);
-        console.log(this.props.deleteModule);
-
-
-
         return (
-
                 <li className ="list-group-item" >
 
                     {!!this.state.inEditMode &&
                     <EditableModuleListItem
-                        title={this.props.title}
-                        toggleEditMode={ this.toggleEditMode}
-                        deleteModule = {this.props.deleteModule}/>}
+                        id              =   {this.props.id }
+                        title           =   {this.props.title}
+                        index           =   {this.props.index}
+                        toggleEditMode  =   { this.toggleEditMode}
+                        editModule = {this.props.editModule}
+                    />}
 
                     {!!!this.state.inEditMode &&
                     <StaticModuleListItem
-                        id      ={this.props.id }
-                        title   ={this.props.title}
-                        toggleEditMode={ this.toggleEditMode}/> }
+                        id              =   {this.props.id }
+                        index           =   {this.props.index}
+                        title           =   {this.props.title}
+                        toggleEditMode  =   {this.toggleEditMode}
+                        deleteModule    =   {this.props.deleteModule}
+                    /> }
                 </li>
         );
     }

@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../node_modules/bootstrap/dist/css/bootstrap.css';
-import CourseCard from "../components/CourseCard";
+import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
+import CourseCard from "./CourseCard";
 
 
 
