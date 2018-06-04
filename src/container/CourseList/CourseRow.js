@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "react-router-dom/es/Link";
+import EditCourseButton from "./EditCourseButton";
 
 export default class CourseRow extends React.Component{
 
@@ -20,19 +21,12 @@ export default class CourseRow extends React.Component{
             </th>
             <td>
                 <Link to= {this.props.coursePageUrl}
-
                       className=" nav-item nav-link  active">
                     {this.props.title}
-
-
                     <span className="float-right">
-
-                  <a href={"#"} style={{'color': 'black'}} >
-                <i className="px-2 fa fa-pencil"   onClick={this.props.editCoursePage}></i>
-                    </a>
-            </span>
+                        <EditCourseButton id={1} editCourseUrl={"/editCourse/:"} />
+                    </span>
                 </Link>
-
 
                 </td>
             <td>{this.props.createdBy}</td>

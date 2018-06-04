@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom";
+import EditCourseButton from "./EditCourseButton";
 
 export default class CourseCard extends React.Component
 
@@ -17,17 +18,20 @@ export default class CourseCard extends React.Component
           <img className="card-img-top"
                src={url}/>
 
+
           <div className="card-body">
+
            <h5 className="card-title">
-               <Link to= {coursePageUrl} className=" nav-item nav-link  active">{this.props.courseTitle}</Link>
+               <Link to= {coursePageUrl}
+                     style={{color: 'black','text-decoration' : 'none'}} >
+                   {this.props.courseTitle}</Link>
+               <span className="float-right">
+                        <EditCourseButton id={1} editCourseUrl={"/editCourse/:"} />
+               </span>
+
+
            </h5>
-              {/*To be uncommented once the data is available*/}
-              <p className="card-text">by       : {this.props.createdBy}</p>
-              {/*<p className="card-text">by       : Me</p>*/}
+              <p className="card-text">by       :Me {this.props.createdBy}</p>
+              <p className="card-text">Created  :  {this.props.createdAt}</p>
 
-              <p className="card-text">Created : {this.props.createdAt}</p>
-
-              {/*<p className="card-text">Created : Yesterday</p>*/}
-
-              {/*<a href="#" className="btn btn-primary">More...</a>*/}
           </div></div>)}}
