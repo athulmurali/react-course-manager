@@ -9,6 +9,7 @@ import My404Component from "./components/My404Component";
 import Home from "./components/Home";
 import Login from "./Pages/Login";
 import CourseEditor from "./container/CourseEditor";
+import Redirect from "react-router-dom/es/Redirect";
 
 
 
@@ -33,6 +34,7 @@ const Routes =()=>
                     <Route path='/Login' component={Login}/>
 
                     <Route path='*' exact={true} component={My404Component} />
+
                 </Switch>
 
 

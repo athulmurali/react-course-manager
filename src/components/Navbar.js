@@ -14,16 +14,12 @@ const NavBar =()=>
                     <Link to='/' className=" nav-link nav-item">Home</Link>
                     <span className="sr-only">(current)</span>
                 </li>
-                <li >
-                    <Link to='/editCourse/:' className=" nav-link nav-item">App</Link>
-                </li>
 
                 <li >
                     <Link to='/courses' className=" nav-link nav-item">Courses</Link>
                 </li>
-
                 {/*<li >*/}
-                    {/*<Link to='/pageParam/456' className=" nav-link nav-item">PageParam</Link>*/}
+                {/*<Link to='/editCourse/:' className=" nav-link nav-item">App</Link>*/}
                 {/*</li>*/}
 
 
