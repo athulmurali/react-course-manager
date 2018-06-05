@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../../node_modules/font-awesome/css/font-awesome.min.css';
-
+import CourseService from  '../services/CourseService'
 import CourseCardsDeck from "./CourseList/CourseCardsDeck";
 
 
@@ -17,6 +17,11 @@ export default class CoursesScreen
         }
     }
 
+
+    componentDidMount(){
+        console.log("Courses screen mounted");
+        this.getAllCoursesFromServer();
+    }
     toggleView =()=>{
         this.setState(()=>{
             return {inListView: !this.state.inListView}})
@@ -56,13 +61,15 @@ export default class CoursesScreen
 
                     <input type="radio" name="options" id="option1"
                            onChange={this.toggleView}
-                           checked={!this.state.inListView}/></div>
+                           checked={!this.state.inListView}
+                           courses ={this.state.courses}
+                    /></div>
                       Cards
                   </label>
                   <label className="btn btn-secondary">
                     <input type="radio" name="options" id="option2"
                            onChange={this.toggleView}
-
+                           courses ={this.state.courses}
                            checked={!!this.state.inListView}/>
                       List
                   </label>
@@ -72,5 +79,26 @@ export default class CoursesScreen
             </div>
             <CourseCardsDeck viewType={"row"} inListView={this.state.inListView}/>
         </div>
+
+
+    getAllCoursesFromServer=()=>{
+        console.log("hi");
+        this.courseService = CourseService.instance;
+
+        this.courseService.findAllCourses()
+            .then((courses) => {
+                console.log(courses);
+                this.setState({courses: courses});
+            }).then(()=>{
+            console.log("printing state from react")
+            console.log(this.state);
+
+    });
+
+
+
+    }
+
+
 }
 

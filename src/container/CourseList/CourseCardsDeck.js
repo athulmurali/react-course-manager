@@ -151,6 +151,8 @@ export default class CourseCardsDeck
         this.setState({ id : 0 ,course: {title: "", coursePageUrl: "/courses"}});
     }
 
+
+
 }
 
 
