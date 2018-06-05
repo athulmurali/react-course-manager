@@ -17,7 +17,7 @@ export default class CourseCardsDeck
                     {
                         id: 1,
                         coursePageUrl: "/course/",
-                        courseTitle: "Web Development",
+                        title: "Web Development",
                         createdBy : "Me",
                         createdAt : "Yesterday",
                         updatedAt : "Today"
@@ -25,7 +25,7 @@ export default class CourseCardsDeck
                     {
                         id: 2,
                         coursePageUrl: "/course/",
-                        courseTitle: "Algorithms",
+                        title: "Algorithms",
                         createdBy : "Me",
                         createdAt : "Yesterday",
                         updatedAt : "Today"
@@ -33,7 +33,7 @@ export default class CourseCardsDeck
                     {
                         id: 3,
                         coursePageUrl: "/course/",
-                        courseTitle: "Information Retrieval",
+                        title: "Information Retrieval",
                         createdBy : "Me",
                         createdAt : "Yesterday",
                         updatedAt : "Today"
@@ -42,7 +42,7 @@ export default class CourseCardsDeck
                     {
                          id: 4,
                          coursePageUrl: "/course/",
-                         courseTitle: "PDP",
+                         title: "PDP",
                          createdBy : "Me",
                          createdAt : "Yesterday",
                          updatedAt : "Today"
@@ -50,20 +50,37 @@ export default class CourseCardsDeck
                     {
                         id: 5,
                         coursePageUrl: "/course/",
-                        courseTitle: "DBMS",
+                        title: "DBMS",
                         createdBy : "Me",
                         createdAt : "Yesterday",
                         updatedAt : "Today"
                     }
                 ]
                 ,course : "",
-                viewType: this.props.viewType
+                viewType: this.props.viewType,
 
             }
         this.titleChanged = this.titleChanged.bind(this);
         this.createCourse = this.createCourse.bind(this);
     }
 
+    componentDidMount()
+    {
+        console.log("Current props : CourseCardDeck ---");
+        console.log(this.props);
+
+        this.setState(()=>{
+            console.log("resetting state options");
+
+            return {coursesNew:  this.props.courses }
+        } )
+        console.log(this.state.coursesNew);
+
+        console.log(this.state);
+
+
+
+    }
 
     render= () =>{
         console.log("Course viewType")
@@ -71,6 +88,8 @@ export default class CourseCardsDeck
         if (!this.props.inListView)
         {
             console.log(this.state.viewType);
+            console.log(this.state.coursesNew);
+
 
             return  <div className="card-deck">
                         {this.renderCoursesAsCards()}
@@ -89,10 +108,20 @@ export default class CourseCardsDeck
 
 
     renderCoursesAsCards= () =>{
-        let courses = this.state.courses.map(function(course){
-            return ( <CourseCard key={ course.id}
-                                 coursePageUrl={course.coursePageUrl}
-                                 courseTitle={course.courseTitle}
+        const newCourses = this.state.coursesNew;
+        let courses = this.props.courses.map(function(course){
+
+            console.log("printing new courses :");
+            console.log(newCourses);
+
+            console.log("printing courses ");
+            course.createdAt = "Yesterday";
+            course.updatedAt = "Today";
+
+            console.log(course);
+            return ( <CourseCard key={course.id}
+                                 coursePageUrl={"/coursePage/"}
+                                 title={course.title}
             />)});
             return courses
         }
@@ -100,20 +129,25 @@ export default class CourseCardsDeck
 
     renderCoursesAsRows= () =>{
         let i=1;
+        let courses = this.props.courses.map(function(course){
+            course.createdBy = "Me";
+            course.createdAt = "Yesterday";
+            course.updatedAt = "Today";
+            course.coursePageUrl = "/coursePage/";
 
-        let courses = this.state.courses.map(function(course){
+
             console.log(course);
+
             return (
                 <CourseRow
                     index = {i++}
 
                     key={ course.id}
                     coursePageUrl={course.coursePageUrl}
-                    title={course.courseTitle}
+                    title={course.title}
                     createdBy={course.createdBy}
                     createdAt={course.createdAt}
                     updatedAt={course.updatedAt}
-
                 />
 
             )
@@ -142,7 +176,7 @@ export default class CourseCardsDeck
 
     titleChanged(event) {
         console.log(event.target.value);
-        this.setState({course: {courseTitle: event.target.value, id : this.state.courses.length +1}});
+        this.setState({course: {title: event.target.value, id : this.state.courses.length +1}});
 
     }
     createCourse(){

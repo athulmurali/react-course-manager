@@ -7,12 +7,15 @@ import ModuleList from "./ModuleList/ModuleList";
 import LessonTabs from "./LessonList/LessonTabs";
 import CourseTitle from "./CourseList/CourseTitle/CourseTitle";
 import DeleteCourseButton from "./CourseList/DeleteCourseButton";
+import CourseService from "../services/CourseService";
 
 export default class CourseEditor extends React.Component{
 
     constructor(props)
     {
         super(props);
+        this.courseService = CourseService.instance;
+
         this.state =
             {
                     courses: [
@@ -100,6 +103,22 @@ export default class CourseEditor extends React.Component{
         }
 
             }
+    }
+
+
+    componentDidMount() {
+        this.selectCourse(this.props.match.params.courseId);
+        // this.getCourseById(this.props.match.params.courseId);
+    }
+
+    selectCourse(courseId) {
+        this.setState({courseId: courseId});
+    }
+
+
+    componentWillReceiveProps(newProps) {
+        this.selectCourse(newProps.match.params.courseId);
+        // this.getCourseById(newProps.match.params.courseId);
     }
 
 

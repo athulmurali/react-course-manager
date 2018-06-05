@@ -21,7 +21,7 @@ export default class CourseRow extends React.Component{
             </th>
             <td>
                 <Link to= {this.props.coursePageUrl}
-                      className=" nav-item nav-link  active">
+                      className="nav-item nav-link  active">
                     {this.props.title}
                     <span className="float-right">
                         <EditCourseButton id={1} editCourseUrl={"/editCourse/:"} />

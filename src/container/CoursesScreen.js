@@ -3,6 +3,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../../node_modules/font-awesome/css/font-awesome.min.css';
 import CourseService from  '../services/CourseService'
 import CourseCardsDeck from "./CourseList/CourseCardsDeck";
+import AddCourseComponent from "./CourseList/AddCourseComponent";
 
 
 
@@ -12,11 +13,12 @@ export default class CoursesScreen
     constructor(props)
     {
         super(props);
+        this.courseService = CourseService.instance;
         this.state={
-            inListView :false
+            inListView :false,
+            courses: []
         }
     }
-
 
     componentDidMount(){
         console.log("Courses screen mounted");
@@ -28,7 +30,6 @@ export default class CoursesScreen
 
         console.log(this.state.inListView)
     }
-
     render= () =>
         <div className="container-fluid">
 
@@ -44,6 +45,12 @@ export default class CoursesScreen
                     </div>
                 </div>
             </div>
+
+            <AddCourseComponent
+                getAllCoursesFromServer={this.getAllCoursesFromServer}
+                createCourse = {this.createCourse}
+
+            />
 
             <div className="row py-3">
                 <span className="col justify-content-end">
@@ -77,26 +84,37 @@ export default class CoursesScreen
                 </div>
                 </span>
             </div>
-            <CourseCardsDeck viewType={"row"} inListView={this.state.inListView}/>
+            <CourseCardsDeck viewType={"row"} inListView={this.state.inListView}
+            courses ={this.state.courses}/>
         </div>
-
 
     getAllCoursesFromServer=()=>{
         console.log("hi");
-        this.courseService = CourseService.instance;
+
 
         this.courseService.findAllCourses()
-            .then((courses) => {
-                console.log(courses);
-                this.setState({courses: courses});
+            .then((coursesReceived) => {
+                console.log("printing :  coursesRec");
+                console.log(coursesReceived);
+
+                this.setState({courses: coursesReceived});
             }).then(()=>{
             console.log("printing state from react")
             console.log(this.state);
 
+            this.render();
     });
 
 
+    }
 
+    createCourse=()=>{
+        console.log("creating new row....");
+        let course = {
+            "title" : "new-course-untitled"
+        }
+        this.courseService.createCourse(course);
+        this.getAllCoursesFromServer();
     }
 
 
