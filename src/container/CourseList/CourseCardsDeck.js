@@ -119,7 +119,9 @@ export default class CourseCardsDeck
             course.updatedAt = "Today";
 
             console.log(course);
-            return ( <CourseCard key={course.id}
+            return ( <CourseCard
+                                id={ course.id}
+                                key={course.id}
                                  coursePageUrl={"/coursePage/"}
                                  title={course.title}
             />)});
@@ -141,7 +143,7 @@ export default class CourseCardsDeck
             return (
                 <CourseRow
                     index = {i++}
-
+                    id={ course.id}
                     key={ course.id}
                     coursePageUrl={course.coursePageUrl}
                     title={course.title}

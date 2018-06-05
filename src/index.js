@@ -26,7 +26,7 @@ const Routes =()=>
                 <Switch>
                     <Route path="/" exact component={Home}/>
 
-                    <Route path="/editCourse/:" exact component={CourseEditor}/>
+                    <Route path="/editCourse/:courseId"  component={CourseEditor}/>
                     <Route path="/home" exact component={Home}/>
                     {/*<Route path='/pageParam/:id' component={PageParam}/>*/}
                     <Route path='/courses' component={CoursesScreen}/>

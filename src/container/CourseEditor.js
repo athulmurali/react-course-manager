@@ -15,7 +15,9 @@ export default class CourseEditor extends React.Component{
     {
         super(props);
         this.courseService = CourseService.instance;
+        console.log("course editor props:");
 
+        console.log(this.props)
         this.state =
             {
                     courses: [
@@ -108,7 +110,8 @@ export default class CourseEditor extends React.Component{
 
     componentDidMount() {
         this.selectCourse(this.props.match.params.courseId);
-        // this.getCourseById(this.props.match.params.courseId);
+        console.log("id from url " + this.props.match.params.courseId);
+        this.courseService.getCourseById(this.props.match.params.courseId);
     }
 
     selectCourse(courseId) {
@@ -118,13 +121,14 @@ export default class CourseEditor extends React.Component{
 
     componentWillReceiveProps(newProps) {
         this.selectCourse(newProps.match.params.courseId);
-        // this.getCourseById(newProps.match.params.courseId);
+        this.getCourseById(newProps.match.params.courseId);
     }
 
 
     deleteCourse=(id)=>{
         var oldOptions = this.state.courses;
         console.log("Delete course id : " + id);
+        this.courseService.deleteCourse(id);
 
         //api to delete
 
@@ -132,11 +136,12 @@ export default class CourseEditor extends React.Component{
 
 
     render(){
+        console.log("current course id : " + this.state.course.id);
         return (
             <div className="container" >
                 <div className= "row   py-1 justify-content-end" >
 
-                        <DeleteCourseButton  deleteCourse ={this.deleteCourse} id={this.state.course.id}/>
+                        <DeleteCourseButton  deleteCourse ={this.deleteCourse} id={this.state.courseId}/>
                 </div>
 
                 <CourseTitle/>

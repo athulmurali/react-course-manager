@@ -14,7 +14,8 @@ export default  class EditCourseButton extends React.Component{
 
 
     render =() =>{
-        return<Link to= "/editCourse/:" className=" nav-link nav-item" style={{'color': 'black'}}>
+        let redirectTo = "/editCourse/"+ this.props.id;
+        return<Link to= {redirectTo} className=" nav-link nav-item" style={{'color': 'black'}}>
                     <i className="px-2 fa fa-pencil"   onClick={this.handleClick}></i>
                 </Link>
     }

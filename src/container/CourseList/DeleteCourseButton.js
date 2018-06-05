@@ -3,6 +3,7 @@ import React from 'react'
 export default class DeleteCourseButton extends React.Component {
     deleteCourse=()=>{
         console.log("delete course button clicked");
+        console.log("delete button props:  id " + this.props.id);
         this.props.deleteCourse(this.props.id);
         return null;
     }
