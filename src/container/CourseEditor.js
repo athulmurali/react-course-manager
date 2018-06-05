@@ -15,58 +15,15 @@ export default class CourseEditor extends React.Component{
     {
         super(props);
         this.courseService = CourseService.instance;
-        console.log("course editor props:");
+        // console.log("course editor props:");
 
-        console.log(this.props)
+        // console.log(this.props)
         this.state =
             {
-                    courses: [
-                        {
-                            id: 1,
-                            coursePageUrl: "/course/",
-                            courseTitle: "Web Development",
-                            createdBy : "Me",
-                            createdAt : "Yesterday",
-                            updatedAt : "Today"
-                        },
-                    {
-                        id: 2,
-                        coursePageUrl: "/course/",
-                        courseTitle: "Algorithms",
-                        createdBy : "Me",
-                        createdAt : "Yesterday",
-                        updatedAt : "Today"
-                    },
-                    {
-                        id: 3,
-                        coursePageUrl: "/course/",
-                        courseTitle: "Information Retrieval",
-                        createdBy : "Me",
-                        createdAt : "Yesterday",
-                        updatedAt : "Today"
-                    },
-
-                    {
-                        id: 4,
-                        coursePageUrl: "/course/",
-                        courseTitle: "PDP",
-                        createdBy : "Me",
-                        createdAt : "Yesterday",
-                        updatedAt : "Today"
-                    },
-                    {
-                        id: 5,
-                        coursePageUrl: "/course/",
-                        courseTitle: "DBMS",
-                        createdBy : "Me",
-                        createdAt : "Yesterday",
-                        updatedAt : "Today"
-                    }
-                ],
-                viewType: this.props.viewType,
-
-                course :{
-            "id": 1,
+                title :"unnamed",
+               course :
+                   {
+            "id": 171,
             "title": "Web Development",
             "modules": [
             {
@@ -102,26 +59,50 @@ export default class CourseEditor extends React.Component{
                 "lessons": []
             }
         ]
-        }
+        },
+            modules :[]
 
             }
     }
 
 
     componentDidMount() {
+
         this.selectCourse(this.props.match.params.courseId);
-        console.log("id from url " + this.props.match.params.courseId);
-        this.courseService.getCourseById(this.props.match.params.courseId);
+        // console.log("id from url " + this.props.match.params.courseId);
+        this.updateTitleState();
+        this.updateModules();
+
+
     }
 
     selectCourse(courseId) {
         this.setState({courseId: courseId});
     }
+    updateTitleState=()=>{
+
+        this.courseService.getCourseById(this.props.match.params.courseId).then((coursesReceived) => {
+            // console.log("printing :  courselatestinfo" );
+
+            this.setState({title : coursesReceived.title});
+        });
+
+    }
 
 
-    componentWillReceiveProps(newProps) {
-        this.selectCourse(newProps.match.params.courseId);
-        this.getCourseById(newProps.match.params.courseId);
+    updateModules=()=>{
+
+        this.courseService.getCourseById(this.props.match.params.courseId).then((coursesReceived) => {
+            // console.log("printing :  courselatestinfo" );
+
+            this.setState({modules : coursesReceived.modules});
+        });
+
+    }
+
+
+    componentWillReceiveProps() {
+        this.selectCourse(this.props.match.params.courseId);
     }
 
 
@@ -141,21 +122,22 @@ export default class CourseEditor extends React.Component{
             <div className="container" >
                 <div className= "row   py-1 justify-content-end" >
 
-                        <DeleteCourseButton  deleteCourse ={this.deleteCourse} id={this.state.courseId}/>
+                        <DeleteCourseButton
+                            deleteCourse ={this.deleteCourse}
+                            id={this.state.courseId}/>
                 </div>
 
-                <CourseTitle/>
-
-
+                <CourseTitle
+                    title={ this.state.title}/>
 
 
                 <div className="row py-2">
                     <div className="col-lg-4 col-sm-12">
                         <h3>Modules</h3>
-                        <ModuleList/>
+                        <ModuleList modules={this.state.modules} courseId={ this.state.course.id}/>
                     </div>
                     <div className="container col-lg-8 col-sm-12">
-                        <h4>Lessons</h4><LessonTabs/>
+                        <h4>Lessons</h4><LessonTabs modules={this.state.courses}/>
                     </div>
                 </div>
             </div>);

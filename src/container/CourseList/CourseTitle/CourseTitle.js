@@ -9,7 +9,7 @@ export default class CourseTitle extends React.Component{
         super(props);
         this.state={
             inEditMode :false,
-            title:"Abcdc"
+            title: this.props.title
         }
     }
 
@@ -18,13 +18,13 @@ export default class CourseTitle extends React.Component{
             this.setState(() => {
                 return { title : this.getCourseTitle() };
             });
-        }, 1000);
+        }, 10);
     }
 
 
     getCourseTitle=()=>{
         // add get course title api here
-        return this.state.title;
+        return this.props.title;
     }
 
 

@@ -74,9 +74,9 @@ export default class CourseCardsDeck
 
             return {coursesNew:  this.props.courses }
         } )
-        console.log(this.state.coursesNew);
+        // console.log(this.state.coursesNew);
 
-        console.log(this.state);
+        // console.log(this.state);
 
 
 
@@ -111,10 +111,10 @@ export default class CourseCardsDeck
         const newCourses = this.state.coursesNew;
         let courses = this.props.courses.map(function(course){
 
-            console.log("printing new courses :");
-            console.log(newCourses);
+            // console.log("printing new courses :");
+            // console.log(newCourses);
 
-            console.log("printing courses ");
+            // console.log("printing courses ");
             course.createdAt = "Yesterday";
             course.updatedAt = "Today";
 
@@ -138,7 +138,7 @@ export default class CourseCardsDeck
             course.coursePageUrl = "/coursePage/";
 
 
-            console.log(course);
+            // console.log(course);
 
             return (
                 <CourseRow

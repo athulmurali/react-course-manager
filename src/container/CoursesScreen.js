@@ -21,7 +21,7 @@ export default class CoursesScreen
     }
 
     componentDidMount(){
-        console.log("Courses screen mounted");
+        // console.log("Courses screen mounted");
         this.getAllCoursesFromServer();
     }
     toggleView =()=>{
@@ -94,15 +94,14 @@ export default class CoursesScreen
 
         this.courseService.findAllCourses()
             .then((coursesReceived) => {
-                console.log("printing :  coursesRec");
-                console.log(coursesReceived);
+                // console.log("printing :  coursesRec");
+                // console.log(coursesReceived);
 
                 this.setState({courses: coursesReceived});
             }).then(()=>{
-            console.log("printing state from react")
-            console.log(this.state);
+            // console.log("printing state from react")
+            // console.log(this.state);
 
-            this.render();
     });
 
 

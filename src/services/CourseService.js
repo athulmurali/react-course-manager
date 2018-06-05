@@ -45,6 +45,7 @@ class CourseService {
     }
 
     getCourseById(courseId) {
+        console.log("getting course info for id : "+ courseId);
         return fetch(COURSE_API_URL + '/' + courseId)
             .then(function(response){
                 return response.json();

@@ -5,7 +5,7 @@ console.log("BASE_URL  " + BASE_URL);
 
 
 const MODULE_API_URL =
-    BASE_URL+ "api/course/CID/module";
+    BASE_URL+ "/api/course/CID/module";
 
 let _singleton = Symbol();
 export default class ModuleService {
@@ -14,14 +14,7 @@ export default class ModuleService {
             throw new Error('Singleton!!!');
     }
 
-    findAllModulesForCourse(courseId) {
-        return fetch(
-            MODULE_API_URL
-                .replace('CID', courseId))
-            .then(function (response) {
-                return response.json();
-            })
-    }
+
 
     createModule(courseId, module) {
         return fetch(MODULE_API_URL.replace('CID', courseId),

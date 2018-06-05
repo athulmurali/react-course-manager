@@ -2,26 +2,29 @@ import React from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
 
 import  ModuleListItem from './ModuleListItem';
+import ModuleService from "../../services/ModuleService";
 
 export default class ModuleList extends React.Component{
 
-
+//     [
+//         {id: 101, title: "JQuery"},
+// {id: 201, title: "React"},
+// {id: 301, title: "Redux"},
+// {id: 401, title: "Angular"},
+// {id: 501, title: "Node"}
+// ]
     constructor(props) {
         super(props);
         this.state = {
+            courseId : 0,
             module: { title: '' },
-            modules: [
-                {id: 101, title: "JQuery"},
-                {id: 201, title: "React"},
-                {id: 301, title: "Redux"},
-                {id: 401, title: "Angular"},
-                {id: 501, title: "Node"}
-            ]
+            modules : props.modules
         }
 
         this.titleChanged = this.titleChanged.bind(this);
         this.createModule = this.createModule.bind(this);
         this.deleteModule = this.deleteModule.bind(this);
+        this.moduleServiceInstance = ModuleService.instance;
     }
 
     titleChanged(event) {
@@ -97,7 +100,6 @@ export default class ModuleList extends React.Component{
 
     }
 
-
     renderListOfModules = () => {
         let index = 0;
         console.log("re- rendering ")
@@ -141,5 +143,24 @@ export default class ModuleList extends React.Component{
 
     }
 
+    componentDidMount(){
+        console.log("Module List Mounted :....");
+        // console.log(this.props.modules);
+        //
+        // this.setModuleList(this.props.modules);
+    }
 
+    componentWillReceiveProps(nextProps)
+    {
+        if(nextProps.modules !== this.props.modules){
+            this.setModuleList(nextProps.modules);
+        }
+
+    }
+    setModuleList=(moduleList)=> {
+        console.log("Getting modules for the course Id : " + this.props.courseId);
+        console.log(moduleList);
+        this.setState(()=> {return {modules: moduleList}}
+        )
+    }
 }
