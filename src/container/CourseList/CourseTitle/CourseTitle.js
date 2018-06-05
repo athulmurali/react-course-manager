@@ -13,19 +13,15 @@ export default class CourseTitle extends React.Component{
         }
     }
 
-    componentDidMount(){
-        this.timer = setInterval(() => {
-            this.setState(() => {
-                return { title : this.getCourseTitle() };
-            });
-        }, 10);
+
+    componentWillReceiveProps(nextProps)
+    {
+        if(nextProps.title !== this.props.title){
+            this.setState({title :nextProps.title});
+        }
+
     }
 
-
-    getCourseTitle=()=>{
-        // add get course title api here
-        return this.props.title;
-    }
 
 
     toggleEditMode=()=>{
