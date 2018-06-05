@@ -1,6 +1,6 @@
 
 
-const BASE_URL = window.location.protocol.concat("//").concat(window.location.host)
+const BASE_URL = "https://neu-course-manager.herokuapp.com"
 console.log("BASE_URL  " + BASE_URL);
 
 
@@ -25,6 +25,21 @@ export default class ModuleService {
             }).then(function (response)
         { return response.json(); })
     }
+
+
+
+
+    findAllModulesForCourse=(CID)=>
+    {
+
+        URL = MODULE_API_URL.replace("CID",CID)
+
+        return fetch(URL)
+            .then(function(response){
+                return response.json();
+            })}
+
+
 
     static get instance() {
         if(!this[_singleton])
