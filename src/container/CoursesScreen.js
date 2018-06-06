@@ -92,8 +92,7 @@ export default class CoursesScreen
         </div>
 
     getAllCoursesFromServer=()=>{
-        console.log("hi");
-
+        console.log("Getting course list from server ......");
 
         this.courseService.findAllCourses()
             .then((coursesReceived) => {
@@ -101,12 +100,7 @@ export default class CoursesScreen
                 // console.log(coursesReceived);
 
                 this.setState({courses: coursesReceived});
-            }).then(()=>{
-            // console.log("printing state from react")
-            // console.log(this.state);
-
-    });
-
+            })
 
     }
 
@@ -115,8 +109,10 @@ export default class CoursesScreen
         let course = {
             "title" : "new-course-untitled"
         }
-        this.courseService.createCourse(course);
-        this.getAllCoursesFromServer();
+
+        this.courseService.createCourse(course).then(()=>{
+            this.getAllCoursesFromServer();
+        });
     }
 
 

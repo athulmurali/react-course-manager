@@ -18,7 +18,7 @@ export default class ModuleList extends React.Component{
         this.state = {
             courseId : 0,
             module: { title: '' },
-            modules : props.modules
+            modules : []
         }
 
         this.titleChanged = this.titleChanged.bind(this);
@@ -29,22 +29,35 @@ export default class ModuleList extends React.Component{
 
     titleChanged(event) {
         console.log(event.target.value);
-        this.setState({module: {title: event.target.value, id : this.state.modules.length +1}});
+        this.setState({module: {title: event.target.value}});
 
     }
 
     createModule(){
 
         console.log("course id to create module under : ");
+        console.log(this.state.module);
 
         this.moduleServiceInstance.createModule(this.props.courseId, this.state.module).then(
             (createdModule)=>{
 
+
+                let newModulesArray = this.state.modules;
+                newModulesArray.push(createdModule)
                 this.setState(
-                { modules : this.state.modules.concat(createdModule)});
-                this.setState({module: {title: ""}});}
+                { modules : newModulesArray      },
+                    ()=> {          this.setState({module: {title: ""}})
+
+                    }
+                );
+            }
         );
 
+
+    }
+
+    resetTitle=()=>{
+        this.setState({module: {title: ""}});
 
     }
 
@@ -170,8 +183,6 @@ export default class ModuleList extends React.Component{
     componentDidMount(){
         console.log("Module List Mounted :....");
         // console.log(this.props.modules);
-        //
-        // this.setModuleList(this.props.modules);
     }
 
     componentWillReceiveProps(nextProps)

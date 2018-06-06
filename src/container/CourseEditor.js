@@ -164,14 +164,12 @@ export default class CourseEditor extends React.Component{
         console.log("selected module id : "+ id);
         console.log("Fetching lessons from server for moduleId  : "+ id);
 
+        this.setState({moduleId :id, moduleSelected : true}, ()=>{
+            this.lessonService.findAllLessonsForModule(this.state.courseId, this.state.moduleId).then((lessons)=>{
+                this.setState({lessons : lessons});
+            });
 
-
-        this.lessonService.findAllLessonsForModule(this.state.courseId, this.state.moduleId).then((lessons)=>{
-            this.setState({lessons : lessons});
         });
-
-
-        this.setState({moduleId :id, moduleSelected : true});
 
     }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import LessonService from "../../services/LessonService";
-import LessonListItem from "./LessonListItem";
+import LessonListItem from "./LessonItem/LessonListItem";
 
 
 export default class LessonList extends React.Component{

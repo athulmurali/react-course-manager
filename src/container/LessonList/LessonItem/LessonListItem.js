@@ -1,8 +1,6 @@
 import React,{Component} from 'react';
-import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../../../node_modules/font-awesome/css/font-awesome.min.css';
-import EditableLessonListItem from "./LessonItem/EditableLessonListItem";
 import StaticLessonListItem from "./StaticLessonListItem";
+import EditableLessonListItem from "./EditableLessonListItem";
 
 
 export default class LessonListItem extends Component {
