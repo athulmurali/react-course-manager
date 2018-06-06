@@ -45,6 +45,15 @@ export default  class  EditableCourseTitle extends React.Component{
                     </a>
             </span>
         </div>
+
+    componentDidMount(){
+        this.setState(
+            {
+                title : this.props.title
+            }
+        )
+
+    }
 }
 
 

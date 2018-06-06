@@ -73,6 +73,7 @@ export default class CourseTitle extends React.Component{
                     toggleEditMode={this.toggleEditMode}/>
 
             else return <EditableCourseTitle
+                title = {this.state.title}
                 toggleEditMode={this.toggleEditMode}
                 editTitle={this.editTitle}/>
         }

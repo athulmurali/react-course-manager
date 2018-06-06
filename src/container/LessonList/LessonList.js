@@ -129,7 +129,7 @@ export default class LessonList extends React.Component{
         console.log("Lesson List Mounted :....");
         // console.log(this.props.lessons);
         //
-        // this.setLessonList(this.props.lessons);
+        this.setLessonList(this.props.lessons);
     }
 
     componentWillReceiveProps(nextProps)

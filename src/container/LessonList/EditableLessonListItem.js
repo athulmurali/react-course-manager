@@ -32,6 +32,11 @@ import React,{Component} from 'react';
          this.props.toggleEditMode();
 
      }
+     componentDidMount(){
+         this.setState({
+             title : this.props.title
+         })
+     }
 
      render = (props)=>
          <div>
