@@ -1,12 +1,14 @@
 import React from "react";
 import StaticCourseTitle from "./StaticCourseTitle";
 import EditableCourseTitle from "./EditableCourseTitle";
+import CourseService from "../../../services/CourseService";
 
 export default class CourseTitle extends React.Component{
 
     constructor(props){
 
         super(props);
+        this.courseService =  CourseService.instance
         this.state={
             inEditMode :false,
             title: this.props.title
@@ -41,11 +43,21 @@ export default class CourseTitle extends React.Component{
         console.log("Title before edit");
         console.log(this.state.title);
 
-        this.setState((state)=>{
-            console.log("resetting state options");
+        let course ={
+            title: newTitle
+        }
 
-            return {title:  newTitle }
-        } )
+        this.courseService.updateCourse(this.props.courseId,course).then(
+            (updatedCourse)=>{
+                this.setState((state)=>{
+                    console.log("Title : Updating title after server success");
+
+                    return {title:  updatedCourse.title }
+                } )
+            }
+        );
+
+
 
         console.log("Title after update ");
         console.log(this.state.title);

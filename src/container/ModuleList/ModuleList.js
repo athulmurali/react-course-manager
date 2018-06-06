@@ -34,9 +34,16 @@ export default class ModuleList extends React.Component{
     }
 
     createModule(){
-        this.setState(
-            { modules : this.state.modules.concat(this.state.module)});
-        this.setState({module: {title: ""}});
+
+        console.log("course id to create module under : ");
+
+        this.moduleServiceInstance.createModule(this.props.courseId, this.state.module).then(
+            (createdModule)=>{
+
+                this.setState(
+                { modules : this.state.modules.concat(createdModule)});
+                this.setState({module: {title: ""}});}
+        );
 
 
     }
@@ -47,20 +54,28 @@ export default class ModuleList extends React.Component{
         console.log("Modules before delete");
         console.log(this.state.modules);
         console.log("Removing module in server   : "+ this.state.modules[index]);
-        this.moduleServiceInstance
+        // this.moduleServiceInstance
+        this.moduleServiceInstance.deleteModule(this.state.modules[index].id).then(
+            (response) =>{
+                if (response.status == 200)
+                {
+                    this.setState((state)=>{
+                        console.log("resetting state options");
+                        var oldOptions = this.state.modules;
+                        let i=-1;
+                        let     modulesAfterDeletion = oldOptions.filter(function(module){
+                            i++;
+                            console.log(i);
+                            return i != index });
+                        return {modules:  modulesAfterDeletion }
+                    } )
 
+                }
+                else{
+                    alert("cannot delete ! Server issue");
+                }
+            })
 
-        //
-        this.setState((state)=>{
-            console.log("resetting state options");
-            var oldOptions = this.state.modules;
-            let i=-1;
-            let     modulesAfterDeletion = oldOptions.filter(function(module){
-                i++;
-                console.log(i);
-                return i != index });
-            return {modules:  modulesAfterDeletion }
-        } )
     }
 
     editModule=(index,title,  updated)=>{

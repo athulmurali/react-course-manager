@@ -23,7 +23,8 @@ export default class ModuleService {
                 headers: { 'Content-Type': 'application/json' },
                 method: 'POST'
             }).then(function (response)
-        { return response.json(); })
+        { return response.json(); }
+        )
     }
 
 
@@ -55,6 +56,18 @@ export default class ModuleService {
 
     }
 
+
+    deleteModule =(id) =>
+    {
+        let  deleteModuleURL = BASE_URL+"/api/module/" + id;
+
+        return fetch(deleteModuleURL ,
+            {
+                method: 'DELETE'
+            }).then(function (response) {
+            return response;
+        })
+    }
 
     static get instance() {
         if(!this[_singleton])

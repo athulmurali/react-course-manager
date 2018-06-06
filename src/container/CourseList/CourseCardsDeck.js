@@ -82,6 +82,8 @@ export default class CourseCardsDeck
 
     }
 
+
+    component
     render= () =>{
         console.log("Course viewType")
 
@@ -108,7 +110,6 @@ export default class CourseCardsDeck
 
 
     renderCoursesAsCards= () =>{
-        const newCourses = this.state.coursesNew;
         let courses = this.props.courses.map(function(course){
 
             // console.log("printing new courses :");
@@ -186,6 +187,7 @@ export default class CourseCardsDeck
             { modules : this.state.courses.concat(this.state.course)});
         this.setState({ id : 0 ,course: {title: "", coursePageUrl: "/courses"}});
     }
+
 
 
 

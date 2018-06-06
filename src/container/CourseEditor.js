@@ -8,6 +8,7 @@ import LessonTabs from "./LessonList/LessonTabs";
 import CourseTitle from "./CourseList/CourseTitle/CourseTitle";
 import DeleteCourseButton from "./CourseList/DeleteCourseButton";
 import CourseService from "../services/CourseService";
+import {Redirect} from "react-router-dom";
 
 export default class CourseEditor extends React.Component{
 
@@ -20,6 +21,7 @@ export default class CourseEditor extends React.Component{
         // console.log(this.props)
         this.state =
             {
+                courseId : -1,
                 title :"unnamed",
                course :
                    {
@@ -60,8 +62,9 @@ export default class CourseEditor extends React.Component{
             }
         ]
         },
-            modules :[]
+            modules :[],
 
+            deleted :false
             }
     }
 
@@ -109,17 +112,35 @@ export default class CourseEditor extends React.Component{
     deleteCourse=(id)=>{
         var oldOptions = this.state.courses;
         console.log("Delete course id : " + id);
-        this.courseService.deleteCourse(id);
+        this.courseService.deleteCourse(id).then(
+            (res)=>{
+                this.setState({deleted: true})
+            }
+        );
+
+
+
+
+
+
+
+
+
+
 
         //api to delete
 
     }
 
 
-    render(){
-        console.log("current course id : " + this.state.course.id);
-        return (
-            <div className="container" >
+
+    render=()=>{
+       return  this.state.deleted ?
+            (<Redirect to="/courses"/>): this.renderEditor()
+    }
+    renderEditor= ()=>{
+
+       return ( <div className="container" >
                 <div className= "row   py-1 justify-content-end" >
 
                         <DeleteCourseButton
@@ -128,13 +149,14 @@ export default class CourseEditor extends React.Component{
                 </div>
 
                 <CourseTitle
+                    courseId = {this.state.courseId}
                     title={ this.state.title}/>
 
 
                 <div className="row py-2">
                     <div className="col-lg-4 col-sm-12">
                         <h3>Modules</h3>
-                        <ModuleList modules={this.state.modules} courseId={ this.state.course.id}/>
+                        <ModuleList modules={this.state.modules} courseId={ this.state.courseId}/>
                     </div>
                     <div className="container col-lg-8 col-sm-12">
                         <h4>Lessons</h4><LessonTabs modules={this.state.courses}/>

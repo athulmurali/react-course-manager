@@ -24,6 +24,9 @@ export default class CoursesScreen
         // console.log("Courses screen mounted");
         this.getAllCoursesFromServer();
     }
+
+
+
     toggleView =()=>{
         this.setState(()=>{
             return {inListView: !this.state.inListView}})
