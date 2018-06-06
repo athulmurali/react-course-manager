@@ -8,7 +8,7 @@ export default class LessonList extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            moduleId : 0,
+
             lesson: [{ title: '' }],
             lessons : []
         }
@@ -129,8 +129,24 @@ export default class LessonList extends React.Component{
 
     componentWillReceiveProps(nextProps)
     {
+        console.log("Lesson list receiving new props:");
+        console.log(nextProps.lessons);
+        console.log(nextProps.moduleId);
+
+        if (nextProps.lessons!= null){
 
             this.setLessonList(nextProps.lessons);
+            this.setState({
+                moduleId : nextProps.moduleId,
+                courseId : nextProps.courseId,
+                lessons : nextProps.lessons
+
+            })
+
+        }
+
+
+
 
     }
     setLessonList=(lessonList)=> {

@@ -35,9 +35,8 @@ export default class LessonService {
         });
     }
 
-    findAllLessons() {
 
-    }
+
     findAllLessonsForModule(courseId, moduleId) {
         return fetch(LESSON_API_URL.replace('CID', courseId).replace('MID', moduleId))
             .then(function (response) {
