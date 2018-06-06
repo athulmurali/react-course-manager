@@ -53,29 +53,6 @@ export default class LessonTabs
     }
 
 
-    editLesson = () =>
-    {
-
-    }
-
-
-    updateLesson =()=>{
-
-    }
-
-
-    deleteLesson =()=>{
-
-    }
-
-
-    createLesson =()=> {
-
-        this.setState({lessons   :  this.state.lessons.concat(this.state.newLesson)})
-        this.setState({newLesson :  this.state.lessons.concat(this.state.newLesson)})
-
-    }
-
 }
 
 

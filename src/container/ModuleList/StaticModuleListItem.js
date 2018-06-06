@@ -18,7 +18,7 @@ export default class StaticModuleListItem extends React.Component{
     }
 
     handleSelect=()=>{
-        alert("sending to next" + this.props.id);
+        console.log("Static Module Item : Module Id selected" + this.props.id);
         this.props.selectModule(this.props.id)
     }
 

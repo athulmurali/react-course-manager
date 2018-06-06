@@ -9,8 +9,8 @@ export default class LessonList extends React.Component{
         super(props);
         this.state = {
             moduleId : 0,
-            lesson: { title: '' },
-            lessons : props.lessons
+            lesson: [{ title: '' }],
+            lessons : []
         }
 
         this.titleChanged = this.titleChanged.bind(this);
@@ -33,9 +33,9 @@ export default class LessonList extends React.Component{
     }
     createLesson(){
 
-        console.log("module id to create lesson under : ");
+        console.log("module id to create lesson under : " + this.props.moduleId);
 
-        this.lessonServiceInstance.createLesson(this.props.moduleId, this.state.lesson).then(
+        this.lessonServiceInstance.createLesson(this.props.courseId,this.props.moduleId, this.state.lesson).then(
             (createdLesson)=>{
 
                 this.setState(
@@ -57,15 +57,14 @@ export default class LessonList extends React.Component{
             (response) =>{
                 if (response.status == 200)
                 {
+                    console.log("removing  ");
+                    console.log(this.state.lessons[index]);
                     this.setState((state)=>{
-                        console.log("resetting state options");
+                        console.log("resetting state options -lesson");
                         var oldOptions = this.state.lessons;
-                        let i=-1;
-                        let     lessonsAfterDeletion = oldOptions.filter(function(lesson){
-                            i++;
-                            console.log(i);
-                            return i != index });
-                        return {lessons:  lessonsAfterDeletion }
+                        oldOptions.slice(index,1)
+
+                        return {lessons:  oldOptions }
                     } )
 
                 }
@@ -120,50 +119,6 @@ export default class LessonList extends React.Component{
         console.log(this.state.lessons[index]);
     }
 
-    renderListOfLessons = () => {
-        let index = 0;
-        console.log("Component LessonList : re- rendering ")
-        console.log(this.state);
-        let lessons = this.state.lessons.map((lesson) => {
-                index++;
-                return <LessonListItem
-                    key={lesson.id}
-                    id={lesson.id}
-                    index={index}
-                    title={lesson.title}
-                    inEditMode={false}
-                    deleteLesson={this.deleteLesson}
-                    editLesson = {this.editLesson}
-                    selectLesson = {this.selectLesson}
-                />
-            }
-        )
-
-        return lessons
-
-    }
-
-    render(){
-        return(
-            <div>
-                <input className="form-control"
-                       onChange={this.titleChanged}
-                       placeholder="title"
-                       value={this.state.lesson.title}/>
-                <button
-                    className="btn btn-primary btn-block"
-                    onClick={this.createLesson}>
-                    <i className="fa fa-plus"></i>
-                </button>
-
-            <ul className="list-group">
-                {this.renderListOfLessons()}
-            </ul>
-            </div>
-
-        );
-
-    }
 
     componentDidMount(){
         console.log("Lesson List Mounted :....");
@@ -174,9 +129,8 @@ export default class LessonList extends React.Component{
 
     componentWillReceiveProps(nextProps)
     {
-        if(nextProps.lessons !== this.props.lessons){
+
             this.setLessonList(nextProps.lessons);
-        }
 
     }
     setLessonList=(lessonList)=> {
@@ -185,4 +139,56 @@ export default class LessonList extends React.Component{
         this.setState(()=> {return {lessons: lessonList}}
         )
     }
+
+
+
+    returnListOfLessons =() => {
+        let index =0;
+       return  this.state.lessons.map((lesson) => {
+            index++;
+            return  <li  key ={index} className="nav-item"><a className="nav-link" href="#">
+                <LessonListItem
+                    key={lesson.id}
+                    id={lesson.id}
+                    index={index}
+                    title={lesson.title}
+                    inEditMode={false}
+                    deleteLesson={this.deleteLesson}
+                    editLesson = {this.editLesson}
+                    selectLesson = {this.selectLesson}
+                />
+
+            </a></li>
+        });
+    }
+
+
+
+    render=()=>{
+        let index = 0;
+
+        let lessons = this.returnListOfLessons()
+        return  <ul className="nav nav-tabs px-2">
+            <li className="nav-item nav-link active">
+
+                <input className="form-control"
+                       onChange={this.titleChanged}
+                       placeholder="title"
+                       value={this.state.lesson.title}/>
+                    <span className="float-right">
+                         <a href={"#"} style={{'color': 'inherit'}} >
+
+                            <i className="px-2 fa fa-plus-circle "  onClick={this.createLesson}></i>
+                        </a>
+
+                    </span>
+
+            </li>
+
+
+                {lessons}
+        </ul>
+    }
+
+
 }

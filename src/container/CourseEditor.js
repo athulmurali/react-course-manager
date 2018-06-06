@@ -75,8 +75,10 @@ export default class CourseEditor extends React.Component{
                         ]
                     },
                 modules :[],
+                lessons:[],
 
-                deleted :false
+                deleted :false,
+                moduleSelected : false
             }
 
 
@@ -157,12 +159,23 @@ export default class CourseEditor extends React.Component{
     }
 
     selectModule =(id)=> {
-        alert("selected module id : "+ id);
+        console.log("selected module id : "+ id);
+        this.setState({moduleId :id});
 
-        // get api for lesson for currentModule :
+        console.log(this.state.modules.find((module)=>{
+            if (module.id == id){
+                console.log("looking for " + id);
+                console.log( module.lessons);
 
-        // set lessons name
+                this.setState({lessons : module.lessons,moduleId: id, moduleSelected : true});
+            }
+            return (module.id == id)
+        }));
 
+    }
+
+    selectLesson(lessonId){
+        alert("Course editor  : Lesson  id clicked : " + lessonId);
     }
 
     render=()=>{
@@ -192,14 +205,22 @@ export default class CourseEditor extends React.Component{
                                     selectModule = {this.selectModule}/>
                     </div>
                     <div className="container col-lg-8 col-sm-12">
-                        <h4>Lessons</h4><LessonTabs
-                        modules={this.state.courses}/>
-                    </div>
-
-
-                    <div className="container col-lg-8 col-sm-12">
                         <h4>Lessons</h4>
-                        <LessonList lessons={this.lessons}   moduleId={ this.moduleID}/>
+
+                        {!!this.state.moduleSelected &&
+                        <LessonList lessons={this.state.lessons}
+                                    moduleId={ this.state.moduleId}
+                                    courseId={ this.state.courseId}
+                                    selectLesson = {this.selectLesson}
+                        />
+                        }
+
+
+
+                        {!this.state.moduleSelected &&
+                        <h3>No module selected</h3>
+                        }
+
                     </div>
 
 
