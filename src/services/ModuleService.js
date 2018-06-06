@@ -28,17 +28,32 @@ export default class ModuleService {
 
 
 
-
     findAllModulesForCourse=(CID)=>
     {
 
         URL = MODULE_API_URL.replace("CID",CID)
 
         return fetch(URL)
-            .then(function(response){
+            .then(function(response)
+            {
                 return response.json();
-            })}
+            })
+    }
 
+    updateModule= (id,module) => {
+
+        let  updateModuleURL = BASE_URL+"/api/module/" + id;
+        return fetch(updateModuleURL,
+            {
+                body: JSON.stringify(module),
+                headers: { 'Content-Type': 'application/json' },
+                method: 'PUT'
+            }).then((response)=>{
+            return response.json();
+        })
+
+
+    }
 
 
     static get instance() {

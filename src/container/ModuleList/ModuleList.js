@@ -46,7 +46,11 @@ export default class ModuleList extends React.Component{
         console.log("index to remove : " + index);
         console.log("Modules before delete");
         console.log(this.state.modules);
-        console.log("trying to remove option  : "+ this.state.modules[index]);
+        console.log("Removing module in server   : "+ this.state.modules[index]);
+        this.moduleServiceInstance
+
+
+        //
         this.setState((state)=>{
             console.log("resetting state options");
             var oldOptions = this.state.modules;
@@ -62,11 +66,6 @@ export default class ModuleList extends React.Component{
     editModule=(index,title,  updated)=>{
 
         index --; //compensation for index start base from 1
-        console.log("Edit module ");
-        console.log("index          : " + index);
-        console.log("title          : " + title);
-        console.log("updated        : " + updated);
-
 
         console.log("Module before edit");
         console.log(this.state.modules);
@@ -76,33 +75,41 @@ export default class ModuleList extends React.Component{
             let newModules = this.state.modules;
             newModules[index].title = title;
 
+            console.log("updating module : ");
+            console.log("before update ");
+            console.log(this.state.modules[index]);
+
+            let module = {
+                title : title
+            }
 
 
-            this.setState((state)=>{
-                console.log("resetting state options");
+                newModules= this.state.modules
+                newModules[index].title = title
 
-                return {modules:  newModules }
+                this.moduleServiceInstance.updateModule(newModules[index].id,newModules[index]).then((response)=>{
+                    console.log("Module :updated in server ")
+                    console.log(response);
+
+                    this.setState((state)=>{
+                        console.log("resetting state options");
+                        return {modules:  newModules }
+                    });
             } )
-        }
 
+
+            console.log("after update ");
+            console.log(this.state.modules[index]);
+
+        }
 
         console.log("Module after edit");
         console.log(this.state.modules[index]);
-
-
-        // to api :
-
-        //courseid
-        //title
-        // updatedAt:
-
-
-
     }
 
     renderListOfModules = () => {
         let index = 0;
-        console.log("re- rendering ")
+        console.log("Component ModuleList : re- rendering ")
         console.log(this.state);
         let modules = this.state.modules.map((module) => {
                 index++;
