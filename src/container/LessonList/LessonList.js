@@ -1,46 +1,46 @@
 import React from 'react';
-import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
+import LessonService from "../../services/LessonService";
+import LessonListItem from "./LessonListItem";
 
 
 export default class LessonList extends React.Component{
 
-//     [
-//         {id: 101, title: "JQuery"},
-// {id: 201, title: "React"},
-// {id: 301, title: "Redux"},
-// {id: 401, title: "Angular"},
-// {id: 501, title: "Node"}
-// ]
     constructor(props) {
         super(props);
         this.state = {
-            courseId : 0,
-            module: { title: '' },
-            modules : props.modules
+            moduleId : 0,
+            lesson: { title: '' },
+            lessons : props.lessons
         }
 
         this.titleChanged = this.titleChanged.bind(this);
         this.createLesson = this.createLesson.bind(this);
         this.deleteLesson = this.deleteLesson.bind(this);
-        this.moduleServiceInstance = LessonService.instance;
+        this.lessonServiceInstance = LessonService.instance;
+
+
     }
 
     titleChanged(event) {
         console.log(event.target.value);
-        this.setState({module: {title: event.target.value, id : this.state.modules.length +1}});
+        this.setState({lesson: {title: event.target.value, id : this.state.lessons.length +1}});
 
     }
 
+
+    selectLesson=(lessonId)=>{
+        alert("selected lessonId : " +  lessonId);
+    }
     createLesson(){
 
-        console.log("course id to create module under : ");
+        console.log("module id to create lesson under : ");
 
-        this.moduleServiceInstance.createLesson(this.props.courseId, this.state.module).then(
+        this.lessonServiceInstance.createLesson(this.props.moduleId, this.state.lesson).then(
             (createdLesson)=>{
 
                 this.setState(
-                { modules : this.state.modules.concat(createdLesson)});
-                this.setState({module: {title: ""}});}
+                { lessons : this.state.lessons.concat(createdLesson)});
+                this.setState({lesson: {title: ""}});}
         );
 
 
@@ -50,22 +50,22 @@ export default class LessonList extends React.Component{
         index = index -1 ; // index starts from 1 in output
         console.log("index to remove : " + index);
         console.log("Lessons before delete");
-        console.log(this.state.modules);
-        console.log("Removing module in server   : "+ this.state.modules[index]);
-        // this.moduleServiceInstance
-        this.moduleServiceInstance.deleteLesson(this.state.modules[index].id).then(
+        console.log(this.state.lessons);
+        console.log("Removing lesson in server   : "+ this.state.lessons[index]);
+        // this.lessonServiceInstance
+        this.lessonServiceInstance.deleteLesson(this.state.lessons[index].id).then(
             (response) =>{
                 if (response.status == 200)
                 {
                     this.setState((state)=>{
                         console.log("resetting state options");
-                        var oldOptions = this.state.modules;
+                        var oldOptions = this.state.lessons;
                         let i=-1;
-                        let     modulesAfterDeletion = oldOptions.filter(function(module){
+                        let     lessonsAfterDeletion = oldOptions.filter(function(lesson){
                             i++;
                             console.log(i);
                             return i != index });
-                        return {modules:  modulesAfterDeletion }
+                        return {lessons:  lessonsAfterDeletion }
                     } )
 
                 }
@@ -81,63 +81,65 @@ export default class LessonList extends React.Component{
         index --; //compensation for index start base from 1
 
         console.log("Lesson before edit");
-        console.log(this.state.modules);
+        console.log(this.state.lessons);
 
 
-        if (index > -1 && index  <  this.state.modules.length) {
-            let newLessons = this.state.modules;
+        if (index > -1 && index  <  this.state.lessons.length) {
+            let newLessons = this.state.lessons;
             newLessons[index].title = title;
 
-            console.log("updating module : ");
+            console.log("updating lesson : ");
             console.log("before update ");
-            console.log(this.state.modules[index]);
+            console.log(this.state.lessons[index]);
 
-            let module = {
+            let lesson = {
                 title : title
             }
 
 
-                newLessons= this.state.modules
+                newLessons= this.state.lessons
                 newLessons[index].title = title
 
-                this.moduleServiceInstance.updateLesson(newLessons[index].id,newLessons[index]).then((response)=>{
+                this.lessonServiceInstance.updateLesson(newLessons[index].id,newLessons[index]).then((response)=>{
                     console.log("Lesson :updated in server ")
                     console.log(response);
 
                     this.setState((state)=>{
                         console.log("resetting state options");
-                        return {modules:  newLessons }
+                        return {lessons:  newLessons }
                     });
             } )
 
 
             console.log("after update ");
-            console.log(this.state.modules[index]);
+            console.log(this.state.lessons[index]);
 
         }
 
         console.log("Lesson after edit");
-        console.log(this.state.modules[index]);
+        console.log(this.state.lessons[index]);
     }
 
     renderListOfLessons = () => {
         let index = 0;
         console.log("Component LessonList : re- rendering ")
         console.log(this.state);
-        let modules = this.state.modules.map((module) => {
+        let lessons = this.state.lessons.map((lesson) => {
                 index++;
                 return <LessonListItem
-                    key={module.id}
-                    id={module.id}
+                    key={lesson.id}
+                    id={lesson.id}
                     index={index}
-                    title={module.title}
+                    title={lesson.title}
                     inEditMode={false}
                     deleteLesson={this.deleteLesson}
-                    editLesson = {this.editLesson} />
+                    editLesson = {this.editLesson}
+                    selectLesson = {this.selectLesson}
+                />
             }
         )
 
-        return modules
+        return lessons
 
     }
 
@@ -147,7 +149,7 @@ export default class LessonList extends React.Component{
                 <input className="form-control"
                        onChange={this.titleChanged}
                        placeholder="title"
-                       value={this.state.module.title}/>
+                       value={this.state.lesson.title}/>
                 <button
                     className="btn btn-primary btn-block"
                     onClick={this.createLesson}>
@@ -165,22 +167,22 @@ export default class LessonList extends React.Component{
 
     componentDidMount(){
         console.log("Lesson List Mounted :....");
-        // console.log(this.props.modules);
+        // console.log(this.props.lessons);
         //
-        // this.setLessonList(this.props.modules);
+        // this.setLessonList(this.props.lessons);
     }
 
     componentWillReceiveProps(nextProps)
     {
-        if(nextProps.modules !== this.props.modules){
-            this.setLessonList(nextProps.modules);
+        if(nextProps.lessons !== this.props.lessons){
+            this.setLessonList(nextProps.lessons);
         }
 
     }
-    setLessonList=(moduleList)=> {
-        console.log("Getting modules for the course Id : " + this.props.courseId);
-        console.log(moduleList);
-        this.setState(()=> {return {modules: moduleList}}
+    setLessonList=(lessonList)=> {
+        console.log("Getting lessons for the module Id : " + this.props.moduleId);
+        console.log(lessonList);
+        this.setState(()=> {return {lessons: lessonList}}
         )
     }
 }

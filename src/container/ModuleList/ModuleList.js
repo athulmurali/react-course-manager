@@ -135,7 +135,9 @@ export default class ModuleList extends React.Component{
                     title={module.title}
                     inEditMode={false}
                     deleteModule={this.deleteModule}
-                    editModule = {this.editModule} />
+                    editModule = {this.editModule}
+                    selectModule ={this.props.selectModule}
+                />
             }
         )
 

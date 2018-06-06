@@ -9,8 +9,20 @@ import CourseTitle from "./CourseList/CourseTitle/CourseTitle";
 import DeleteCourseButton from "./CourseList/DeleteCourseButton";
 import CourseService from "../services/CourseService";
 import {Redirect} from "react-router-dom";
+import LessonList from "./LessonList/LessonList";
 
 export default class CourseEditor extends React.Component{
+
+    componentDidMount() {
+
+        this.selectCourse(this.props.match.params.courseId);
+        // console.log("id from url " + this.props.match.params.courseId);
+        this.updateTitleState();
+        this.updateModules();
+
+
+    }
+
 
     constructor(props)
     {
@@ -23,59 +35,71 @@ export default class CourseEditor extends React.Component{
             {
                 courseId : -1,
                 title :"unnamed",
-               course :
-                   {
-            "id": 171,
-            "title": "Web Development",
-            "modules": [
-            {
-                "id": 41,
-                "title": "Module 1- React",
-                "lessons": [
+                course :
                     {
-                        "id": 2,
-                        "title": "lesson -1 editted"
+                        "id": 171,
+                        "title": "Web Development",
+                        "modules": [
+                            {
+                                "id": 41,
+                                "title": "Module 1- React",
+                                "lessons": [
+                                    {
+                                        "id": 2,
+                                        "title": "lesson -1 editted"
+                                    },
+                                    {
+                                        "id": 12,
+                                        "title": "lesson -1"
+                                    },
+                                    {
+                                        "id": 22,
+                                        "title": "lesson -1"
+                                    },
+                                    {
+                                        "id": 32,
+                                        "title": "lesson -1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 71,
+                                "title": "Module 2- Redux editted",
+                                "lessons": []
+                            },
+                            {
+                                "id": 81,
+                                "title": "Module 3- Redux editted",
+                                "lessons": []
+                            }
+                        ]
                     },
-                    {
-                        "id": 12,
-                        "title": "lesson -1"
-                    },
-                    {
-                        "id": 22,
-                        "title": "lesson -1"
-                    },
-                    {
-                        "id": 32,
-                        "title": "lesson -1"
-                    }
-                ]
-            },
-            {
-                "id": 71,
-                "title": "Module 2- Redux editted",
-                "lessons": []
-            },
-            {
-                "id": 81,
-                "title": "Module 3- Redux editted",
-                "lessons": []
+                modules :[],
+
+                deleted :false
             }
-        ]
+
+
+        this.lessons = [
+        {
+            "id": 2,
+            "title": "lesson -01"
         },
-            modules :[],
+        {
+            "id": 12,
+            "title": "lesson -1"
+        },
+        {
+            "id": 22,
+            "title": "lesson -11"
+        },
+        {
+            "id": 32,
+            "title": "lesson -111"
+        }
+    ]
 
-            deleted :false
-            }
-    }
-
-
-    componentDidMount() {
-
-        this.selectCourse(this.props.match.params.courseId);
-        // console.log("id from url " + this.props.match.params.courseId);
-        this.updateTitleState();
-        this.updateModules();
-
+        this.moduleID = 10
 
     }
 
@@ -132,7 +156,14 @@ export default class CourseEditor extends React.Component{
 
     }
 
+    selectModule =(id)=> {
+        alert("selected module id : "+ id);
 
+        // get api for lesson for currentModule :
+
+        // set lessons name
+
+    }
 
     render=()=>{
        return  this.state.deleted ?
@@ -156,11 +187,22 @@ export default class CourseEditor extends React.Component{
                 <div className="row py-2">
                     <div className="col-lg-4 col-sm-12">
                         <h3>Modules</h3>
-                        <ModuleList modules={this.state.modules} courseId={ this.state.courseId}/>
+                        <ModuleList modules={this.state.modules}
+                                    courseId={ this.state.courseId}
+                                    selectModule = {this.selectModule}/>
                     </div>
                     <div className="container col-lg-8 col-sm-12">
-                        <h4>Lessons</h4><LessonTabs modules={this.state.courses}/>
+                        <h4>Lessons</h4><LessonTabs
+                        modules={this.state.courses}/>
                     </div>
+
+
+                    <div className="container col-lg-8 col-sm-12">
+                        <h4>Lessons</h4>
+                        <LessonList lessons={this.lessons}   moduleId={ this.moduleID}/>
+                    </div>
+
+
                 </div>
             </div>);
     }

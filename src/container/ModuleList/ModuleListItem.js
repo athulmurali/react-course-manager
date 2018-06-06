@@ -55,6 +55,7 @@ export default class ModuleListItem extends Component{
                         title           =   {this.props.title}
                         toggleEditMode  =   {this.toggleEditMode}
                         deleteModule    =   {this.props.deleteModule}
+                        selectModule    =   {this.props.selectModule}
                     /> }
                 </li>
         );

@@ -1,8 +1,8 @@
 import React,{Component} from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../../../node_modules/font-awesome/css/font-awesome.min.css';
-import EditableModuleListItem from "./EditableLessonListItem";
-import StaticModuleListItem from "./StaticLessonListItem";
+import EditableLessonListItem from "./EditableLessonListItem";
+import StaticLessonListItem from "./StaticLessonListItem";
 
 
 export default class LessonListItem extends Component{
@@ -15,7 +15,7 @@ export default class LessonListItem extends Component{
             }
 
         this.toggleEditMode = this.toggleEditMode.bind(this);
-        console.log("ModuleListItem : Constructor props")
+        console.log("LessonListItem : Constructor props")
         console.log(this.props);
 
 
@@ -40,21 +40,22 @@ export default class LessonListItem extends Component{
                 <li className ="list-group-item" >
 
                     {!!this.state.inEditMode &&
-                    <EditableModuleListItem
+                    <EditableLessonListItem
                         id              =   {this.props.id }
                         title           =   {this.props.title}
                         index           =   {this.props.index}
-                        toggleEditMode  =   { this.toggleEditMode}
-                        editModule = {this.props.editModule}
+                        toggleEditMode  =   {this.toggleEditMode}
+                        editLesson      =   {this.props.editLesson}
                     />}
 
                     {!!!this.state.inEditMode &&
-                    <StaticModuleListItem
+                    <StaticLessonListItem
                         id              =   {this.props.id }
                         index           =   {this.props.index}
                         title           =   {this.props.title}
                         toggleEditMode  =   {this.toggleEditMode}
-                        deleteModule    =   {this.props.deleteModule}
+                        deleteLesson    =   {this.props.deleteLesson}
+                        selectLesson    =   {this.props.selectLesson}
                     /> }
                 </li>
         );

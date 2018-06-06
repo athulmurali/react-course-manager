@@ -17,11 +17,17 @@ export default class StaticModuleListItem extends React.Component{
         this.props.deleteModule(this.props.index);
     }
 
+    handleSelect=()=>{
+        alert("sending to next" + this.props.id);
+        this.props.selectModule(this.props.id)
+    }
+
     render =()=>
         <div>
-            <Link to='/courses' className="nav-item" style={{'color': 'black'}}>
+            <a href="#" className="nav-item" style={{'color': 'black',textDecoration :'none'}}
+               onClick={this.handleSelect}>
                 {"Module - " + this.props.index + " "+this.props.title}
-            </Link>
+            </a>
             <span className="float-right">
 
         <a href={"#"} style={{'color': 'inherit'}} >
