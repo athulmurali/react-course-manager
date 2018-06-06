@@ -4,7 +4,6 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../../node_modules/font-awesome/css/font-awesome.min.css';
 
 import ModuleList from "./ModuleList/ModuleList";
-import LessonTabs from "./LessonList/LessonTabs";
 import CourseTitle from "./CourseList/CourseTitle/CourseTitle";
 import DeleteCourseButton from "./CourseList/DeleteCourseButton";
 import CourseService from "../services/CourseService";
@@ -164,13 +163,16 @@ export default class CourseEditor extends React.Component{
     selectModule =(id)=> {
         console.log("selected module id : "+ id);
         console.log("Fetching lessons from server for moduleId  : "+ id);
-        this.setState({moduleSelected : true,moduleId :id});
 
 
 
-        this.lessonService.findAllLessonsForModule(this.state.courseId, this.state.moduleId).then(lessons=>{
+        this.lessonService.findAllLessonsForModule(this.state.courseId, this.state.moduleId).then((lessons)=>{
             this.setState({lessons : lessons});
         });
+
+
+        this.setState({moduleId :id, moduleSelected : true});
+
     }
 
 

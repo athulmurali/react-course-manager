@@ -36,8 +36,7 @@ export default class LessonListItem extends Component {
 
     render() {
         return (
-            <li className="list-group-item">
-
+            <div>
                 {!!this.state.inEditMode &&
                 <EditableLessonListItem
                     id={this.props.id}
@@ -56,7 +55,7 @@ export default class LessonListItem extends Component {
                     deleteLesson={this.props.deleteLesson}
                     selectLesson={this.props.selectLesson}
                 />}
-            </li>
+            </div>
         );
     }
 

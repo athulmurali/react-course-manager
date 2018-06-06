@@ -9,8 +9,9 @@ export default class LessonList extends React.Component{
         super(props);
         this.state = {
 
-            lesson: [{ title: '' }],
+            lesson: { title: '' },
             lessons : []
+
         }
 
         this.titleChanged = this.titleChanged.bind(this);
@@ -38,8 +39,11 @@ export default class LessonList extends React.Component{
         this.lessonServiceInstance.createLesson(this.props.courseId,this.props.moduleId, this.state.lesson).then(
             (createdLesson)=>{
 
+                let  newLessonList = this.state.lessons
+                newLessonList.push(createdLesson)
+
                 this.setState(
-                { lessons : this.state.lessons.concat(createdLesson)});
+                { lessons : newLessonList});
                 this.setState({lesson: {title: ""}});}
         );
 
@@ -59,13 +63,14 @@ export default class LessonList extends React.Component{
                 {
                     console.log("removing  ");
                     console.log(this.state.lessons[index]);
-                    this.setState((state)=>{
-                        console.log("resetting state options -lesson");
-                        var oldOptions = this.state.lessons;
-                        oldOptions.slice(index,1)
+                    console.log("resetting state options -lesson");
+                    let listAfterRemoval = this.state.lessons;
+                    listAfterRemoval.splice(index,1);
+                    console.log("lessonList after removal");
+                    console.log(listAfterRemoval);
 
-                        return {lessons:  oldOptions }
-                    } )
+                    this.setState({lessons:  listAfterRemoval })
+
 
                 }
                 else{
