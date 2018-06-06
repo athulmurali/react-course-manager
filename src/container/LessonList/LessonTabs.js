@@ -16,6 +16,11 @@ export default class LessonTabs
                         title : "Lesson 2",
                         id: 202
                     },]
+            ,newLesson :{
+                index : 0
+                ,id   : -1
+                ,title: ""
+            }
         }
     }
     render() { return(
@@ -45,6 +50,30 @@ export default class LessonTabs
                      {lessons}
                     <li className="nav-item"><a className="nav-link active" href="#"><b>+</b></a></li>
                  </ul>
+    }
+
+
+    editLesson = () =>
+    {
+
+    }
+
+
+    updateLesson =()=>{
+
+    }
+
+
+    deleteLesson =()=>{
+
+    }
+
+
+    createLesson =()=> {
+
+        this.setState({lessons   :  this.state.lessons.concat(this.state.newLesson)})
+        this.setState({newLesson :  this.state.lessons.concat(this.state.newLesson)})
+
     }
 
 }
