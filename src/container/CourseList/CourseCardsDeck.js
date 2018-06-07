@@ -177,15 +177,30 @@ export default class CourseCardsDeck
     }
 
 
+    getDate =() =>{
+        var now = new Date();
+
+        var day = ("0" + now.getDate()).slice(-2);
+        var month = ("0" + (now.getMonth() + 1)).slice(-2);
+
+        return now.getFullYear()+"-"+(month)+"-"+(day) ;
+    }
     titleChanged(event) {
         console.log(event.target.value);
         this.setState({course: {title: event.target.value, id : this.state.courses.length +1}});
 
     }
     createCourse(){
+
+
+
         this.setState(
             { modules : this.state.courses.concat(this.state.course)});
-        this.setState({ id : 0 ,course: {title: "", coursePageUrl: "/courses"}});
+        this.setState(
+            { id : 0 ,
+                course: {title: "",
+                created : this.getDate(),
+                coursePageUrl: "/courses"}});
     }
 
 

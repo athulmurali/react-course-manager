@@ -24,7 +24,7 @@ export default class LessonList extends React.Component{
 
     titleChanged(event) {
         console.log(event.target.value);
-        this.setState({lesson: {title: event.target.value, id : this.state.lessons.length +1}});
+        this.setState({lesson: {title: event.target.value}});
 
     }
 
