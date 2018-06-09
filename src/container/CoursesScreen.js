@@ -4,6 +4,7 @@ import '../../node_modules/font-awesome/css/font-awesome.min.css';
 import CourseService from  '../services/CourseService'
 import CourseCardsDeck from "./CourseList/CourseCardsDeck";
 import AddCourseComponent from "./CourseList/AddCourseComponent";
+import Loader from "../components/Loader";
 
 
 
@@ -16,7 +17,9 @@ export default class CoursesScreen
         this.courseService = CourseService.instance;
         this.state={
             inListView :false,
-            courses: []
+            courses: [],
+            loading : false
+
         }
     }
 
@@ -87,11 +90,14 @@ export default class CoursesScreen
                 </div>
                 </span>
             </div>
+            { this.state.loading && <h1> Loading </h1> }
             <CourseCardsDeck viewType={"row"} inListView={this.state.inListView}
             courses ={this.state.courses}/>
         </div>
 
     getAllCoursesFromServer=()=>{
+        this.setState({ loading : true});
+
         console.log("Getting course list from server ......");
 
         this.courseService.findAllCourses()
@@ -99,8 +105,10 @@ export default class CoursesScreen
                 // console.log("printing :  coursesRec");
                 // console.log(coursesReceived);
 
-                this.setState({courses: coursesReceived});
+                this.setState({courses: coursesReceived, loading : false});
             })
+
+
 
     }
 
@@ -114,6 +122,8 @@ export default class CoursesScreen
             this.getAllCoursesFromServer();
         });
     }
+
+
 
 
 }

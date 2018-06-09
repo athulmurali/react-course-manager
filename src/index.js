@@ -9,8 +9,8 @@ import My404Component from "./components/My404Component";
 import Home from "./components/Home";
 import Login from "./Pages/Login";
 import CourseEditor from "./container/CourseEditor";
-import Redirect from "react-router-dom/es/Redirect";
 
+import SortByButton from './components/SortByButton'
 
 
 
@@ -25,7 +25,7 @@ const Routes =()=>
 
             <div className="container-fluid">
                 <Switch>
-                    <Route path="/" exact component={Home}/>
+                    <Route path="/" exact component={SortByButton}/>
 
                     <Route path="/editCourse/:courseId"  component={CourseEditor}/>
                     <Route path="/home" exact component={Home}/>

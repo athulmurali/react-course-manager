@@ -227,5 +227,9 @@ export default class CourseEditor extends React.Component{
                 </div>
             </div>);
     }
+
+
+
+
 }
 
