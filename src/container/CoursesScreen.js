@@ -2,11 +2,8 @@ import React from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../../node_modules/font-awesome/css/font-awesome.min.css';
 import CourseService from  '../services/CourseService'
-import CourseCardsDeck from "./CourseList/CourseCardsDeck";
+import Courses from "./CourseList/Courses";
 import AddCourseComponent from "./CourseList/AddCourseComponent";
-import Loader from "../components/Loader";
-
-
 
 export default class CoursesScreen
     extends React.Component {
@@ -36,6 +33,36 @@ export default class CoursesScreen
 
         console.log(this.state.inListView)
     }
+
+
+
+    getAllCoursesFromServer=()=>{
+        this.setState({ loading : true});
+
+        console.log("Getting course list from server ......");
+
+        this.courseService.findAllCourses()
+            .then((coursesReceived) => {
+
+                this.setState({courses: coursesReceived, loading : false});
+            })
+
+
+
+    }
+
+    createCourse=()=>{
+        console.log("creating new row....");
+        let course = {
+            "title" : "new-course-untitled"
+        }
+
+        this.courseService.createCourse(course).then(()=>{
+            this.getAllCoursesFromServer();
+        });
+    }
+
+
     render= () =>
         <div className="container-fluid">
 
@@ -91,40 +118,8 @@ export default class CoursesScreen
                 </span>
             </div>
             { this.state.loading && <h1> Loading </h1> }
-            <CourseCardsDeck viewType={"row"} inListView={this.state.inListView}
+            <Courses viewType={"row"} inListView={this.state.inListView}
             courses ={this.state.courses}/>
         </div>
-
-    getAllCoursesFromServer=()=>{
-        this.setState({ loading : true});
-
-        console.log("Getting course list from server ......");
-
-        this.courseService.findAllCourses()
-            .then((coursesReceived) => {
-                // console.log("printing :  coursesRec");
-                // console.log(coursesReceived);
-
-                this.setState({courses: coursesReceived, loading : false});
-            })
-
-
-
-    }
-
-    createCourse=()=>{
-        console.log("creating new row....");
-        let course = {
-            "title" : "new-course-untitled"
-        }
-
-        this.courseService.createCourse(course).then(()=>{
-            this.getAllCoursesFromServer();
-        });
-    }
-
-
-
-
 }
 
