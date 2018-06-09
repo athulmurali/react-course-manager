@@ -25,7 +25,7 @@ const Routes =()=>
 
             <div className="container-fluid">
                 <Switch>
-                    <Route path="/" exact component={SortByButton}/>
+                    <Route path="/" exact component={Home}/>
 
                     <Route path="/editCourse/:courseId"  component={CourseEditor}/>
                     <Route path="/home" exact component={Home}/>
