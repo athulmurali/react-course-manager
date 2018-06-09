@@ -110,14 +110,18 @@ export default class CourseCardsDeck
 
 
     renderCoursesAsCards= () =>{
-        let courses = this.props.courses.map(function(course){
+        let courses = this.props.courses.map((course)=>{
 
             // console.log("printing new courses :");
             // console.log(newCourses);
 
             // console.log("printing courses ");
-            course.createdAt = "Yesterday";
-            course.updatedAt = "Today";
+            // course.createdAt = "Yesterday";
+            // course.updatedAt = "Today";
+
+
+            course.createdAt =  this.dateTimeObjToDate(course.created);
+            course.updatedAt =  this.dateTimeObjToDate(course.modified);
 
             console.log(course);
             return ( <CourseCard
@@ -125,6 +129,8 @@ export default class CourseCardsDeck
                                 key={course.id}
                                  coursePageUrl={"/coursePage/"}
                                  title={course.title}
+                                createdAt = {  course.createdAt}
+                                modified = {course.modified}
             />)});
             return courses
         }
@@ -132,10 +138,11 @@ export default class CourseCardsDeck
 
     renderCoursesAsRows= () =>{
         let i=1;
-        let courses = this.props.courses.map(function(course){
+        let courses = this.props.courses.map((course)=>{
             course.createdBy = "Me";
-            course.createdAt = "Yesterday";
-            course.updatedAt = "Today";
+
+            course.createdAt =  this.dateTimeObjToDate(course.created);
+            course.updatedAt =  this.dateTimeObjToDate(course.modified);
             course.coursePageUrl = "/coursePage/";
 
 
@@ -204,6 +211,15 @@ export default class CourseCardsDeck
     }
 
 
+    dateTimeObjToDate = (dateTimeObj)=>{
+        var dateObj = new Date(dateTimeObj)
+        var month = dateObj.getUTCMonth() + 1; //months from 1-12
+        var day = dateObj.getUTCDate();
+        var year = dateObj.getUTCFullYear();
+
+        return   year + "/" + month + "/" + day;
+
+    }
 
 
 }
