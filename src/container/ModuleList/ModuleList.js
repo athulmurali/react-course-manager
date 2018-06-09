@@ -150,6 +150,7 @@ export default class ModuleList extends React.Component{
                     deleteModule={this.deleteModule}
                     editModule = {this.editModule}
                     selectModule ={this.props.selectModule}
+                    selectedModuleId ={this.props.selectedModuleId}
                 />
             }
         )

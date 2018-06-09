@@ -202,24 +202,35 @@ export default class CourseEditor extends React.Component{
                         <h3>Modules</h3>
                         <ModuleList modules={this.state.modules}
                                     courseId={ this.state.courseId}
-                                    selectModule = {this.selectModule}/>
+                                    selectModule = {this.selectModule}
+                                    selectedModuleId ={this.state.moduleId}
+                        />
                     </div>
                     <div className="container col-lg-8 col-sm-12">
-                        <h4>Lessons</h4>
-
-                        {!!this.state.moduleSelected   && this.state.moduleId != -1 &&
-                        <LessonList lessons={this.state.lessons}
-                                    moduleId={ this.state.moduleId}
-                                    courseId={ this.state.courseId}
-                                    selectLesson = {this.selectLesson}
-                        />
-                        }
 
 
+                        <div className="row ">
 
-                        {!this.state.moduleSelected &&
-                        <h3>No module selected</h3>
-                        }
+                            <div className="border-top border-right border-secondary container row navbar">
+                                <h4>Lessons</h4>
+                            </div>
+
+                            {!this.state.moduleSelected  &&
+                            <div className="container row jumbotron justify-content-center">
+                                <h3 className="">No Module Selected! </h3>
+                            </div>
+                            }
+
+
+                            {!!this.state.moduleSelected   && this.state.moduleId != -1 &&
+                            <LessonList lessons={this.state.lessons}
+                                        moduleId={ this.state.moduleId}
+                                        courseId={ this.state.courseId}
+                                        selectLesson = {this.selectLesson}
+                            />
+                            }
+
+                        </div>
 
                     </div>
 

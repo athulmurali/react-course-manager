@@ -14,7 +14,7 @@ export default class CourseCard extends React.Component
 
             // {Math.floor(Math.random() * Math.floor(500))} looks odd for different image sizes
             return (
-          <div className="card" styles={{width: '12rem',height: '24rem'}}>
+          <div className="card" style={{minWidth: '12rem',height: '12 rem'}}>
           <img className="card-img-top"
                src={url}/>
 

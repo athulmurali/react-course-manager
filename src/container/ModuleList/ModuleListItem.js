@@ -36,8 +36,10 @@ export default class ModuleListItem extends Component{
 
 
     render() {
+            let className = !!(this.props.selectedModuleId == this.props.id) ?   "list-group-item  bg-secondary" :  "list-group-item"
         return (
-                <li className ="list-group-item" >
+                <li className ={className} >
+
 
                     {!!this.state.inEditMode &&
                     <EditableModuleListItem
@@ -57,6 +59,7 @@ export default class ModuleListItem extends Component{
                         deleteModule    =   {this.props.deleteModule}
                         selectModule    =   {this.props.selectModule}
                     /> }
+
                 </li>
         );
     }
