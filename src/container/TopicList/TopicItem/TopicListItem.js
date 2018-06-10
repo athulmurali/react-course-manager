@@ -1,9 +1,9 @@
 import React,{Component} from 'react';
-import StaticLessonListItem from "./StaticLessonListItem";
-import EditableLessonListItem from "./EditableLessonListItem";
+import EditableTopicListItem from "./EditableTopicListItem";
+import StaticTopicListItem from "./StaticTopicListItem";
 
 
-export default class LessonListItem extends Component {
+export default class TopicListItem extends Component {
     constructor(props) {
         super(props);
         this.state =
@@ -13,7 +13,7 @@ export default class LessonListItem extends Component {
             }
 
         this.toggleEditMode = this.toggleEditMode.bind(this);
-        console.log("LessonListItem : Constructor props")
+        console.log("TopicListItem : Constructor props")
         console.log(this.props);
 
 
@@ -33,29 +33,28 @@ export default class LessonListItem extends Component {
 
 
     render() {
-        let className =  (this.props.selectedLessonId == this.props.id) ?
-            "nav-item nav-link active" :"nav-item nav-link"
-
+        let className =  (this.props.selectedTopicId == this.props.id )?
+            "nav-item nav-link active" : "nav-item nav-link"
 
         return (
             <div className={className}>
                 {!!this.state.inEditMode &&
-                <EditableLessonListItem
+                <EditableTopicListItem
                     id={this.props.id}
                     title={this.props.title}
                     index={this.props.index}
                     toggleEditMode={this.toggleEditMode}
-                    editLesson={this.props.editLesson}
+                    editTopic={this.props.editTopic}
                 />}
 
                 {!!!this.state.inEditMode &&
-                <StaticLessonListItem
+                <StaticTopicListItem
                     id={this.props.id}
                     index={this.props.index}
                     title={this.props.title}
                     toggleEditMode={this.toggleEditMode}
-                    deleteLesson={this.props.deleteLesson}
-                    selectLesson={this.props.selectLesson}
+                    deleteTopic={this.props.deleteTopic}
+                    selectTopic={this.props.selectTopic}
                 />}
             </div>
         );

@@ -30,7 +30,7 @@ export default class LessonList extends React.Component{
 
 
     selectLesson=(lessonId)=>{
-        alert("selected lessonId : " +  lessonId);
+        this.props.selectLesson(lessonId)
     }
     createLesson(){
 
@@ -165,9 +165,11 @@ export default class LessonList extends React.Component{
 
     returnListOfLessons =() => {
         let index =0;
-       return  this.state.lessons.map((lesson) => {
+
+        return  this.state.lessons.map((lesson) => {
             index++;
-            return  <li  key ={index} className="nav-item"><a className="nav-link" href="#">
+            return  <li  key ={index} >
+
                 <LessonListItem
                     key={lesson.id}
                     id={lesson.id}
@@ -177,39 +179,38 @@ export default class LessonList extends React.Component{
                     deleteLesson={this.deleteLesson}
                     editLesson = {this.editLesson}
                     selectLesson = {this.selectLesson}
+                    selectedLessonId = {this.props.selectedLessonId}
                 />
 
-            </a></li>
+            </li>
         });
     }
 
 
 
     render=()=>{
-        let index = 0;
+
 
         let lessons = this.returnListOfLessons()
         return  <ul className="nav nav-tabs px-2">
-            <li className="nav-item nav-link active">
+                    <li className="nav-item nav-link">
 
-                <input className="form-control"
-                       onChange={this.titleChanged}
-                       placeholder="title"
-                       value={this.state.lesson.title}/>
-                    <span className="float-right">
-                         <a href={"#"} style={{'color': 'inherit'}} >
+                        <input className="form-control"
+                               onChange={this.titleChanged}
+                               placeholder="title"
+                               value={this.state.lesson.title}/>
+                            <span className="float-right">
+                                 <a href={"#"} style={{'color': 'inherit'}} >
 
-                            <i className="px-2 fa fa-plus-circle "  onClick={this.createLesson}></i>
-                        </a>
+                                    <i className="px-2 fa fa-plus-circle "  onClick={this.createLesson}></i>
+                                </a>
 
-                    </span>
+                            </span>
 
-            </li>
-
-
-                {lessons}
-        </ul>
-    }
+                    </li>
+                    {lessons}
+                </ul>
+        }
 
 
 }

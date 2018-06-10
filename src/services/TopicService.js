@@ -6,9 +6,9 @@ console.log("BASE_URL  " + BASE_URL);
 
 
 const TOPIC_API_URL =
-    BASE_URL + "/api/course/CID/module/MID/lesson/LID/topic/TID"
+    BASE_URL + "/api/course/CID/module/MID/lesson/LID/topic"
 const TOPIC_API_URL_TID =
-       BASE_URL+ "/api/lesson/LID";
+       BASE_URL+ "/api/topic/TID";
 
 export default class TopicService {
     constructor(singletonToken) {
@@ -41,23 +41,26 @@ export default class TopicService {
 
 
 
-    findAllTopicsForLesson(courseId, moduleId,lessonId) {
+    findAllTopicsForLesson=(courseId, moduleId,lessonId)=> {
+        console.log("Course Id : " + courseId);
+        console.log("Module Id : " + moduleId);
+        console.log("Lesson Id : " + lessonId);
         return fetch(TOPIC_API_URL
             .replace('CID', courseId)
             .replace('MID', moduleId)
-            .replace('LID', lessonId),
+            .replace('LID', lessonId))
             .then(function (response) {
                 if(response.status === 500) {
                     return null;
                 } else {
                     return response.json();
                 }
-            });
+            })
     }
 
     updateTopic= (id,topic) => {
 
-        let  updateTopicURL = BASE_URL+"/api/topic/" + id;
+        let  updateTopicURL = TOPIC_API_URL_TID.replace("TID", id);
         return fetch(updateTopicURL,
             {
                 body: JSON.stringify(topic),
