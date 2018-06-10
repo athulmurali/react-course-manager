@@ -42,14 +42,16 @@ import React,{Component} from 'react';
          <div>
              <input type="text" placeholder="Lesson Name" value={this.state.title} onChange={this.titleChanged}/>
              <span className="float-right">
-                <i className="px-2 fa fa-check-circle fa-2x"   style={{'color': 'inherit'}}
+                <i className="px-2 fa fa-check-circle fa-2x"   style={{'color': 'inherit','cursor' : 'pointer'}}
                    onClick={this.handleEdit}>
 
                 </i>
 
                     <i className="px-2 fa fa-ban fa-2x"
                        onClick={this.props.toggleEditMode}
-                       style={{'color': 'inherit'}}></i>
+                       style={{'color': 'inherit','cursor' : 'pointer'}}>
+
+                    </i>
             </span>
          </div>
  }

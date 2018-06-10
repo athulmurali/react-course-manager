@@ -34,12 +34,12 @@ export default class StaticLessonListItem extends React.Component{
 
             <i className="px-2 fa fa-pencil"
                onClick={this.props.toggleEditMode}
-               style={{'color': 'inherit'}}
+               style={{'color': 'inherit', 'cursor' : 'pointer'}}
             ></i>
 
             <i className="px-2 fa fa-trash"
                onClick={this.handleDelete}
-               style={{'color': 'inherit'}}></i>
+               style={{'color': 'inherit', 'cursor' : 'pointer'}}></i>
 
         </span>
         </div>
