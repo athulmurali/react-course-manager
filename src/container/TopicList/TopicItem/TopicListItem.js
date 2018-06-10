@@ -34,7 +34,7 @@ export default class TopicListItem extends Component {
 
     render() {
         let className =  (this.props.selectedTopicId == this.props.id )?
-            "nav-item nav-link active" : "nav-item nav-link"
+            "nav-item nav-link active text-white " : "nav-item nav-link"
 
         return (
             <div className={className}>

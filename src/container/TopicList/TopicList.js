@@ -31,7 +31,6 @@ export default class TopicList extends React.Component{
 
     selectTopic=(topicId)=>{
         // this.props.selectTopic(topicId)
-        alert("selected topicId : " +  topicId);
         this.setState({selectedTopicId : topicId})
     }
     createTopic(){

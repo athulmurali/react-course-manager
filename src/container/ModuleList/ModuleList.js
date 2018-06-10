@@ -167,7 +167,7 @@ export default class ModuleList extends React.Component{
                        placeholder="title"
                        value={this.state.module.title}/>
                 <button
-                    className="btn btn-primary btn-block"
+                    className="btn btn-outline-secondary btn-block"
                     onClick={this.createModule}>
                     <i className="fa fa-plus"></i>
                 </button>

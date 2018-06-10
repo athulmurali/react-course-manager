@@ -25,7 +25,7 @@ export default class StaticTopicListItem extends React.Component{
     render =()=>
         <div>
             <button className="btn-outline-secondary"
-                    style={{'color': 'black', 'cursor' : 'pointer'}}
+                    style={{ 'cursor' : 'pointer', color:'inherit'}}
             onClick={this.handleSelect} >
                 {"Topic - " + this.props.index + " "+this.props.title}
             </button>

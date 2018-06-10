@@ -34,7 +34,7 @@ export default class LessonListItem extends Component {
 
     render() {
         let className =  (this.props.selectedLessonId == this.props.id) ?
-            "nav-item nav-link active" :"nav-item nav-link"
+            "nav-item nav-link active bg-secondary" :"nav-item nav-link"
 
 
         return (
