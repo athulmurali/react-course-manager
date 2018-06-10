@@ -232,6 +232,28 @@ export default class CourseEditor extends React.Component{
 
                         </div>
 
+                        <div className="row">
+
+                            <div className="border-top border-right border-secondary container row navbar">
+                                <h4>Topics</h4>
+                            </div>
+
+                            {!this.state.moduleSelected  &&
+                            <div className="container row jumbotron justify-content-center">
+                                <h3 className="">No Lesson Selected! </h3>
+                            </div>
+                            }
+
+
+                            {!!this.state.moduleSelected   && this.state.moduleId != -1 &&
+                            <LessonList lessons={this.state.lessons}
+                                        moduleId={ this.state.moduleId}
+                                        courseId={ this.state.courseId}
+                                        selectLesson = {this.selectLesson}
+                            />
+                            }
+
+                        </div>
                     </div>
 
 
