@@ -1,5 +1,5 @@
 import React from 'react'
-
-const WidgetList =()=> <div> Hola </div>
+import '../../styles/WidgetList.css'
+const WidgetList =()=> <div className={"widgetListCSSTest"}> Hola </div>
 
 export default WidgetList;
