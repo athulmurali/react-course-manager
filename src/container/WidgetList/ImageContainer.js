@@ -11,22 +11,24 @@ const Image = ({widget, preview, imageTextChanged, imageNameChanged}) => {
         <div className="container widget-container widgetContainerStyle">
             <div className="col-md-12">
                 <div hidden={preview}>
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="form-group">
-                                <input onChange={() => imageTextChanged(widget.id, inputElem3.value)}
-                                       ref={node3 => inputElem3= node3}
-                                       value={widget.text} className="form-control"
-                                /> <br/>
-                            </div>
-                        </div>
-                    </div>
+
                     <div className="row">
                         <div className="col-md-12">
                             <div className="form-group">
                                 <input onChange={() => imageNameChanged(widget.id, nameElem.value)}
                                        value={widget.name}
                                        ref={node => nameElem = node} className="form-control"/> <br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="form-group">
+                                <input onChange={() => imageTextChanged(widget.id, inputElem3.value)}
+                                       ref={node3 => inputElem3= node3}
+                                       placeholder="https://goo.gl/ZdEZ93"
+                                       value={widget.text} className="form-control"
+                                /> <br/>
                             </div>
                         </div>
                     </div>

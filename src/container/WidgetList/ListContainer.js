@@ -20,14 +20,13 @@ const List = ({widget, preview, listTextChanged, listTypeChanged, listNameChange
 
 
         <div>
-            <div className="container widget-container"
-                 style={widgetContainerStyle}>
+            <div className="container widget-container">
                 <div className="col-md-12">
                     <div hidden={preview}>
                         <div className="row">
                             <div className="col-md-12">
                                 <div className="form-group">
-    <textarea onChange={() => listTextChanged(widget.id, inputElem2.value)}
+                                    <textarea onChange={() => listTextChanged(widget.id, inputElem2.value)}
               ref={node2 => inputElem2= node2}
               value={widget.text}  className="form-control"/> <br/>
                                 </div>
@@ -61,7 +60,10 @@ const List = ({widget, preview, listTextChanged, listTypeChanged, listNameChange
                                 <div className="form-group">
 
                                     <h5> Preview</h5>
-                                </div></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className="row">
                         <div className="col-md-12">
                             {widget.listType== "ordered" && <div>{textToOrderedList(widget.text)} </div>}
