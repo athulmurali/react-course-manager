@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21538077-4bef-4f0f-9d54-2be4d9336541" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/container/WidgetList/LinkContainer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/container/WidgetList/ParaContainer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/container/WidgetList/HeadingContainer.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/container/WidgetList/WidgetElementsContainer.js" afterPath="$PROJECT_DIR$/src/container/WidgetList/WidgetElementsContainer.js" />
+      <change beforePath="$PROJECT_DIR$/src/container/WidgetListContainer.js" afterPath="$PROJECT_DIR$/src/container/WidgetListContainer.js" />
+      <change beforePath="$PROJECT_DIR$/src/styles/WidgetList.css" afterPath="$PROJECT_DIR$/src/styles/WidgetList.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,33 +29,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ParaContainer.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/container/WidgetList/ParaContainer.js">
+      <file leaf-file-name="WidgetListContainer.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/container/WidgetListContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="179">
+              <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
               <folding>
-                <element signature="e#435#950#0" expanded="false" />
-                <element signature="e#485#919#0" expanded="false" />
-                <element signature="e#975#1431#0" expanded="false" />
-                <element signature="e#1025#1400#0" expanded="false" />
-                <element signature="e#1457#1709#0" expanded="false" />
-                <element signature="e#1761#2039#0" expanded="false" />
-                <element signature="e#2158#2390#0" expanded="false" />
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#!!block;n#componentDidMount#0;n#WidgetList#0" expanded="false" />
+                <element signature="n#!!block;n#componentWillReceiveProps#0;n#WidgetList#0" expanded="false" />
+                <element signature="n#!!block;n#saveToServer#0;n#WidgetList#0" expanded="false" />
+                <element signature="e#1116#1245#0" expanded="false" />
+                <element signature="e#1266#1579#0" expanded="false" />
+                <element signature="e#1336#1552#0" expanded="false" />
+                <element signature="e#1654#1856#0" expanded="false" />
+                <element signature="e#2838#3104#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinkContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/container/WidgetList/LinkContainer.js">
+      <file leaf-file-name="WidgetListEditor.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/container/WidgetListEditor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="17" column="64" lean-forward="false" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+            <state relative-caret-position="300">
+              <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
-                <element signature="e#2808#2838#0" expanded="false" />
-                <element signature="e#2892#3251#0" expanded="false" />
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WidgetElementsContainer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/container/WidgetList/WidgetElementsContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="90" column="34" lean-forward="false" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#522#4025#0" expanded="false" />
+                <element signature="e#856#963#0" expanded="false" />
+                <element signature="e#992#3457#0" expanded="false" />
+                <element signature="e#1052#1394#0" expanded="false" />
+                <element signature="e#1429#1901#0" expanded="false" />
+                <element signature="e#1936#2395#0" expanded="false" />
+                <element signature="e#2430#3421#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -71,12 +91,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Comp</find>
-      <find>lessonId</find>
-      <find>selectTopic</find>
-      <find>selectLes</find>
-      <find>topicId</find>
-      <find>select</find>
       <find>topic</find>
       <find>selectTop</find>
       <find>compon</find>
@@ -101,6 +115,12 @@
       <find>LinkC</find>
       <find>ParaC</find>
       <find>Style</find>
+      <find>Heading</find>
+      <find>Save</find>
+      <find>ad</find>
+      <find>sold</find>
+      <find>widgetListStyle</find>
+      <find>add</find>
     </findStrings>
     <replaceStrings>
       <replace>createModule</replace>
@@ -133,7 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/Loader.js" />
         <option value="$PROJECT_DIR$/src/components/SortByButton.js" />
         <option value="$PROJECT_DIR$/src/container/ModuleList/EditableModuleListItem.js" />
         <option value="$PROJECT_DIR$/src/container/CourseRows.js" />
@@ -170,20 +189,21 @@
         <option value="$PROJECT_DIR$/src/reducers/widgetReducer/index.js" />
         <option value="$PROJECT_DIR$/src/components/Widget.js" />
         <option value="$PROJECT_DIR$/src/container/TopicList/TopicList.js" />
-        <option value="$PROJECT_DIR$/src/container/WidgetListContainer.js" />
         <option value="$PROJECT_DIR$/src/container/CourseEditor.js" />
         <option value="$PROJECT_DIR$/src/container/WidgetListEditor.js" />
         <option value="$PROJECT_DIR$/src/components/WidgetComponent.js" />
         <option value="$PROJECT_DIR$/src/components/WidgetElementsContainer.js" />
         <option value="$PROJECT_DIR$/src/container/WidgetList/List.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/styles/WidgetList.css" />
         <option value="$PROJECT_DIR$/src/container/WidgetList/ImageContainer.js" />
         <option value="$PROJECT_DIR$/src/container/WidgetList/ListContainer.js" />
         <option value="$PROJECT_DIR$/src/container/WidgetList/ParaContainer.js" />
         <option value="$PROJECT_DIR$/src/container/WidgetList/LinkConainer.js" />
-        <option value="$PROJECT_DIR$/src/container/WidgetList/WidgetElementsContainer.js" />
         <option value="$PROJECT_DIR$/src/container/WidgetList/LinkContainer.js" />
+        <option value="$PROJECT_DIR$/src/container/WidgetList/HeadingContainer.js" />
+        <option value="$PROJECT_DIR$/src/styles/WidgetList.css" />
+        <option value="$PROJECT_DIR$/src/container/WidgetList/WidgetElementsContainer.js" />
+        <option value="$PROJECT_DIR$/src/container/WidgetListContainer.js" />
       </list>
     </option>
   </component>
@@ -422,15 +442,16 @@
       <workItem from="1528596642213" duration="15531000" />
       <workItem from="1528846606552" duration="9931000" />
       <workItem from="1529294402456" duration="3208000" />
-      <workItem from="1529298661038" duration="8151000" />
+      <workItem from="1529298661038" duration="10839000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217217000" />
+    <option name="totallyTimeSpent" value="219905000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="713" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -439,7 +460,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29935277" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29935277" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33441034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -683,17 +704,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/container/WidgetList/WidgetElementsContainer.js</url>
-          <line>130</line>
+          <line>50</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="100" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/container/WidgetList/HeadingContainer.js</url>
+          <line>14</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/container/WidgetList/ParaContainer.js</url>
+          <line>55</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="101" />
+      <option name="time" value="104" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build/index.html" />
     <entry file="file://$PROJECT_DIR$/src/container/LessonList/LessonTabs.js" />
     <entry file="file://$PROJECT_DIR$/src/container/CourseList/CourseTitle/CourseTitle.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1037,16 +1069,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/WidgetListEditor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/container/CourseEditor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -1073,22 +1095,6 @@
             <element signature="e#8262#9324#0" expanded="false" />
             <element signature="e#8553#8728#0" expanded="false" />
             <element signature="e#8850#9262#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/WidgetListContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="104" column="32" lean-forward="false" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#componentDidMount#0;n#WidgetList#0" expanded="false" />
-            <element signature="n#!!block;n#componentWillReceiveProps#0;n#WidgetList#0" expanded="false" />
-            <element signature="n#!!block;n#saveToServer#0;n#WidgetList#0" expanded="false" />
-            <element signature="e#1027#1735#0" expanded="false" />
-            <element signature="e#1768#2097#0" expanded="false" />
-            <element signature="e#2741#3007#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1122,14 +1128,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/WidgetList.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1153,21 +1151,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/WidgetList/WidgetElementsContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="157" column="56" lean-forward="true" selection-start-line="157" selection-start-column="56" selection-end-line="157" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#630#3427#0" expanded="false" />
-            <element signature="e#3470#3808#0" expanded="false" />
-            <element signature="e#3847#3877#0" expanded="false" />
-            <element signature="e#4243#7224#0" expanded="false" />
-            <element signature="e#7858#7911#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/container/WidgetList/LinkContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1180,11 +1163,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/WidgetList/HeadingContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding>
+            <element signature="e#1#26#0" expanded="true" />
+            <element signature="e#303#3159#0" expanded="false" />
+            <element signature="e#2765#3059#0" expanded="false" />
+            <element signature="e#3225#3563#0" expanded="false" />
+            <element signature="e#3602#3632#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/WidgetList.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/container/WidgetList/ParaContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
           <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#258#2081#0" expanded="false" />
             <element signature="e#435#950#0" expanded="false" />
             <element signature="e#485#919#0" expanded="false" />
             <element signature="e#975#1431#0" expanded="false" />
@@ -1192,6 +1199,51 @@
             <element signature="e#1457#1709#0" expanded="false" />
             <element signature="e#1761#2039#0" expanded="false" />
             <element signature="e#2158#2390#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/WidgetListEditor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/WidgetList/WidgetElementsContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="90" column="34" lean-forward="false" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#522#4025#0" expanded="false" />
+            <element signature="e#856#963#0" expanded="false" />
+            <element signature="e#992#3457#0" expanded="false" />
+            <element signature="e#1052#1394#0" expanded="false" />
+            <element signature="e#1429#1901#0" expanded="false" />
+            <element signature="e#1936#2395#0" expanded="false" />
+            <element signature="e#2430#3421#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/WidgetListContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#componentDidMount#0;n#WidgetList#0" expanded="false" />
+            <element signature="n#!!block;n#componentWillReceiveProps#0;n#WidgetList#0" expanded="false" />
+            <element signature="n#!!block;n#saveToServer#0;n#WidgetList#0" expanded="false" />
+            <element signature="e#1116#1245#0" expanded="false" />
+            <element signature="e#1266#1579#0" expanded="false" />
+            <element signature="e#1336#1552#0" expanded="false" />
+            <element signature="e#1654#1856#0" expanded="false" />
+            <element signature="e#2838#3104#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -39,10 +39,16 @@ class WidgetList extends React.Component {
 
         <div>
             <div className="container pt-5">
-                <div className="row flex-row-reverse pr-2 pb-3">
+
+                <div className="row flex-row-reverse pr-2 pb-3 align-items-center">
+                    <span style={{float: "left"}} className="px-2">
+                                <h5>Preview</h5>
+
+                        </span>
                     <div className="d-flex float-right my-auto">
 
                         <label className="switch m-auto">
+
                             <input type="checkbox" onClick={this.props.preview}/>
                             <span className="slider round"></span>
                         </label>
@@ -52,28 +58,30 @@ class WidgetList extends React.Component {
                                 onClick={this.saveToServer}>
                             Save
                         </button>
+
+                    </div>
+                    <div className="d-flex pr-2">
+                        <button className="btn   btn-danger" onClick={this.props.addWidget}><i
+                            className="fa fa-plus-square"></i>
+                        </button>
                     </div>
                 </div>
-            </div>
 
-            <div>
-            {this.props.widgets.map(widget => (
-                <WidgetContainer widget={widget}
-                                 preview={this.props.previewMode}
-                                 key={widget.widgetOrder}
-                                 widgetLength={this.props.widgets.length}/>
-            ))}
-    </div>
 
-        <div className="container pt-1">
-            <div className="row flex-row-reverse pr-2 pb-3 ml-auto">
-                <div className="row flex-row-reverse pr-2 pb-3">
-                    <button className="btn btn-danger" onClick={this.props.addWidget}><i
-                        className="fa fa-plus-square"></i>
-                    </button>
+                <div >
+                    {this.props.widgets.map(widget => (
+                        <WidgetContainer widget={widget}
+                                         preview={this.props.previewMode}
+                                         key={widget.widgetOrder}
+                                         widgetLength={this.props.widgets.length}/>
+                    ))}
                 </div>
+
+
+
+
             </div>
-            </div>
+
 
         </div>
 
