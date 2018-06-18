@@ -1,4 +1,6 @@
 import * as constants from "../constants/index"
+import TopicService from "../services/TopicService";
+import WidgetService from "../services/WidgetService";
 
 ///////////////////////////////////////// Heading //////////////////////////////////////////////////////////////////////
 export const headingNameChanged = (dispatch, widgetId, newName) => (
@@ -36,7 +38,6 @@ export const listTextChanged = (dispatch,widgetId,newListText) =>(
 )
 
 export const listNameChanged = (dispatch,widgetId,newListName) =>(
-
     dispatch({
         type : constants.LIST_NAME_CHANGED,
         id: widgetId,
@@ -124,21 +125,16 @@ export const paraNameChanged = (dispatch,widgetId,newName) =>(
 /////////////////////////////////////// Paragraph End //////////////////////////////////////////////////////////////////
 
 export const findAllWidgetsForTopic = (dispatch,topicId) => {
-    fetch('http://localhost:8080/api/topic/'+topicId+"/widget")
-        .then(response => (response.json()))
-        .then(widgets => dispatch({
+
+    const widgetServiceInstance = WidgetService.instance;
+
+
+    widgetServiceInstance.findAllWidgetsForTopic(topicId).then(widgets => dispatch({
             type: constants.FIND_ALL_WIDGETS_FOR_TOPIC,
             widgets: widgets }))
 }
 
 
-// export const findAllWidgets = dispatch => {
-//   fetch('http://localhost:8080/api/widget')
-//     .then(response => (response.json()))
-//     .then(widgets => dispatch({
-//       type: constants.FIND_ALL_WIDGETS,
-//       widgets: widgets }))
-// }
 export const addWidget = dispatch => (
     dispatch({type: constants.ADD_WIDGET})
 )
