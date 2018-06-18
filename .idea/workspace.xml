@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21538077-4bef-4f0f-9d54-2be4d9336541" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/container/WidgetList/HeadingContainer.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/container/WidgetList/ImageContainer.js" afterPath="$PROJECT_DIR$/src/container/WidgetList/ImageContainer.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/WidgetList/ListContainer.js" afterPath="$PROJECT_DIR$/src/container/WidgetList/ListContainer.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/WidgetList/WidgetElementsContainer.js" afterPath="$PROJECT_DIR$/src/container/WidgetList/WidgetElementsContainer.js" />
       <change beforePath="$PROJECT_DIR$/src/container/WidgetListContainer.js" afterPath="$PROJECT_DIR$/src/container/WidgetListContainer.js" />
-      <change beforePath="$PROJECT_DIR$/src/styles/WidgetList.css" afterPath="$PROJECT_DIR$/src/styles/WidgetList.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WidgetListContainer.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WidgetListContainer.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/container/WidgetListContainer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="179">
-              <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="n#!!block;n#componentDidMount#0;n#WidgetList#0" expanded="false" />
@@ -45,45 +40,7 @@
                 <element signature="e#1266#1579#0" expanded="false" />
                 <element signature="e#1336#1552#0" expanded="false" />
                 <element signature="e#1654#1856#0" expanded="false" />
-                <element signature="e#2838#3104#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/container/WidgetList/ListContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-                <element signature="e#141#254#0" expanded="false" />
-                <element signature="e#598#1064#0" expanded="false" />
-                <element signature="e#773#953#0" expanded="false" />
-                <element signature="e#1089#1839#0" expanded="false" />
-                <element signature="e#2455#2672#0" expanded="false" />
-                <element signature="e#2751#3098#0" expanded="false" />
-                <element signature="e#3208#3238#0" expanded="false" />
-                <element signature="e#3292#3651#0" expanded="false" />
-                <element signature="e#3692#3866#0" expanded="false" />
-                <element signature="e#3906#4080#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageContainer.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/container/WidgetList/ImageContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="73" lean-forward="false" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-                <element signature="e#180#2147#0" expanded="false" />
-                <element signature="e#405#889#0" expanded="false" />
-                <element signature="e#1787#2118#0" expanded="false" />
-                <element signature="e#2276#2520#0" expanded="false" />
+                <element signature="e#2863#3129#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -131,7 +88,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>selectTop</find>
       <find>compon</find>
       <find>stateToPropertiesMapper</find>
       <find>return</find>
@@ -141,7 +97,6 @@
       <find>ref</find>
       <find>state</find>
       <find>List</find>
-      <find>addWidget</find>
       <find>ListCon</find>
       <find>ListContainer</find>
       <find>widgetContainer</find>
@@ -161,6 +116,8 @@
       <find>widgetListStyle</find>
       <find>add</find>
       <find>sty</find>
+      <find>addWidget</find>
+      <find>dispatch</find>
     </findStrings>
     <replaceStrings>
       <replace>createModule</replace>
@@ -241,9 +198,9 @@
         <option value="$PROJECT_DIR$/src/container/WidgetList/HeadingContainer.js" />
         <option value="$PROJECT_DIR$/src/styles/WidgetList.css" />
         <option value="$PROJECT_DIR$/src/container/WidgetList/WidgetElementsContainer.js" />
-        <option value="$PROJECT_DIR$/src/container/WidgetListContainer.js" />
         <option value="$PROJECT_DIR$/src/container/WidgetList/ListContainer.js" />
         <option value="$PROJECT_DIR$/src/container/WidgetList/ImageContainer.js" />
+        <option value="$PROJECT_DIR$/src/container/WidgetListContainer.js" />
       </list>
     </option>
   </component>
@@ -293,6 +250,12 @@
               <item name="react-course-manager" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-course-manager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-course-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-course-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-course-manager" type="b2602c69:ProjectViewProjectNode" />
@@ -482,12 +445,12 @@
       <workItem from="1528596642213" duration="15531000" />
       <workItem from="1528846606552" duration="9931000" />
       <workItem from="1529294402456" duration="3208000" />
-      <workItem from="1529298661038" duration="11776000" />
+      <workItem from="1529298661038" duration="12260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220842000" />
+    <option name="totallyTimeSpent" value="221326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="713" extended-state="0" />
@@ -1061,14 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="101" column="44" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Navbar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
@@ -1248,20 +1203,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/WidgetListContainer.js">
+    <entry file="file://$PROJECT_DIR$/src/container/WidgetList/ImageContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+        <state relative-caret-position="225">
+          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#componentDidMount#0;n#WidgetList#0" expanded="false" />
-            <element signature="n#!!block;n#componentWillReceiveProps#0;n#WidgetList#0" expanded="false" />
-            <element signature="n#!!block;n#saveToServer#0;n#WidgetList#0" expanded="false" />
-            <element signature="e#1116#1245#0" expanded="false" />
-            <element signature="e#1266#1579#0" expanded="false" />
-            <element signature="e#1336#1552#0" expanded="false" />
-            <element signature="e#1654#1856#0" expanded="false" />
-            <element signature="e#2838#3104#0" expanded="false" />
+            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#180#2147#0" expanded="false" />
+            <element signature="e#405#889#0" expanded="false" />
+            <element signature="e#1787#2118#0" expanded="false" />
+            <element signature="e#2276#2520#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1286,16 +1237,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/WidgetList/ImageContainer.js">
+    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="73" lean-forward="false" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
+        <state relative-caret-position="1665">
+          <caret line="128" column="33" lean-forward="false" selection-start-line="128" selection-start-column="25" selection-end-line="128" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/WidgetListContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <element signature="e#180#2147#0" expanded="false" />
-            <element signature="e#405#889#0" expanded="false" />
-            <element signature="e#1787#2118#0" expanded="false" />
-            <element signature="e#2276#2520#0" expanded="false" />
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#componentDidMount#0;n#WidgetList#0" expanded="false" />
+            <element signature="n#!!block;n#componentWillReceiveProps#0;n#WidgetList#0" expanded="false" />
+            <element signature="n#!!block;n#saveToServer#0;n#WidgetList#0" expanded="false" />
+            <element signature="e#1116#1245#0" expanded="false" />
+            <element signature="e#1266#1579#0" expanded="false" />
+            <element signature="e#1336#1552#0" expanded="false" />
+            <element signature="e#1654#1856#0" expanded="false" />
+            <element signature="e#2863#3129#0" expanded="false" />
           </folding>
         </state>
       </provider>

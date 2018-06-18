@@ -61,8 +61,8 @@ class WidgetList extends React.Component {
 
                     </div>
                     <div className="d-flex pr-2">
-                        <button className="btn   btn-danger" onClick={this.props.addWidget}><i
-                            className="fa fa-plus-square"></i>
+                        <button className="btn  rounded-circle btn-outline-secondary" onClick={this.props.addWidget}><i
+                            className="fa fa-plus-circle"></i>
                         </button>
                     </div>
                 </div>
