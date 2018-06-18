@@ -1,12 +1,12 @@
 let _singleton = Symbol();
 
 
-const BASE_URL = "https://neu-course-manager.herokuapp.com"
+const BASE_URL = "http://localhost:8080"
 console.log("BASE_URL  " + BASE_URL);
 
 
 const WIDGET_API_URL =
-    BASE_URL + "/api/topic//widget"
+    BASE_URL + "/api/topic/TID/widget"
 const WIDGET_API_URL_TID =
     BASE_URL+ "/api/widget/TID";
 
@@ -43,9 +43,9 @@ export default class WidgetService {
 
     findAllWidgetsForTopic=(topicId)=> {
 
-        return fetch(WIDGET_API_URL
 
-            .replace('TID', topicId))
+        return fetch(WIDGET_API_URL.replace('TID', topicId)
+        )
             .then(function (response) {
                 if(response.status === 500) {
                     return null;
@@ -55,9 +55,39 @@ export default class WidgetService {
             })
     }
 
+
+
+    saveWidgetsForTopic=(topicId,widgets)=> {
+        const URL = BASE_URL+ "/api/widget/save/"+topicId
+
+        console.log(URL);
+        console.log("widgets to save");
+        console.log(widgets);
+
+        return fetch(URL,
+            {
+                method: 'POST',
+                body: JSON.stringify(widgets),
+                headers: {
+                    'content-type': 'application/json'
+                }
+            })
+            .then(function (response) {
+                if(response.status === 500) {
+                    return null;
+                } else {
+                    return response.json();
+                }
+            })
+    }
+
+
+
     updateWidget= (id,widget) => {
 
-        let  updateWidgetURL = WIDGET_API_URL_TID.replace("TID", id);
+        const URL = BASE_URL + "/api/widget/WID"
+
+        let  updateWidgetURL = URL.replace("WID", id);
         return fetch(updateWidgetURL,
             {
                 body: JSON.stringify(widget),

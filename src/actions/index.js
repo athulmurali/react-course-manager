@@ -138,7 +138,7 @@ export const findAllWidgetsForTopic = (dispatch,topicId) => {
 export const addWidget = dispatch => (
     dispatch({type: constants.ADD_WIDGET})
 )
-export const save = (dispatch,topicId) => (
+export const save = (dispatch,topicId,widgets) => (
     dispatch({type: constants.SAVE,
         topicId : topicId})
 )

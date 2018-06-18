@@ -1,4 +1,5 @@
 import * as constants from "../../constants/index"
+import WidgetService from "../../services/WidgetService";
 
 export const widgetReducer = (state = {widgets: [], preview: false}, action) => {
     let newState
@@ -260,15 +261,13 @@ export const widgetReducer = (state = {widgets: [], preview: false}, action) => 
         case constants.SAVE:
 
 
-            fetch('http://localhost:8080/api/topic/'+action.topicId+"/widgets", {
-                method: 'post',
-                body: JSON.stringify(state.widgets),
-                headers: {
-                    'content-type': 'application/json'}
-            })
+            const widgetServiceInstance = WidgetService.instance
+            alert("save clicked");
+            widgetServiceInstance.saveWidgetsForTopic(action.topicId, state.widgets);
+            return state;
 
 
-            return state
+
 
 
 

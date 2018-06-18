@@ -97,7 +97,8 @@ export default class CoursesScreen
 
                     <div className="btn-group btn-group-toggle" data-toggle="buttons">
                   <label className="btn btn-secondary">
-                        <div className={!this.state.inListView && "active"}>
+                        <div className={!this.state.inListView &&
+                        "active"}>
 
                     <input type="radio" name="options" id="option1"
                            onChange={this.toggleView}
