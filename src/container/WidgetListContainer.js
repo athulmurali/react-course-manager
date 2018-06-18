@@ -4,7 +4,7 @@ import * as actions from "../actions"
 import WidgetContainer from './WidgetList/WidgetElementsContainer'
 import '../styles/WidgetList.css'
 
-class WidgetList extends React.Component {
+class WidgetList extends React.Component  {
     constructor(props) {
         super(props)
         this.state = {topicId: ''};
