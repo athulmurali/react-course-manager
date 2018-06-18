@@ -2,6 +2,9 @@ import React from 'react';
 import TopicService from "../../services/TopicService";
 import TopicListItem from "./TopicItem/TopicListItem";
 
+import {BrowserRouter as Route} from 'react-router-dom'
+
+
 
 export default class TopicList extends React.Component{
 
@@ -32,6 +35,7 @@ export default class TopicList extends React.Component{
     selectTopic=(topicId)=>{
         // this.props.selectTopic(topicId)
         this.setState({selectedTopicId : topicId})
+        this.props.selectTopic(topicId);
     }
     createTopic(){
 
@@ -195,7 +199,7 @@ export default class TopicList extends React.Component{
 
     render=()=>{
         let topics = this.returnListOfTopics()
-        return  <ul className="nav nav-pills">
+        return <ul className="nav nav-pills">
                     <li className="nav-item nav-link">
                         <input className="form-control"
                                onChange={this.titleChanged}
@@ -211,7 +215,12 @@ export default class TopicList extends React.Component{
                     </li>
                      {topics}
                  </ul>
+
+
     }
 
 
+
+
 }
+

@@ -13,6 +13,7 @@ import LessonService from "../services/LessonService";
 import TopicList from "./TopicList/TopicList";
 import ModuleService from "../services/ModuleService";
 import TopicService from "../services/TopicService";
+import WidgetListEditor from "./WidgetListEditor";
 
 export default class CourseEditor extends React.Component{
 
@@ -43,6 +44,8 @@ export default class CourseEditor extends React.Component{
                 courseId : -1,
                 moduleId : -1,
                 lessonId: -1,
+                topicId: -1,
+
                 title :"unnamed",
                 course :
                     {
@@ -133,6 +136,33 @@ export default class CourseEditor extends React.Component{
         });
 
     }
+
+
+    selectTopic =(id)=> {
+        console.log("selected topic id : "+ id);
+        console.log("Fetching widgets from server for topicId  : "+ id);
+
+        //
+        // this.setState({lessonId :id, lessonSelected : true}, ()=>{
+        //     this.widgetService.findAllTopicsForLesson(  this.state.courseId,
+        //         this.state.moduleId,
+        //         this.state.lessonId
+        //     ).then((topics)=>{
+        //         console.log(topics);
+        //         this.setState({topics : topics});
+        //     });
+        //
+        // });
+
+
+
+
+        this.setState({topicId : id});
+
+
+
+    }
+
 
     updateTitleState=()=>{
 
@@ -256,16 +286,30 @@ export default class CourseEditor extends React.Component{
                                        courseId         =   { this.state.courseId}
                                        moduleId         =   { this.state.moduleId}
                                         lessonId        =   { this.state.lessonId}
+                                       selectTopic      =   {this.selectTopic}
 
                             />
                             }
 
                         </div>
+
+
+
+
                     </div>
-
-
                 </div>
-            </div>);
+
+                {this.state.topicId != -1 &&
+                <div className=" card widgetContainer row  py-2 container mx-auto">
+                   <WidgetListEditor
+                       courseId         =   { this.state.courseId}
+                       moduleId         =   { this.state.moduleId}
+                       lessonId         =   { this.state.lessonId}
+                       topicId          =   { this.state.topicId}
+                   />
+               </div>}
+
+       </div>);
     }
 
 
