@@ -30,23 +30,19 @@ export default class WidgetListEditor
     componentDidMount() {
 
 
-        window.addEventListener("beforeunload", this.onUnload)
-
-
         this.setCourseId(this.props.courseId);
         this.setModuleId(this.props.moduleId);
         this.setLessonId(this.props.lessonId);
         this.setTopicId(this.props.topicId);
 
-        // alert("selected topic : " + this.props.lessonId  + this.props.topicId);
 
     }
 
     componentWillReceiveProps(newProps) {
-        this.setCourseId(this.props.courseId);
-        this.setModuleId(this.props.moduleId);
-        this.setLessonId(this.props.lessonId);
-        this.setTopicId(this.props.topicId);
+        this.setCourseId(newProps.courseId);
+        this.setModuleId(newProps.moduleId);
+        this.setLessonId(newProps.lessonId);
+        this.setTopicId(newProps.topicId);
     }
 
     setTopicId(topicId) {

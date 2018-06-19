@@ -38,6 +38,7 @@ class WidgetList extends React.Component  {
         this.props.save(this.state.topicId);
     }
 
+
     render() {
         return (
 

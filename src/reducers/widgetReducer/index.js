@@ -297,9 +297,7 @@ export const widgetReducer = (state = {widgets: [], preview: false}, action) => 
             widgetServiceInstance.createWidget(action.topicId,tempWidget)
             return {
                 widgets: [
-                    ...state.widgets,tempWidget
-
-                ]
+                    ...state.widgets,tempWidget]
             }
         default:
             return state
