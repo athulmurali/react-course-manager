@@ -1,7 +1,7 @@
 ## Online url : https://react-course-manager.herokuapp.com/
 
 
-Assignment 3 : https://github.com/athulmurali/react-course-manager/releases/tag/3.1
+Assignment 3 : https://github.com/athulmurali/react-course-manager/releases/tag/3.2
 
 
 
