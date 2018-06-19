@@ -28,13 +28,9 @@ export default class WidgetListEditor
 
 
     componentDidMount() {
-        // this.setModuleId(this.props.match.params.moduleId);
-        // this.setCourseId(this.props.match.params.courseId);
-        // this.setLessonId(this.props.match.params.lessonId);
-        // this.setTopicId(this.props.match.params.topicId);
-        //
 
 
+        window.addEventListener("beforeunload", this.onUnload)
 
 
         this.setCourseId(this.props.courseId);

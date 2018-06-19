@@ -1,7 +1,7 @@
 let _singleton = Symbol();
 
 
-const BASE_URL = "http://localhost:8080"
+const BASE_URL = "https://neu-course-manager.herokuapp.com"
 console.log("BASE_URL  " + BASE_URL);
 
 
@@ -20,11 +20,10 @@ export default class WidgetService {
             this[_singleton] = new WidgetService(_singleton);
         return this[_singleton]
     }
-    createWidget(courseId, moduleId,lessonId,widget) {
-        return fetch(WIDGET_API_URL
-                .replace('CID', courseId)
-                .replace('MID', moduleId)
-                .replace('LID', lessonId),
+    createWidget(topicId,widget) {
+        const URL =  BASE_URL + "/api/topic/TID/widget"
+        return fetch(URL.replace('TID',topicId),
+
             {
                 body: JSON.stringify(widget),
                 headers: { 'Content-Type': 'application/json' },
@@ -34,9 +33,10 @@ export default class WidgetService {
         });
     }
     deleteWidget(widgetID) {
-        return fetch(WIDGET_API_URL_TID.replace('TID', widgetID), {
+        const URL = BASE_URL + "/api/widget/WID"
+        return fetch(URL.replace('WID', widgetID), {
             method: 'DELETE'
-        });
+        }).then(()=> console.log("delete widget complete! "));
     }
 
 
@@ -44,7 +44,11 @@ export default class WidgetService {
     findAllWidgetsForTopic=(topicId)=> {
 
 
-        return fetch(WIDGET_API_URL.replace('TID', topicId)
+        const URL = BASE_URL +   "/api/topic/WID/widget"
+
+        console.log("finding widgets for topic Id  : " + topicId);
+
+        return fetch(URL.replace('WID', topicId)
         )
             .then(function (response) {
                 if(response.status === 500) {

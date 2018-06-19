@@ -2,6 +2,8 @@ import * as constants from "../../constants/index"
 import WidgetService from "../../services/WidgetService";
 
 export const widgetReducer = (state = {widgets: [], preview: false}, action) => {
+    const widgetServiceInstance = WidgetService.instance
+
     let newState
     switch (action.type) {
 
@@ -261,7 +263,6 @@ export const widgetReducer = (state = {widgets: [], preview: false}, action) => 
         case constants.SAVE:
 
 
-            const widgetServiceInstance = WidgetService.instance
             alert("save clicked");
             widgetServiceInstance.saveWidgetsForTopic(action.topicId, state.widgets);
             return state;
@@ -278,24 +279,29 @@ export const widgetReducer = (state = {widgets: [], preview: false}, action) => 
 
 
         case constants.DELETE_WIDGET:
+            alert("delete clicked");
+            console.log(action);
             return {
                 widgets: state.widgets.filter(widget => (
                     widget.id !== action.id
                 ))
             }
         case constants.ADD_WIDGET:
+
+            const tempWidget =  {
+                id: state.widgets.length + 1,
+                text: 'New Widget',
+                name: 'Widget Name',
+                widgetType: 'Paragraph',
+                size: '2',
+                listType: 'ordered',
+                widgetOrder: state.widgets.length + 1
+            }
+            // widgetServiceInstance.createWidget(action.)
             return {
                 widgets: [
-                    ...state.widgets,
-                    {
-                        id: state.widgets.length + 1,
-                        text: 'New Widget',
-                        name: 'Widget Name',
-                        widgetType: 'Paragraph',
-                        size: '2',
-                        listType: 'ordered',
-                        widgetOrder: state.widgets.length + 1
-                    }
+                    ...state.widgets,tempWidget
+
                 ]
             }
         default:

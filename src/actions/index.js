@@ -1,5 +1,4 @@
 import * as constants from "../constants/index"
-import TopicService from "../services/TopicService";
 import WidgetService from "../services/WidgetService";
 
 ///////////////////////////////////////// Heading //////////////////////////////////////////////////////////////////////
@@ -135,8 +134,8 @@ export const findAllWidgetsForTopic = (dispatch,topicId) => {
 }
 
 
-export const addWidget = dispatch => (
-    dispatch({type: constants.ADD_WIDGET})
+export const addWidget = (dispatch,topicId)=> (
+    dispatch({type: constants.ADD_WIDGET, topicId:topicId})
 )
 export const save = (dispatch,topicId,widgets) => (
     dispatch({type: constants.SAVE,
