@@ -282,10 +282,11 @@ export const widgetReducer = (state = {widgets: [], preview: false}, action) => 
 
         case constants.ADD_WIDGET:
 
+            const milliSec = new Date().getTime();
             const tempWidget =  {
                 id: state.widgets.length + 1,
                 text: 'New Widget',
-                name: 'Widget Name',
+                name: 'widget' + milliSec.toString(),
                 widgetType: 'Paragraph',
                 size: '2',
                 listType: 'ordered',

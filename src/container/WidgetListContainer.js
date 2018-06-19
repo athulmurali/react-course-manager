@@ -79,10 +79,13 @@ class WidgetList extends React.Component  {
 
 
                 <div >
-                    {this.props.widgets.map(widget => (
+                    {
+
+
+                        this.props.widgets.map(widget => (
                         <WidgetContainer widget={widget}
                                          preview={this.props.previewMode}
-                                         key={widget.widgetOrder}
+                                         key={widget.id}
                                          widgetLength={this.props.widgets.length}/>
                     ))}
                 </div>

@@ -97,21 +97,23 @@ const dispatchToPropsMapperList = dispatch =>
 const textToOrderedList = (text) =>
 {
     let stringArray = text.split("\n");
+    let i =0;
     return (
 
         <ol className="list-group" >
-            {stringArray.map(line => ( <li> {line} </li>))}
+            {stringArray.map(line => ( <li key= {i++}> {line}  </li>))}
         </ol>
     )
 }
 
 const textToUnorderedList = (text) =>
 {
+    let i =0;
     let stringArray = text.split("\n");
     return (
 
         <ul className="list-group" >
-            {stringArray.map(line => ( <li> {line} </li>))}
+            {stringArray.map(line => ( <li key= {i++}> {line} </li>))}
         </ul>
     )
 }
