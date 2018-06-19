@@ -5,6 +5,12 @@
 
 
 /*Added Later*/
+
+.widgetListStyle{
+    height: 37px;
+    borderRadius : 3px;
+}
+
 .widgetContainerStyle {
     borderWidth: thin;
     borderColor: gray;

@@ -48,7 +48,7 @@ const Widget = ({widget, preview, dispatch,widgetLength}) => {
                                 </div>
 
 
-                                <div className="d-inline-flex pr-1 float-right my-auto" style={widgetListStyle}>
+                                <div className="d-inline-flex pr-1 float-right my-auto widgetListStyle" >
                                     <select value={widget.widgetType}
                                             onChange={e =>
                                                 dispatch({
