@@ -10,6 +10,10 @@ class WidgetList extends React.Component  {
         this.state = {topicId: ''};
         this.selectTopic = this.selectTopic.bind(this);
         this.saveToServer = this.saveToServer.bind(this);
+        this.addWidgetToServer = this.addWidgetToServer.bind(this)
+    }
+    addWidgetToServer(){
+        this.props.addWidget(this.props.topicId)
     }
 
     componentDidMount() {
@@ -39,6 +43,12 @@ class WidgetList extends React.Component  {
 
         <div>
             <div className="container pt-5">
+                <div className="container row  col justify-content-center align-items-center">
+                    <h2>Widgets</h2>
+                </div>
+
+                { (this.state.topicId != "" && this.state.topicId != -1) &&
+                    <div>
 
                 <div className="row flex-row-reverse pr-2 pb-3 align-items-center">
                     <span style={{float: "left"}} className="px-2">
@@ -61,7 +71,7 @@ class WidgetList extends React.Component  {
 
                     </div>
                     <div className="d-flex pr-2">
-                        <button className="btn  rounded-circle btn-outline-secondary" onClick={this.props.addWidget}><i
+                        <button className="btn  rounded-circle btn-outline-secondary" onClick={this.addWidgetToServer}><i
                             className="fa fa-plus-circle"></i>
                         </button>
                     </div>
@@ -76,9 +86,10 @@ class WidgetList extends React.Component  {
                                          widgetLength={this.props.widgets.length}/>
                     ))}
                 </div>
+                    </div>
 
 
-
+                }
 
             </div>
 
@@ -101,7 +112,7 @@ class WidgetList extends React.Component  {
     dispatcherToPropsMapper
         = dispatch => ({
         findAllWidgetsForTopic: (topicId) => actions.findAllWidgetsForTopic(dispatch, topicId),
-        addWidget: () => actions.addWidget(dispatch),
+        addWidget: (topicId) => actions.addWidget(dispatch,topicId),
         save: (topicId) => actions.save(dispatch, topicId),
         preview: () => actions.preview(dispatch)
     })

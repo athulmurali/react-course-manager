@@ -4,8 +4,48 @@ import WidgetService from "../../services/WidgetService";
 export const widgetReducer = (state = {widgets: [], preview: false}, action) => {
     const widgetServiceInstance = WidgetService.instance
 
-    let newState
     switch (action.type) {
+
+
+        case constants.PREVIEW:
+            return {
+                widgets: state.widgets,
+                preview: !state.preview
+            }
+
+
+        case constants.HEADING_TEXT_CHANGED:
+            return {
+                widgets: state.widgets.map(widget => {
+                    if(widget.id === action.id) {
+                        widget.text = action.text
+                    }
+                    return Object.assign({}, widget)
+                })
+            }
+
+        case constants.HEADING_NAME_CHANGED:
+            return {
+                widgets: state.widgets.map(widget => {
+                    if(widget.id === action.id) {
+                        widget.name = action.name
+                    }
+                    return Object.assign({}, widget)
+                })
+            }
+
+
+        case constants.HEADING_SIZE_CHANGED:
+            return {
+                widgets: state.widgets.map(widget => {
+                    if(widget.id === action.id) {
+                        widget.size = action.size
+                    }
+                    return Object.assign({}, widget)
+                })
+
+            }
+
 
         case constants.INCREASE_ORDER_WIDGET:
             return {
@@ -192,9 +232,6 @@ export const widgetReducer = (state = {widgets: [], preview: false}, action) => 
                 }
             return JSON.parse(JSON.stringify(newState7))
 
-
-
-
         case constants.LIST_TYPE_CHANGED:
 
         {
@@ -210,43 +247,6 @@ export const widgetReducer = (state = {widgets: [], preview: false}, action) => 
         }
 
 
-        case constants.PREVIEW:
-            return {
-                widgets: state.widgets,
-                preview: !state.preview
-            }
-
-        case constants.HEADING_TEXT_CHANGED:
-            return {
-                widgets: state.widgets.map(widget => {
-                    if(widget.id === action.id) {
-                        widget.text = action.text
-                    }
-                    return Object.assign({}, widget)
-                })
-            }
-
-        case constants.HEADING_NAME_CHANGED:
-            return {
-                widgets: state.widgets.map(widget => {
-                    if(widget.id === action.id) {
-                        widget.name = action.name
-                    }
-                    return Object.assign({}, widget)
-                })
-            }
-
-
-        case constants.HEADING_SIZE_CHANGED:
-            return {
-                widgets: state.widgets.map(widget => {
-                    if(widget.id === action.id) {
-                        widget.size = action.size
-                    }
-                    return Object.assign({}, widget)
-                })
-
-            }
 
         case constants.SELECT_WIDGET_TYPE:
             console.log(action);
@@ -262,15 +262,8 @@ export const widgetReducer = (state = {widgets: [], preview: false}, action) => 
 
         case constants.SAVE:
 
-
-            alert("save clicked");
             widgetServiceInstance.saveWidgetsForTopic(action.topicId, state.widgets);
             return state;
-
-
-
-
-
 
         case constants.FIND_ALL_WIDGETS_FOR_TOPIC:
             newState = Object.assign({}, state)
@@ -279,13 +272,14 @@ export const widgetReducer = (state = {widgets: [], preview: false}, action) => 
 
 
         case constants.DELETE_WIDGET:
-            alert("delete clicked");
-            console.log(action);
+            console.log("Deleting widget ID : " + action.id);
+            widgetServiceInstance.deleteWidget(action.id);
             return {
                 widgets: state.widgets.filter(widget => (
                     widget.id !== action.id
                 ))
             }
+
         case constants.ADD_WIDGET:
 
             const tempWidget =  {
@@ -297,7 +291,9 @@ export const widgetReducer = (state = {widgets: [], preview: false}, action) => 
                 listType: 'ordered',
                 widgetOrder: state.widgets.length + 1
             }
-            // widgetServiceInstance.createWidget(action.)
+            console.log("printing action after adding widget : ")
+            console.log(action)
+            widgetServiceInstance.createWidget(action.topicId,tempWidget)
             return {
                 widgets: [
                     ...state.widgets,tempWidget
