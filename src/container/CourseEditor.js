@@ -47,45 +47,9 @@ export default class CourseEditor extends React.Component{
                 topicId: -1,
 
                 title :"unnamed",
+                private : false,
                 course :
-                    {
-                        "id": 171,
-                        "title": "Web Development",
-                        "modules": [
-                            {
-                                "id": 41,
-                                "title": "Module 1- React",
-                                "lessons": [
-                                    {
-                                        "id": 2,
-                                        "title": "lesson -1 editted"
-                                    },
-                                    {
-                                        "id": 12,
-                                        "title": "lesson -1"
-                                    },
-                                    {
-                                        "id": 22,
-                                        "title": "lesson -1"
-                                    },
-                                    {
-                                        "id": 32,
-                                        "title": "lesson -1"
-                                    }
-                                ]
-                            },
-                            {
-                                "id": 71,
-                                "title": "Module 2- Redux editted",
-                                "lessons": []
-                            },
-                            {
-                                "id": 81,
-                                "title": "Module 3- Redux editted",
-                                "lessons": []
-                            }
-                        ]
-                    },
+                    {private : false},
                 modules :[],
                 lessons: [],
                 topics : [],
@@ -96,6 +60,8 @@ export default class CourseEditor extends React.Component{
 
 
         this.lessons = []
+
+        this.getCourseFromServer();
 
 
     }
@@ -141,26 +107,7 @@ export default class CourseEditor extends React.Component{
     selectTopic =(id)=> {
         console.log("selected topic id : "+ id);
         console.log("Fetching widgets from server for topicId  : "+ id);
-
-        //
-        // this.setState({lessonId :id, lessonSelected : true}, ()=>{
-        //     this.widgetService.findAllTopicsForLesson(  this.state.courseId,
-        //         this.state.moduleId,
-        //         this.state.lessonId
-        //     ).then((topics)=>{
-        //         console.log(topics);
-        //         this.setState({topics : topics});
-        //     });
-        //
-        // });
-
-
-
-
         this.setState({topicId : id});
-
-
-
     }
 
 
@@ -175,7 +122,29 @@ export default class CourseEditor extends React.Component{
     }
 
 
-    updateModules=()=>{
+    updateCourseVisibility=()=>{
+
+        let tempCourse = this.state.course;
+        console.log(tempCourse)
+        tempCourse.private = !tempCourse.private
+        console.log(tempCourse)
+
+
+        this.courseService.updateCourse(this.state.courseId,tempCourse).then(
+                (updatedCourse)=> {
+                    this.setState({course: updatedCourse})
+                })
+    }
+
+
+
+   getCourseFromServer=()=>{
+       this.courseService.getCourseById(this.props.match.params.courseId).then((courseReceived) => {
+           this.setState({course : courseReceived});
+       });
+   }
+
+   updateModules=()=>{
 
         this.courseService.getCourseById(this.props.match.params.courseId).then((coursesReceived) => {
             // console.log("printing :  courselatestinfo" );
@@ -221,11 +190,39 @@ export default class CourseEditor extends React.Component{
     }
     renderEditor= ()=>{
        return ( <div className="container" >
-                <div className= "row   py-1 justify-content-end" >
+                <div className= "row   py-1 justify-content-between" >
 
-                        <DeleteCourseButton
+
+                    <div className="row flex-row pr-2 pb-3 align-items-center">
+                        <span style={{float: "left"}} className="px-2">
+                                <h7>Public</h7>
+
+                        </span>
+                        <div className="d-flex float-right my-auto">
+
+                            <label className="switch m-auto">
+
+                                <input type="checkbox" checked={this.state.course.private}
+                                       onClick={()=>this.updateCourseVisibility()}/>
+                                <span className="slider round"></span>
+                            </label>
+                        </div>
+
+
+                        <span style={{float: "right"}} className="px-2">
+                                <h7>Private</h7>
+
+                        </span>
+
+
+                    </div>
+
+                    <DeleteCourseButton
                             deleteCourse ={this.deleteCourse}
                             id={this.state.courseId}/>
+
+
+
                 </div>
                 <CourseTitle
                     courseId = {this.state.courseId}
