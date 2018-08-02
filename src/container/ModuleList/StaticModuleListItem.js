@@ -1,7 +1,4 @@
-
-
-import Link from "react-router-dom/es/Link";
-import React from  'react'
+import React from 'react'
 
 export default class StaticModuleListItem extends React.Component{
 

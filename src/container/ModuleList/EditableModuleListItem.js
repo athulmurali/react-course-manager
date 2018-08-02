@@ -1,8 +1,7 @@
-import React,{Component} from 'react';
+import React from 'react';
 
 
-
- class  EditableModuleListItem extends React.Component {
+class  EditableModuleListItem extends React.Component {
      constructor(props) {
          super(props);
          console.log("Printing all  state ");

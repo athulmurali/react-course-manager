@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
 
-import  ModuleListItem from './ModuleListItem';
+import ModuleListItem from './ModuleListItem';
 import ModuleService from "../../services/ModuleService";
 
 export default class ModuleList extends React.Component{

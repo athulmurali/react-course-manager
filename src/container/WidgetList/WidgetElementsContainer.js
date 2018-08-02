@@ -1,14 +1,12 @@
-import React, {Component} from  'react'
+import React from 'react'
 import {connect} from 'react-redux'
+import * as constants from "../../constants/index"
 import {DELETE_WIDGET} from "../../constants/index"
-import * as constants from '../../constants/index'
 import ListContainer from "./ListContainer";
 import ImageContainer from "./ImageContainer";
 import ParaContainer from "./ParaContainer";
 import LinkContainer from "./LinkContainer";
 import HeadingContainer from "./HeadingContainer";
-
-
 
 
 const Widget = ({widget, preview, dispatch,widgetLength}) => {

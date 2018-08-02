@@ -1,5 +1,4 @@
 import React from "react";
-import Redirect from "react-router-dom/es/Redirect";
 import Link from "react-router-dom/es/Link";
 
 // Required props :

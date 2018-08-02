@@ -1,11 +1,13 @@
 import React from 'react';
 
 import WidgetListContainer from './WidgetListContainer'
-import {createStore} from 'redux'
+import {applyMiddleware, createStore} from 'redux'
+import logger from 'redux-logger'
+
 import {Provider} from 'react-redux'
 import {widgetReducer} from "../reducers/widgetReducer"
 
-let store = createStore(widgetReducer);
+let store = createStore(widgetReducer,applyMiddleware(logger));
 
 export default class WidgetListEditor
     extends React.Component {

@@ -22,3 +22,6 @@ export const LINK_DISP_CHANGED          = 'LINK_DISP_CHANGED'
 export const INCREASE_ORDER_WIDGET      = 'INCREASE_ORDER_WIDGET'
 export const DECREASE_ORDER_WIDGET      = 'DECREASE_ORDER_WIDGET'
 export const FIND_ALL_WIDGETS_FOR_TOPIC = 'FIND_ALL_WIDGETS_FOR_TOPIC'
+
+
+export const MEAN_BACKEND_URL = "https://mean-exam-manager-backend.herokuapp.com";

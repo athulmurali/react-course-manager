@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../../node_modules/font-awesome/css/font-awesome.min.css';
-import CourseService from  '../services/CourseService'
+import CourseService from '../services/CourseService'
 import Courses from "./CourseList/Courses";
 import AddCourseComponent from "./CourseList/AddCourseComponent";
 
@@ -57,9 +57,29 @@ export default class CoursesScreen
             "title" : "new-course-untitled"
         }
 
-        this.courseService.createCourse(course).then(()=>{
+        this.courseService.createCourse(course).then((response)=>{
+            console.log("created new course");
+            console.log(response.id);
+
+            this.courseService.createCourseInMongo(response.id).
+            then(response=>{
+                console.log("created in mongo successfully")
+                console.log(response)
+            }).
+            catch(err=>{
+                console.log("Error in adding the new course to mongo")
+                console.log(err);
+            })
+
+
             this.getAllCoursesFromServer();
+
+
         });
+
+
+
+
     }
 
 

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../../node_modules/font-awesome/css/font-awesome.min.css';
@@ -11,7 +10,6 @@ import {Redirect} from "react-router-dom";
 import LessonList from "./LessonList/LessonList";
 import LessonService from "../services/LessonService";
 import TopicList from "./TopicList/TopicList";
-import ModuleService from "../services/ModuleService";
 import TopicService from "../services/TopicService";
 import WidgetListEditor from "./WidgetListEditor";
 
@@ -163,22 +161,15 @@ export default class CourseEditor extends React.Component{
     deleteCourse=(id)=>{
         var oldOptions = this.state.courses;
         console.log("Delete course id : " + id);
-        this.courseService.deleteCourse(id).then(
-            (res)=>{
+        this.courseService.deleteCourse(id).
+        then((res)=>{
                 this.setState({deleted: true})
-            }
-        );
+            });
 
-
-
-
-
-
-
-
-
-
-
+        // this.courseService.deleteCourseInMongo(id).
+        // then(response=>{ console.log(response);
+        // console.log("deleted in mongo too.")}).
+        // catch(err=>{console.log(err);})
         //api to delete
 
     }

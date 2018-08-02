@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, {Component} from 'react';
 import StaticLessonListItem from "./StaticLessonListItem";
 import EditableLessonListItem from "./EditableLessonListItem";
 

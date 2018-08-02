@@ -1,8 +1,7 @@
-import React,{Component} from 'react';
+import React from 'react';
 
 
-
- class  EditableLessonListItem extends React.Component{
+class  EditableLessonListItem extends React.Component{
      constructor(props)
      {
          super(props);

@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, {Component} from 'react';
 import EditableTopicListItem from "./EditableTopicListItem";
 import StaticTopicListItem from "./StaticTopicListItem";
 

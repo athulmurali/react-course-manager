@@ -2,9 +2,6 @@ import React from 'react';
 import TopicService from "../../services/TopicService";
 import TopicListItem from "./TopicItem/TopicListItem";
 
-import {BrowserRouter as Route} from 'react-router-dom'
-
-
 
 export default class TopicList extends React.Component{
 

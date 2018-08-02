@@ -1,4 +1,4 @@
-import  React from 'react'
+import React from 'react'
 import {connect} from 'react-redux'
 import * as actions from "../actions"
 import WidgetContainer from './WidgetList/WidgetElementsContainer'
@@ -19,6 +19,8 @@ class WidgetList extends React.Component  {
     componentDidMount() {
         this.selectTopic
         (this.props.topicId);
+
+        window.addEventListener('onbeforeunload', this.handleWindowClose);
     }
 
     componentWillReceiveProps(newProps) {
@@ -28,6 +30,14 @@ class WidgetList extends React.Component  {
             this.props.findAllWidgetsForTopic(newProps.topicId);
         }
     }
+
+    componentWillUnmount() {
+        window.removeEventListener('onbeforeunload', this.handleWindowClose);
+    }
+
+
+
+
 
     selectTopic(topicId) {
         this.setState({topicId: topicId});

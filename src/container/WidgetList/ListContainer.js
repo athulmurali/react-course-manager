@@ -3,8 +3,6 @@ import {connect} from "react-redux";
 import React from 'react';
 
 
-
-
 var widgetContainerStyle =
     {
         border: "solid" , borderWidth: "thin" , width:"1000px", borderColor: "gray" , borderRadius: "3px"
