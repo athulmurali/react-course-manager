@@ -95,44 +95,17 @@ export default class ModuleList extends React.Component{
 
         index --; //compensation for index start base from 1
 
-        console.log("Module before edit");
-        console.log(this.state.modules);
-
-
         if (index > -1 && index  <  this.state.modules.length) {
             let newModules = this.state.modules;
             newModules[index].title = title;
 
-            console.log("updating module : ");
-            console.log("before update ");
-            console.log(this.state.modules[index]);
+                newModules= this.state.modules;
+                newModules[index].title = title;
 
-            let module = {
-                title : title
-            }
-
-
-                newModules= this.state.modules
-                newModules[index].title = title
-
-                this.moduleServiceInstance.updateModule(newModules[index].id,newModules[index]).then((response)=>{
-                    console.log("Module :updated in server ")
-                    console.log(response);
-
-                    this.setState((state)=>{
-                        console.log("resetting state options");
-                        return {modules:  newModules }
-                    });
-            } )
-
-
-            console.log("after update ");
-            console.log(this.state.modules[index]);
-
+                this.moduleServiceInstance.updateModule(newModules[index].id,newModules[index]).
+                then(()=>{this.setState({modules:  newModules } ,this.props.selectModule(newModules[index].id))} );
         }
 
-        console.log("Module after edit");
-        console.log(this.state.modules[index]);
     }
 
     renderListOfModules = () => {
@@ -146,6 +119,7 @@ export default class ModuleList extends React.Component{
                     id={module.id}
                     index={index}
                     title={module.title}
+                    isSelected ={module.id  === this.props.selectedModuleId}
                     inEditMode={false}
                     deleteModule={this.deleteModule}
                     editModule = {this.editModule}

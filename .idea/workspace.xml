@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21538077-4bef-4f0f-9d54-2be4d9336541" name="Default" comment="">
+    <list default="true" id="21538077-4bef-4f0f-9d54-2be4d9336541" name="Default" comment="Minor changes&#10;&#10;- Made the whole div of module List item clickable and selectable and removed the anchor tag&#10;- Replace  empty XML tags for i with single tag i">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/CourseEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/CourseEditor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/ModuleList/ModuleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/ModuleList/ModuleList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/ModuleList/StaticModuleListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/ModuleList/StaticModuleListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/ModuleList/ModuleListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/ModuleList/ModuleListItem.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,25 +26,21 @@
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/container/ModuleList/ModuleList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="148" column="38" selection-start-line="148" selection-start-column="38" selection-end-line="148" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/container/ModuleList/StaticModuleListItem.js">
+        <entry file="file://$PROJECT_DIR$/src/container/ModuleList/ModuleListItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="60">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+              <folding>
+                <element signature="e#314#1795#0" />
+                <element signature="e#610#699#0" />
+                <element signature="e#723#820#0" />
+                <element signature="e#993#2139#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,9 +56,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>WIDGET_API_URL</find>
-      <find>findAllWidgetsForTopic</find>
-      <find>dispatch</find>
       <find>ADD</find>
       <find>DEL</find>
       <find>find</find>
@@ -90,6 +83,9 @@
       <find>lessonSelected</find>
       <find>float</find>
       <find>private</find>
+      <find>selectedMod</find>
+      <find>selectedModuleId</find>
+      <find>modules</find>
     </findStrings>
     <replaceStrings>
       <replace>createModule</replace>
@@ -118,6 +114,11 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Athul Muralidharan &lt;athulmurali@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -133,7 +134,6 @@
         <option value="$PROJECT_DIR$/src/container/CourseList/Courses.js" />
         <option value="$PROJECT_DIR$/src/container/CourseList/CourseCard.js" />
         <option value="$PROJECT_DIR$/src/components/Home.js" />
-        <option value="$PROJECT_DIR$/src/container/ModuleList/ModuleListItem.js" />
         <option value="$PROJECT_DIR$/src/container/TopicList/LessonList.js" />
         <option value="$PROJECT_DIR$/src/container/TopicList/TopicItem/LessonListItem.js" />
         <option value="$PROJECT_DIR$/src/container/TopicList/TopicItem/EditableLessonListItem.js" />
@@ -176,9 +176,10 @@
         <option value="$PROJECT_DIR$/src/container/TopicSection.jsx" />
         <option value="$PROJECT_DIR$/src/container/WidgetListContainer.js" />
         <option value="$PROJECT_DIR$/src/container/Sections/ModulesSection.jsx" />
+        <option value="$PROJECT_DIR$/src/container/ModuleList/StaticModuleListItem.js" />
         <option value="$PROJECT_DIR$/src/container/CourseEditor.js" />
         <option value="$PROJECT_DIR$/src/container/ModuleList/ModuleList.js" />
-        <option value="$PROJECT_DIR$/src/container/ModuleList/StaticModuleListItem.js" />
+        <option value="$PROJECT_DIR$/src/container/ModuleList/ModuleListItem.js" />
       </list>
     </option>
   </component>
@@ -198,6 +199,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -221,19 +223,19 @@
               <item name="react-course-manager" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-course-manager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Pages" type="462c0819:PsiDirectoryNode" />
+              <item name="container" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-course-manager" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-course-manager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+              <item name="container" type="462c0819:PsiDirectoryNode" />
+              <item name="ModuleList" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -364,24 +366,33 @@
       <workItem from="1533205519360" duration="1125000" />
       <workItem from="1559433868818" duration="429000" />
       <workItem from="1559612069202" duration="4892000" />
-      <workItem from="1559668590810" duration="507000" />
+      <workItem from="1559668590810" duration="860000" />
+      <workItem from="1559669738664" duration="1951000" />
     </task>
+    <task id="LOCAL-00001" summary="Minor changes&#10;&#10;- Made the whole div of module List item clickable and selectable and removed the anchor tag&#10;- Replace  empty XML tags for i with single tag i">
+      <created>1559669232477</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1559669232477</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="251575000" />
+    <option name="totallyTimeSpent" value="253879000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.200556" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20214456" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="UI Designer" order="4" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32847896" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32970297" />
@@ -395,9 +406,6 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32970297" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -406,6 +414,9 @@
       <window_info anchor="right" id="Database" order="5" weight="0.32956383" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="SciView" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35702747" />
@@ -461,6 +472,26 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Minor changes&#10;&#10;- Made the whole div of module List item clickable and selectable and removed the anchor tag&#10;- Replace  empty XML tags for i with single tag i" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes&#10;&#10;- Made the whole div of module List item clickable and selectable and removed the anchor tag&#10;- Replace  empty XML tags for i with single tag i" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -616,7 +647,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/container/ModuleList/ModuleList.js</url>
-          <line>164</line>
+          <line>138</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -753,34 +784,22 @@
           <line>23</line>
           <option name="timeStamp" value="123" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/container/ModuleList/ModuleList.js</url>
+          <line>110</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/container/ModuleList/ModuleList.js</url>
+          <line>15</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Utils/DateUtils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/CourseList/CourseRowsTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/CourseList/CourseCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/container/CourseList/CourseCards.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -1231,56 +1250,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/CourseEditor.js">
+    <entry file="file://$PROJECT_DIR$/build_report.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="206">
+          <caret line="137" column="38" selection-start-line="137" selection-start-column="38" selection-end-line="137" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/ModuleList/EditableModuleListItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-319" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/ModuleList/StaticModuleListItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2" column="41" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="41" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#1315#1743#0" />
-            <element signature="e#1553#1684#0" />
-            <element signature="e#1708#1776#0" />
-            <element signature="e#1845#1907#0" />
-            <element signature="e#1996#2417#0" />
-            <element signature="e#2191#2408#0" />
-            <element signature="e#2382#2878#0" />
-            <element signature="e#2984#3174#0" />
-            <element signature="e#3184#3474#0" />
-            <element signature="e#3771#3942#0" />
-            <element signature="e#3290#3466#0" />
-            <element signature="e#4344#4801#0" />
-            <element signature="e#4505#4567#0" />
-            <element signature="e#4611#6266#0" />
-            <element signature="e#4629#6258#0" />
-            <element signature="e#5009#6116#0" />
-            <element signature="e#5954#6090#0" />
-            <element signature="e#6263#9025#0" />
-            <element signature="e#5150#5331#0" />
-            <element signature="e#7352#7799#0" />
-            <element signature="e#5860#6242#0" />
-            <element signature="e#9175#9481#0" />
+            <element signature="e#176#321#0" />
+            <element signature="e#348#482#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/ModuleList/ModuleListItem.js">
+    <entry file="file://$PROJECT_DIR$/src/container/CourseEditor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="57" column="63" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="63" />
+        <state relative-caret-position="185">
+          <caret line="132" column="48" selection-start-line="132" selection-start-column="32" selection-end-line="132" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/container/ModuleList/ModuleList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="148" column="38" selection-start-line="148" selection-start-column="38" selection-end-line="148" selection-end-column="38" />
+        <state relative-caret-position="248">
+          <caret line="121" column="30" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="30" />
+          <folding>
+            <element signature="e#994#1565#0" />
+            <element signature="e#1586#1640#0" />
+            <element signature="e#1668#2811#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/ModuleList/StaticModuleListItem.js">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="173">
+          <caret line="486" column="8" selection-start-line="486" selection-start-column="8" selection-end-line="486" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/ModuleList/ModuleListItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#314#1795#0" />
+            <element signature="e#610#699#0" />
+            <element signature="e#723#820#0" />
+            <element signature="e#993#2139#0" />
+          </folding>
         </state>
       </provider>
     </entry>
