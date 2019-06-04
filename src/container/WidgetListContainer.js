@@ -62,28 +62,26 @@ class WidgetList extends React.Component  {
                     <div>
 
                 <div className="row flex-row-reverse pr-2 pb-3 align-items-center">
-                    <span style={{float: "left"}} className="px-2">
+                    <span className="px-2 float-left">
                                 <h5>Preview</h5>
-
-                        </span>
+                    </span>
                     <div className="d-flex float-right my-auto">
-
                         <label className="switch m-auto">
-
                             <input type="checkbox" onClick={this.props.preview}/>
                             <span className="slider round"></span>
                         </label>
                     </div>
                     <div className="d-flex pr-2">
-                        <button className="btn btn-success m-auto" hidden={this.props.previewMode}
+                        <button className="btn btn-success m-auto"
+                                hidden={this.props.previewMode}
                                 onClick={this.saveToServer}>
                             Save
                         </button>
-
                     </div>
                     <div className="d-flex pr-2">
-                        <button className="btn  rounded-circle btn-outline-secondary" onClick={this.addWidgetToServer}><i
-                            className="fa fa-plus-circle"></i>
+                        <button className="btn  rounded-circle btn-outline-secondary"
+                                onClick={this.addWidgetToServer}>
+                            <i className="fa fa-plus-circle"></i>
                         </button>
                     </div>
                 </div>
@@ -91,8 +89,6 @@ class WidgetList extends React.Component  {
 
                 <div >
                     {
-
-
                         this.props.widgets.map(widget => (
                         <WidgetContainer widget={widget}
                                          preview={this.props.previewMode}

@@ -2,36 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21538077-4bef-4f0f-9d54-2be4d9336541" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Login.js" afterPath="$PROJECT_DIR$/src/Pages/Login.js" />
-      <change beforePath="$PROJECT_DIR$/src/actions/index.js" afterPath="$PROJECT_DIR$/src/actions/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/constants/index.js" afterPath="$PROJECT_DIR$/src/constants/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/CourseEditor.js" afterPath="$PROJECT_DIR$/src/container/CourseEditor.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/CourseList/CourseTitle/EditableCourseTitle.js" afterPath="$PROJECT_DIR$/src/container/CourseList/CourseTitle/EditableCourseTitle.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/CourseList/EditCourseButton.js" afterPath="$PROJECT_DIR$/src/container/CourseList/EditCourseButton.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/CoursesScreen.js" afterPath="$PROJECT_DIR$/src/container/CoursesScreen.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/LessonList/LessonItem/EditableLessonListItem.js" afterPath="$PROJECT_DIR$/src/container/LessonList/LessonItem/EditableLessonListItem.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/LessonList/LessonItem/LessonListItem.js" afterPath="$PROJECT_DIR$/src/container/LessonList/LessonItem/LessonListItem.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/LessonList/LessonItem/StaticLessonListItem.js" afterPath="$PROJECT_DIR$/src/container/LessonList/LessonItem/StaticLessonListItem.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/ModuleList/EditableModuleListItem.js" afterPath="$PROJECT_DIR$/src/container/ModuleList/EditableModuleListItem.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/ModuleList/ModuleList.js" afterPath="$PROJECT_DIR$/src/container/ModuleList/ModuleList.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/ModuleList/ModuleListItem.js" afterPath="$PROJECT_DIR$/src/container/ModuleList/ModuleListItem.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/ModuleList/StaticModuleListItem.js" afterPath="$PROJECT_DIR$/src/container/ModuleList/StaticModuleListItem.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/TopicList/TopicItem/EditableTopicListItem.js" afterPath="$PROJECT_DIR$/src/container/TopicList/TopicItem/EditableTopicListItem.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/TopicList/TopicItem/StaticTopicListItem.js" afterPath="$PROJECT_DIR$/src/container/TopicList/TopicItem/StaticTopicListItem.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/TopicList/TopicItem/TopicListItem.js" afterPath="$PROJECT_DIR$/src/container/TopicList/TopicItem/TopicListItem.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/TopicList/TopicList.js" afterPath="$PROJECT_DIR$/src/container/TopicList/TopicList.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/TopicPills.js" afterPath="$PROJECT_DIR$/src/container/TopicPills.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/WidgetList/HeadingContainer.js" afterPath="$PROJECT_DIR$/src/container/WidgetList/HeadingContainer.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/WidgetList/ListContainer.js" afterPath="$PROJECT_DIR$/src/container/WidgetList/ListContainer.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/WidgetList/WidgetElementsContainer.js" afterPath="$PROJECT_DIR$/src/container/WidgetList/WidgetElementsContainer.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/WidgetListContainer.js" afterPath="$PROJECT_DIR$/src/container/WidgetListContainer.js" />
-      <change beforePath="$PROJECT_DIR$/src/container/WidgetListEditor.js" afterPath="$PROJECT_DIR$/src/container/WidgetListEditor.js" />
-      <change beforePath="$PROJECT_DIR$/src/services/CourseService.js" afterPath="$PROJECT_DIR$/src/services/CourseService.js" />
+      <change afterPath="$PROJECT_DIR$/src/components/AccessToggleSwitch.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/Sections/LessonSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/Sections/ModulesSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/Sections/TopicSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/CourseEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/CourseEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/WidgetListContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/WidgetListContainer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,37 +30,80 @@
     <expand />
     <select />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CoursesScreen.js" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/container/CoursesScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="77" column="11" lean-forward="true" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="11" />
+            <state relative-caret-position="510">
+              <caret line="77" column="11" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="11" />
               <folding>
-                <element signature="e#414#612#0" expanded="false" />
-                <element signature="e#637#734#0" expanded="false" />
-                <element signature="e#758#895#0" expanded="false" />
-                <element signature="e#931#1225#0" expanded="false" />
-                <element signature="e#1316#1371#0" expanded="false" />
-                <element signature="e#1618#1732#0" expanded="false" />
-                <element signature="e#1758#1878#0" expanded="false" />
-                <element signature="e#2025#2656#0" expanded="false" />
-                <element signature="e#2091#2637#0" expanded="false" />
-                <element signature="e#2670#2827#0" expanded="false" />
+                <element signature="e#414#612#0" />
+                <element signature="e#637#734#0" />
+                <element signature="e#758#895#0" />
+                <element signature="e#931#1225#0" />
+                <element signature="e#1316#1371#0" />
+                <element signature="e#1618#1732#0" />
+                <element signature="e#1758#1878#0" />
+                <element signature="e#2025#2656#0" />
+                <element signature="e#2091#2637#0" />
+                <element signature="e#2670#2827#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseEditor.js" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/container/WidgetListEditor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="14">
+              <caret line="4" column="32" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/container/CourseEditor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="177" column="16" lean-forward="true" selection-start-line="177" selection-start-column="16" selection-end-line="177" selection-end-column="16" />
+            <state relative-caret-position="315">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
-                <element signature="e#4344#4801#0" expanded="false" />
-                <element signature="e#4505#4567#0" expanded="false" />
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#1315#1743#0" />
+                <element signature="e#1553#1684#0" />
+                <element signature="e#1708#1776#0" />
+                <element signature="e#1845#1907#0" />
+                <element signature="e#1996#2417#0" />
+                <element signature="e#2191#2408#0" />
+                <element signature="e#2382#2878#0" />
+                <element signature="e#2984#3174#0" />
+                <element signature="e#3184#3474#0" />
+                <element signature="e#3771#3942#0" />
+                <element signature="e#3290#3466#0" />
+                <element signature="e#4344#4801#0" />
+                <element signature="e#4505#4567#0" />
+                <element signature="e#4611#6266#0" />
+                <element signature="e#4629#6258#0" />
+                <element signature="e#5009#6116#0" />
+                <element signature="e#5954#6090#0" />
+                <element signature="e#6263#9025#0" />
+                <element signature="e#5150#5331#0" />
+                <element signature="e#7352#7799#0" />
+                <element signature="e#5860#6242#0" />
+                <element signature="e#9175#9481#0" />
               </folding>
             </state>
           </provider>
@@ -96,14 +120,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sold</find>
-      <find>widgetListStyle</find>
-      <find>sty</find>
-      <find>addWidget</find>
-      <find>topic</find>
-      <find>widget</find>
-      <find>Topic</find>
-      <find>TOPIC</find>
       <find>WIDGET_API_URL</find>
       <find>findAllWidgetsForTopic</find>
       <find>dispatch</find>
@@ -124,8 +140,16 @@
       <find>FIND</find>
       <find>Preview</find>
       <find>props.pre</find>
-      <find>private</find>
       <find>serv</find>
+      <find>applyMi</find>
+      <find>lessonSele</find>
+      <find>select</find>
+      <find>moduleId</find>
+      <find>-1</find>
+      <find>courseId</find>
+      <find>lessonSelected</find>
+      <find>float</find>
+      <find>private</find>
     </findStrings>
     <replaceStrings>
       <replace>createModule</replace>
@@ -156,18 +180,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/container/CourseList/CourseRows.js" />
-        <option value="$PROJECT_DIR$/src/container/CourseList/as.js" />
-        <option value="$PROJECT_DIR$/src/Utils/DateUtils.js" />
-        <option value="$PROJECT_DIR$/src/container/CourseList/CourseRowsTable.js" />
         <option value="$PROJECT_DIR$/src/container/CourseList/CourseCards.js" />
         <option value="$PROJECT_DIR$/src/container/CourseList/CourseCardsDeck.js" />
         <option value="$PROJECT_DIR$/src/container/CourseList/Courses.js" />
@@ -210,19 +225,17 @@
         <option value="$PROJECT_DIR$/src/reducers/widgetReducer/index.js" />
         <option value="$PROJECT_DIR$/src/container/WidgetListEditor.js" />
         <option value="$PROJECT_DIR$/src/actions/index.js" />
-        <option value="$PROJECT_DIR$/src/container/WidgetListContainer.js" />
         <option value="$PROJECT_DIR$/src/constants/index.js" />
-        <option value="$PROJECT_DIR$/src/container/CourseEditor.js" />
         <option value="$PROJECT_DIR$/src/container/CoursesScreen.js" />
         <option value="$PROJECT_DIR$/src/services/CourseService.js" />
+        <option value="$PROJECT_DIR$/src/components/AccessToggleSwitch.jsx" />
+        <option value="$PROJECT_DIR$/src/container/LessonSection.jsx" />
+        <option value="$PROJECT_DIR$/src/container/TopicSection.jsx" />
+        <option value="$PROJECT_DIR$/src/container/WidgetListContainer.js" />
+        <option value="$PROJECT_DIR$/src/container/Sections/ModulesSection.jsx" />
+        <option value="$PROJECT_DIR$/src/container/CourseEditor.js" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -230,31 +243,17 @@
       <select />
     </treeState>
   </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="713" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -271,7 +270,7 @@
               <item name="react-course-manager" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-course-manager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-course-manager" type="b2602c69:ProjectViewProjectNode" />
@@ -283,39 +282,55 @@
               <item name="react-course-manager" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-course-manager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="container" type="462c0819:PsiDirectoryNode" />
+              <item name="ModuleList" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-course-manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-course-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="container" type="462c0819:PsiDirectoryNode" />
+              <item name="Sections" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_ANALYSIS_RESULTS_SCOPE" value="VCS changed files" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/athulmuralidharan/webDev/react-course-manager/src/container/WidgetList/WidgetElementsContainer.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="SONARLINT_ANALYSIS_RESULTS_SCOPE" value="VCS changed files" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/athulmuralidharan/webDev/react-course-manager/src/container/WidgetList/WidgetElementsContainer.js" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/container/WidgetList" />
-      <recent name="$PROJECT_DIR$/src/reducers/widgetReducer" />
-      <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/container/LessonList/LessonItem" />
-      <recent name="$PROJECT_DIR$/src/container/LessonList" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/container" />
       <recent name="$PROJECT_DIR$/src/services" />
       <recent name="$PROJECT_DIR$/src/container/LessonList" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/container/Sections/ModulesSection.jsx" />
+      <recent name="$PROJECT_DIR$/src/container/TopicSection.jsx" />
+      <recent name="$PROJECT_DIR$/src/container/LessonSection.jsx" />
+      <recent name="$PROJECT_DIR$/src/components/AccessToggleSwitch.jsx" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/container/Sections" />
+      <recent name="$PROJECT_DIR$/src/container/WidgetList" />
+      <recent name="$PROJECT_DIR$/src/reducers/widgetReducer" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/container/LessonList/LessonItem" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -331,90 +346,43 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
+    <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
+    <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -456,71 +424,73 @@
       <workItem from="1532543778955" duration="4657000" />
       <workItem from="1533203592597" duration="1647000" />
       <workItem from="1533205519360" duration="1125000" />
+      <workItem from="1559433868818" duration="429000" />
+      <workItem from="1559612069202" duration="4892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="245676000" />
+    <option name="totallyTimeSpent" value="250997000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="713" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47411004" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38529888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17932148" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32847896" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.46027398" />
+      <window_info anchor="bottom" id="SonarLint" order="9" weight="0.32686085" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32956383" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32956383" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41747573" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35702747" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35702747" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32847896" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.41747573" />
+      <window_info anchor="bottom" id="SonarLint" order="9" weight="0.32686085" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32956383" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32956383" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -536,7 +506,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/container/CourseEditor.js</url>
-          <line>300</line>
+          <line>150</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -596,7 +566,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/container/CourseEditor.js</url>
-          <line>29</line>
+          <line>16</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -666,7 +636,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/container/CourseEditor.js</url>
-          <line>229</line>
+          <line>133</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -688,21 +658,6 @@
           <url>file://$PROJECT_DIR$/src/container/TopicList/TopicList.js</url>
           <line>162</line>
           <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/container/CourseEditor.js</url>
-          <line>256</line>
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/container/CourseEditor.js</url>
-          <line>231</line>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/container/CourseEditor.js</url>
-          <line>233</line>
-          <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/container/TopicList/TopicList.js</url>
@@ -791,7 +746,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/container/WidgetListContainer.js</url>
-          <line>96</line>
+          <line>92</line>
           <option name="timeStamp" value="116" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -818,46 +773,33 @@
           <line>50</line>
           <option name="timeStamp" value="121" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/AccessToggleSwitch.jsx</url>
+          <line>9</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/container/CourseEditor.js</url>
+          <line>23</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="123" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/container/CourseRows.js" />
-    <entry file="file://$PROJECT_DIR$/src/container/ModuleList/EditableModuleListItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#constructor#0;n#EditableModuleListItem#0" expanded="false" />
-            <element signature="e#251#286#0" expanded="false" />
-            <element signature="e#531#742#0" expanded="false" />
-            <element signature="e#911#1320#0" expanded="false" />
-            <element signature="e#959#1115#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/CourseList/CourseRows.js" />
-    <entry file="file://$PROJECT_DIR$/src/container/CourseList/CourseRow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/DateUtils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/container/CourseList/CourseRowsTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
-          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="26" />
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="26" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
@@ -867,15 +809,14 @@
     <entry file="file://$PROJECT_DIR$/src/container/CourseList/CourseCard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
-          <caret line="16" column="56" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="56" />
-          <folding />
+          <caret line="16" column="56" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/container/CourseList/CourseCards.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
-          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -896,8 +837,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/Home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="6" column="7" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="6" selection-end-column="7" />
-          <folding />
+          <caret line="6" column="7" selection-start-line="5" selection-start-column="8" selection-end-line="6" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -911,15 +851,15 @@
     <entry file="file://$PROJECT_DIR$/src/services/ModuleService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
           <folding>
-            <element signature="e#262#357#0" expanded="false" />
-            <element signature="e#396#707#0" expanded="false" />
-            <element signature="e#472#629#0" expanded="false" />
-            <element signature="e#751#940#0" expanded="false" />
-            <element signature="e#975#1320#0" expanded="false" />
-            <element signature="e#1353#1590#0" expanded="false" />
-            <element signature="e#1618#1749#0" expanded="false" />
+            <element signature="e#262#357#0" />
+            <element signature="e#396#707#0" />
+            <element signature="e#472#629#0" />
+            <element signature="e#751#940#0" />
+            <element signature="e#975#1320#0" />
+            <element signature="e#1353#1590#0" />
+            <element signature="e#1618#1749#0" />
           </folding>
         </state>
       </provider>
@@ -930,18 +870,18 @@
           <caret line="182" column="18" lean-forward="true" selection-start-line="182" selection-start-column="18" selection-end-line="182" selection-end-column="18" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#757#806#0" expanded="false" />
-            <element signature="e#825#1313#0" expanded="false" />
-            <element signature="e#1341#2444#0" expanded="false" />
-            <element signature="e#2486#3737#0" expanded="false" />
-            <element signature="e#3222#3531#0" expanded="false" />
-            <element signature="e#3763#3923#0" expanded="false" />
-            <element signature="e#3970#4404#0" expanded="false" />
-            <element signature="e#4148#4394#0" expanded="false" />
-            <element signature="e#4438#4629#0" expanded="false" />
-            <element signature="e#5447#6062#0" expanded="false" />
-            <element signature="e#5507#5714#0" expanded="false" />
-            <element signature="e#5743#6035#0" expanded="false" />
+            <element signature="e#757#806#0" />
+            <element signature="e#825#1313#0" />
+            <element signature="e#1341#2444#0" />
+            <element signature="e#2486#3737#0" />
+            <element signature="e#3222#3531#0" />
+            <element signature="e#3763#3923#0" />
+            <element signature="e#3970#4404#0" />
+            <element signature="e#4148#4394#0" />
+            <element signature="e#4438#4629#0" />
+            <element signature="e#5447#6062#0" />
+            <element signature="e#5507#5714#0" />
+            <element signature="e#5743#6035#0" />
           </folding>
         </state>
       </provider>
@@ -949,16 +889,16 @@
     <entry file="file://$PROJECT_DIR$/src/container/TopicList/TopicItem/StaticTopicListItem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="27" column="65" lean-forward="false" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
+          <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/container/LessonList/LessonItem/StaticLessonListItem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
-          <caret line="36" column="63" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="63" />
+          <caret line="36" column="63" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="63" />
           <folding>
-            <element signature="e#223#368#0" expanded="false" />
+            <element signature="e#223#368#0" />
           </folding>
         </state>
       </provider>
@@ -966,11 +906,11 @@
     <entry file="file://$PROJECT_DIR$/src/container/LessonList/LessonItem/LessonListItem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="36" column="50" lean-forward="false" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
           <folding>
-            <element signature="e#242#527#0" expanded="false" />
-            <element signature="e#299#365#0" expanded="false" />
-            <element signature="e#550#770#0" expanded="false" />
+            <element signature="e#242#527#0" />
+            <element signature="e#299#365#0" />
+            <element signature="e#550#770#0" />
           </folding>
         </state>
       </provider>
@@ -978,25 +918,17 @@
     <entry file="file://$PROJECT_DIR$/src/container/LessonList/LessonItem/EditableLessonListItem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
-          <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/ModuleList/ModuleList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="169" column="65" lean-forward="false" selection-start-line="169" selection-start-column="65" selection-end-line="169" selection-end-column="65" />
-          <folding />
+          <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/container/TopicList/TopicItem/TopicListItem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
-          <caret line="36" column="48" lean-forward="false" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+          <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-            <element signature="e#544#764#0" expanded="false" />
+            <element signature="e#544#764#0" />
           </folding>
         </state>
       </provider>
@@ -1018,7 +950,7 @@
     <entry file="file://$PROJECT_DIR$/src/Router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
-          <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="19" />
+          <caret line="34" column="19" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1033,7 +965,7 @@
     <entry file="file://$PROJECT_DIR$/src/container/WidgetList/LinkContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="17" column="64" lean-forward="false" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -1043,14 +975,14 @@
           <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <element signature="e#258#2081#0" expanded="false" />
-            <element signature="e#435#950#0" expanded="false" />
-            <element signature="e#485#919#0" expanded="false" />
-            <element signature="e#975#1431#0" expanded="false" />
-            <element signature="e#1025#1400#0" expanded="false" />
-            <element signature="e#1457#1709#0" expanded="false" />
-            <element signature="e#1761#2039#0" expanded="false" />
-            <element signature="e#2158#2390#0" expanded="false" />
+            <element signature="e#258#2081#0" />
+            <element signature="e#435#950#0" />
+            <element signature="e#485#919#0" />
+            <element signature="e#975#1431#0" />
+            <element signature="e#1025#1400#0" />
+            <element signature="e#1457#1709#0" />
+            <element signature="e#1761#2039#0" />
+            <element signature="e#2158#2390#0" />
           </folding>
         </state>
       </provider>
@@ -1058,13 +990,13 @@
     <entry file="file://$PROJECT_DIR$/src/container/WidgetList/ImageContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <element signature="e#180#2147#0" expanded="false" />
-            <element signature="e#405#889#0" expanded="false" />
-            <element signature="e#1787#2118#0" expanded="false" />
-            <element signature="e#2276#2520#0" expanded="false" />
+            <element signature="e#180#2147#0" />
+            <element signature="e#405#889#0" />
+            <element signature="e#1787#2118#0" />
+            <element signature="e#2276#2520#0" />
           </folding>
         </state>
       </provider>
@@ -1072,24 +1004,24 @@
     <entry file="file://$PROJECT_DIR$/src/services/LessonService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
-          <caret line="52" column="28" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="28" />
+          <caret line="52" column="28" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/container/TopicList/TopicList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
-          <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <caret line="22" column="26" selection-start-line="22" selection-end-line="23" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#659#769#0" expanded="false" />
-            <element signature="e#959#1603#0" expanded="false" />
-            <element signature="e#1351#1584#0" expanded="false" />
-            <element signature="e#1630#2720#0" expanded="false" />
-            <element signature="e#2761#3990#0" expanded="false" />
-            <element signature="e#4946#5663#0" expanded="false" />
-            <element signature="e#5856#6062#0" expanded="false" />
-            <element signature="e#6087#6362#0" expanded="false" />
+            <element signature="e#659#769#0" />
+            <element signature="e#959#1603#0" />
+            <element signature="e#1351#1584#0" />
+            <element signature="e#1630#2720#0" />
+            <element signature="e#2761#3990#0" />
+            <element signature="e#4946#5663#0" />
+            <element signature="e#5856#6062#0" />
+            <element signature="e#6087#6362#0" />
           </folding>
         </state>
       </provider>
@@ -1104,7 +1036,7 @@
     <entry file="file://$PROJECT_DIR$/src/services/TopicService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <caret line="3" column="17" selection-start-line="3" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -1113,9 +1045,9 @@
         <state relative-caret-position="121">
           <caret line="28" column="49" lean-forward="true" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
           <folding>
-            <element signature="e#1256#1671#0" expanded="false" />
-            <element signature="e#1719#2337#0" expanded="false" />
-            <element signature="e#2374#2763#0" expanded="false" />
+            <element signature="e#1256#1671#0" />
+            <element signature="e#1719#2337#0" />
+            <element signature="e#2374#2763#0" />
           </folding>
         </state>
       </provider>
@@ -1123,26 +1055,26 @@
     <entry file="file://$PROJECT_DIR$/src/styles/WidgetList.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-872">
-          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="16" />
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/My404Component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state>
+          <caret selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/widgetReducer/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="267" column="27" lean-forward="false" selection-start-line="267" selection-start-column="23" selection-end-line="267" selection-end-column="27" />
+          <caret line="267" column="27" selection-start-line="267" selection-start-column="23" selection-end-line="267" selection-end-column="27" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
-            <element signature="e#492#756#0" expanded="false" />
-            <element signature="e#4452#4815#0" expanded="false" />
-            <element signature="e#7359#7664#0" expanded="false" />
+            <element signature="e#492#756#0" />
+            <element signature="e#4452#4815#0" />
+            <element signature="e#7359#7664#0" />
           </folding>
         </state>
       </provider>
@@ -1150,17 +1082,17 @@
     <entry file="file://$PROJECT_DIR$/src/container/WidgetList/ListContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
-          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
           <folding>
-            <element signature="e#141#254#0" expanded="false" />
-            <element signature="e#598#1064#0" expanded="false" />
-            <element signature="e#773#953#0" expanded="false" />
-            <element signature="e#1089#1839#0" expanded="false" />
-            <element signature="e#2455#2672#0" expanded="false" />
-            <element signature="e#2751#3098#0" expanded="false" />
-            <element signature="e#3208#3238#0" expanded="false" />
-            <element signature="e#3292#3651#0" expanded="false" />
-            <element signature="e#3932#4131#0" expanded="false" />
+            <element signature="e#141#254#0" />
+            <element signature="e#598#1064#0" />
+            <element signature="e#773#953#0" />
+            <element signature="e#1089#1839#0" />
+            <element signature="e#2455#2672#0" />
+            <element signature="e#2751#3098#0" />
+            <element signature="e#3208#3238#0" />
+            <element signature="e#3292#3651#0" />
+            <element signature="e#3932#4131#0" />
           </folding>
         </state>
       </provider>
@@ -1168,13 +1100,13 @@
     <entry file="file://$PROJECT_DIR$/src/container/WidgetList/HeadingContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
-          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
           <folding>
             <element signature="e#1#26#0" expanded="true" />
-            <element signature="e#655#889#0" expanded="false" />
-            <element signature="e#2765#3059#0" expanded="false" />
-            <element signature="e#3225#3563#0" expanded="false" />
-            <element signature="e#3602#3632#0" expanded="false" />
+            <element signature="e#655#889#0" />
+            <element signature="e#2765#3059#0" />
+            <element signature="e#3225#3563#0" />
+            <element signature="e#3602#3632#0" />
           </folding>
         </state>
       </provider>
@@ -1182,39 +1114,19 @@
     <entry file="file://$PROJECT_DIR$/src/container/TopicPills.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/WidgetListEditor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-659">
-          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+          <caret line="4" column="21" selection-start-line="4" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/container/WidgetList/WidgetElementsContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="32" />
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="32" />
           <folding>
-            <element signature="e#573#3565#0" expanded="false" />
-            <element signature="e#856#963#0" expanded="false" />
-            <element signature="e#1052#1394#0" expanded="false" />
-            <element signature="e#1936#2395#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/WidgetListContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="72" column="79" lean-forward="true" selection-start-line="72" selection-start-column="79" selection-end-line="72" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#573#3565#0" />
+            <element signature="e#856#963#0" />
+            <element signature="e#1052#1394#0" />
+            <element signature="e#1936#2395#0" />
           </folding>
         </state>
       </provider>
@@ -1222,9 +1134,9 @@
     <entry file="file://$PROJECT_DIR$/src/container/CourseList/CourseTitle/CourseTitle.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="57" selection-end-column="10" />
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="57" selection-end-column="10" />
           <folding>
-            <element signature="e#1155#1370#0" expanded="false" />
+            <element signature="e#1155#1370#0" />
           </folding>
         </state>
       </provider>
@@ -1232,22 +1144,14 @@
     <entry file="file://$PROJECT_DIR$/src/actions/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
-          <caret line="141" column="27" lean-forward="false" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
-          <folding />
+          <caret line="141" column="27" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/constants/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
-          <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1263,18 +1167,7 @@
         <state relative-caret-position="376">
           <caret line="118" column="18" lean-forward="true" selection-start-line="118" selection-start-column="18" selection-end-line="118" selection-end-column="18" />
           <folding>
-            <element signature="e#266#2069#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/CourseEditor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="177" column="16" lean-forward="true" selection-start-line="177" selection-start-column="16" selection-end-line="177" selection-end-column="16" />
-          <folding>
-            <element signature="e#4344#4801#0" expanded="false" />
-            <element signature="e#4505#4567#0" expanded="false" />
+            <element signature="e#266#2069#0" />
           </folding>
         </state>
       </provider>
@@ -1282,30 +1175,143 @@
     <entry file="file://$PROJECT_DIR$/src/services/CourseService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
-          <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
           <folding>
-            <element signature="e#1265#1313#0" expanded="false" />
-            <element signature="e#1577#1790#0" expanded="false" />
-            <element signature="e#1668#1716#0" expanded="false" />
+            <element signature="e#1265#1313#0" />
+            <element signature="e#1577#1790#0" />
+            <element signature="e#1668#1716#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/container/CoursesScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="77" column="11" lean-forward="true" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="11" />
+        <state relative-caret-position="510">
+          <caret line="77" column="11" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="11" />
           <folding>
-            <element signature="e#414#612#0" expanded="false" />
-            <element signature="e#637#734#0" expanded="false" />
-            <element signature="e#758#895#0" expanded="false" />
-            <element signature="e#931#1225#0" expanded="false" />
-            <element signature="e#1316#1371#0" expanded="false" />
-            <element signature="e#1618#1732#0" expanded="false" />
-            <element signature="e#1758#1878#0" expanded="false" />
-            <element signature="e#2025#2656#0" expanded="false" />
-            <element signature="e#2091#2637#0" expanded="false" />
-            <element signature="e#2670#2827#0" expanded="false" />
+            <element signature="e#414#612#0" />
+            <element signature="e#637#734#0" />
+            <element signature="e#758#895#0" />
+            <element signature="e#931#1225#0" />
+            <element signature="e#1316#1371#0" />
+            <element signature="e#1618#1732#0" />
+            <element signature="e#1758#1878#0" />
+            <element signature="e#2025#2656#0" />
+            <element signature="e#2091#2637#0" />
+            <element signature="e#2670#2827#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/WidgetListEditor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/ModuleList/ModuleList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2084">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AccessToggleSwitch.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/Sections/TopicSection.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+            <element signature="n#!!block;n#TopicSection#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/Sections/LessonSection.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+            <element signature="n#!!block;n#LessonSection#0" />
+            <element signature="e#334#429#0" />
+            <element signature="e#480#623#0" />
+            <element signature="e#710#984#0" />
+            <element signature="e#1907#2168#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/WidgetListContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="92" column="24" lean-forward="true" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="24" />
+          <folding>
+            <element signature="e#1369#1507#0" />
+            <element signature="e#1716#1845#0" />
+            <element signature="e#2254#2456#0" />
+            <element signature="e#2505#2780#0" />
+            <element signature="e#2559#2753#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/Sections/ModulesSection.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="e#171#460#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/CourseEditor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#1315#1743#0" />
+            <element signature="e#1553#1684#0" />
+            <element signature="e#1708#1776#0" />
+            <element signature="e#1845#1907#0" />
+            <element signature="e#1996#2417#0" />
+            <element signature="e#2191#2408#0" />
+            <element signature="e#2382#2878#0" />
+            <element signature="e#2984#3174#0" />
+            <element signature="e#3184#3474#0" />
+            <element signature="e#3771#3942#0" />
+            <element signature="e#3290#3466#0" />
+            <element signature="e#4344#4801#0" />
+            <element signature="e#4505#4567#0" />
+            <element signature="e#4611#6266#0" />
+            <element signature="e#4629#6258#0" />
+            <element signature="e#5009#6116#0" />
+            <element signature="e#5954#6090#0" />
+            <element signature="e#6263#9025#0" />
+            <element signature="e#5150#5331#0" />
+            <element signature="e#7352#7799#0" />
+            <element signature="e#5860#6242#0" />
+            <element signature="e#9175#9481#0" />
           </folding>
         </state>
       </provider>
