@@ -137,7 +137,7 @@ export default class ModuleList extends React.Component{
 
     renderListOfModules = () => {
         let index = 0;
-        console.log("Component ModuleList : re- rendering ")
+        console.log("Component ModuleList : re- rendering ");
         console.log(this.state);
         let modules = this.state.modules.map((module) => {
                 index++;
